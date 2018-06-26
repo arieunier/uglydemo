@@ -1,0 +1,331 @@
+{
+  "mappings": [
+    {
+      "object_name": "GameActivity__c",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "IsDeleted": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "active__c": {}
+        },
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          }
+        },
+        "applied_at": "2018-06-08T16:28:26.980928Z"
+      }
+    },
+    {
+      "object_name": "WinesAndSpirits__c",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "Description__c": {},
+          "image__c": {},
+          "Name": {},
+          "LastModifiedDate": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "Id": {}
+        },
+        "indexes": {
+          "LastModifiedDate": {
+            "unique": false
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          }
+        }
+      }
+    },
+    {
+      "object_name": "heroku_logs__c",
+      "config": {
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          },
+          "externalid__c": {
+            "unique": true
+          }
+        },
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "externalid__c",
+        "applied_at": "2018-06-04T11:40:32.456056Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": false,
+        "fields": {
+          "method__c": {},
+          "useragent__c": {},
+          "Name": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "url__c": {},
+          "creationdate__c": {},
+          "CreatedDate": {},
+          "CreatedById": {},
+          "Id": {},
+          "userid__c": {},
+          "externalid__c": {}
+        }
+      }
+    },
+    {
+      "object_name": "Product2",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": false,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "image__c": {},
+          "Name": {},
+          "DisplayUrl": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "pic__c": {},
+          "CreatedById": {},
+          "Id": {},
+          "Description": {}
+        },
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          }
+        },
+        "applied_at": "2018-03-28T08:50:21.079683Z"
+      }
+    },
+    {
+      "object_name": "Participant__c",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "IsDeleted": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "image__c": {},
+          "Description__c": {}
+        },
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          }
+        },
+        "applied_at": "2018-04-18T21:54:48.688060Z"
+      }
+    },
+    {
+      "object_name": "Match__c",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "Participant_Visitor__c": {},
+          "GameActivity__c": {},
+          "Name": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "Date__c": {},
+          "CreatedDate": {},
+          "Participant_Home__c": {},
+          "question__c": {},
+          "Id": {}
+        },
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          }
+        },
+        "applied_at": "2018-04-19T07:15:04.734666Z"
+      }
+    },
+    {
+      "object_name": "ImageAnalysis__c",
+      "config": {
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "PersonId__c": {
+            "unique": true
+          },
+          "Id": {
+            "unique": true
+          }
+        },
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "PersonId__c",
+        "applied_at": "2018-06-04T19:52:42.639682Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": true,
+        "fields": {
+          "Hair__c": {},
+          "ImageHeight__c": {},
+          "Haircolor__c": {},
+          "Gender__c": {},
+          "MediaId__c": {},
+          "Age__c": {},
+          "Contempt__c": {},
+          "Disgust__c": {},
+          "lipmakeup__c": {},
+          "Description__c": {},
+          "image__c": {},
+          "Emotion__c": {},
+          "UserAgent__c": {},
+          "Smile_value__c": {},
+          "eyemakeup__c": {},
+          "Name": {},
+          "FaceTop__c": {},
+          "Bald__c": {},
+          "IsDeleted": {},
+          "Moustache__c": {},
+          "SystemModstamp": {},
+          "Fear__c": {},
+          "PersonId__c": {},
+          "Beard__c": {},
+          "URL__c": {},
+          "FacialHair__c": {},
+          "Emotion_Value__c": {},
+          "Sadness__c": {},
+          "CreatedDate": {},
+          "ImageWidth__c": {},
+          "Glasses__c": {},
+          "Surprise__c": {},
+          "FaceWidth__c": {},
+          "Smile__c": {},
+          "Id": {},
+          "Neutral__c": {},
+          "Happiness__c": {},
+          "Anger__c": {},
+          "FaceLeft__c": {},
+          "FaceHeight__c": {}
+        }
+      }
+    },
+    {
+      "object_name": "Bet__c",
+      "config": {
+        "indexes": {
+          "webuser__c": {
+            "unique": false
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          },
+          "externalid__c": {
+            "unique": true
+          },
+          "userid__c": {
+            "unique": false
+          }
+        },
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "externalid__c",
+        "applied_at": "2018-06-04T13:12:23.912939Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": true,
+        "fields": {
+          "webuser__c": {},
+          "Winner__c": {},
+          "useragent__c": {},
+          "webuser__r__userid__c": {},
+          "Name": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "Id": {},
+          "userid__c": {},
+          "externalid__c": {},
+          "Match__c": {}
+        }
+      }
+    },
+    {
+      "object_name": "webusers__c",
+      "config": {
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "userid__c": {
+            "unique": true
+          }
+        },
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "userid__c",
+        "applied_at": "2018-06-04T10:38:18.514044Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": true,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "IsDeleted": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "userid__c": {},
+          "useragent__c": {}
+        }
+      }
+    }
+  ],
+  "connection": {
+    "app_name": "yourdemo",
+    "organization_id": "00D0N000000k4t2UAA",
+    "exported_at": "2018-06-12T07:38:29.344161+00:00",
+    "features": {
+      "poll_db_no_merge": true,
+      "poll_external_ids": false,
+      "rest_count_only": false
+    }
+  },
+  "version": 1
+}

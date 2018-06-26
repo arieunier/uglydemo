@@ -1,0 +1,48 @@
+{
+  "name": "Demonstration Heroku",
+  "description" : "a sample demo of heroku",
+  "repository":"https://github.com/arieunier/heroku-demo",
+  "keywords": ["python", "postgres", "redis", "connect"], 
+  "scripts": {
+      "postdeploy": "echo Dumping database ; echo Staging DB is $STAGING_DATABASE_URL; echo Local Db is $DATABASE_URL; pg_dump $STAGING_DATABASE_URL | psql $DATABASE_URL; echo Finished dumping Database; cp newrelic.ini.template newrelic.ini; newrelic-admin generate-config $NEW_RELIC_LICENSE_KEY newrelic.ini"
+    },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    },
+    "worker-rabbitmq" : {
+      "quantity": 0,
+      "size": "standard-2x"
+    }
+  },
+  "addons": [
+    {"plan": "heroku-postgresql:hobby-dev"}, 
+    {"plan": "heroku-redis:hobby-dev"}
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env":
+    {
+      "NEW_RELIC_CONFIG_FILE": {
+        "Description" : "new relic path",
+        "value" : "/app/newrelic.ini",
+        "required" : false
+      },
+      "STAGING_DATABASE_URL": {
+        "Description" : "staging database - for review apps",
+        "required" : false
+      }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "echo Setting up environment",
+        "test": "python tests.py "
+      }
+    }
+  }
+}

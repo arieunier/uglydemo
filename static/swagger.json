@@ -1,0 +1,80 @@
+{
+    "swagger": "2.0",
+    "info": 
+    {
+        "description": "how to send data to a user connected to the web app",
+        "version": "1.0.0",
+        "title": "Heroku Uggliest app",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": 
+        {
+            "email": "arieunier@salesforce.com"
+        },
+        "license": 
+        {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "host": "basecampmadrid.herokuapp.com",
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": 
+    {
+        "/send_notification": 
+        {
+            "post": 
+            {
+                "summary": "sends a notification to a user",
+                "description": "",
+                "operationId": "sendNotification",
+                "parameters": [
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": "the message to send",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "userid",
+                        "in": "query",
+                        "description": "the user id to send the message to",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": 
+                {
+                    "200": 
+                    {
+                        "description": "success",
+                        "schema": 
+                        {
+                            "$ref": "#/definitions/simpleResponse"
+                        }
+                    },
+                    "404": 
+                    {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "simpleResponse": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

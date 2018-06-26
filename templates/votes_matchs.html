@@ -1,0 +1,235 @@
+<html lang="en">
+	<head>
+
+    
+    <!------ Include the above in your HEAD tag ---------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="../static/js/modernizr.custom.80028.js"></script>
+    <!-- Bootstrap Core CSS  -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="../static/stylesheets/bootstrap-panel.css" rel="stylesheet">
+    <link href="../static/stylesheets/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+
+   
+    <!-- Custom CSS -->
+    <link href="../static/stylesheets/thumbnail-gallery.css" rel="stylesheet">
+    <link href="../static/stylesheets/mouseover.css" rel="stylesheet">
+    <!--  background color -->
+    <link href="../static/stylesheets/background.css" rel="stylesheet">
+    
+    {% if FA_APIKEY %}
+    <script type="text/javascript" src="../static/js/fa-sdk-web.js"></script>
+        <script type="text/javascript">
+            FollowAnalytics.initialize({
+                FAID: '{{ FA_APIKEY }}',
+                bundleId: 'Mobile App',
+                defaultIcon: 'https://s3-eu-west-1.amazonaws.com/fa-sdks/sdk-web/web-sdk-assets/followanalytics192.png',
+                optInAnalytics: true,
+                analyticsScope: FollowAnalytics.AnalyticsScope.FULL
+            });
+            FollowAnalytics.setOptInAnalytics(true);
+            FollowAnalytics.registerForPushNotifications();
+            FollowAnalytics.setUserId('{{ userid }}')
+            FollowAnalytics.logEvent('Example log name', details)
+            FollowAnalytics.isRegisteredForPushNotifications();
+        </script>
+    {% endif %}
+
+    {% if PUSHER_KEY %}
+    <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+    <script>
+      var pusher = new Pusher( '{{ PUSHER_KEY }}' , {
+      cluster: 'eu'
+      });
+      var channel = pusher.subscribe( '{{ userid }}' );
+      channel.bind('my-event', function(data) {
+      alert('An event was triggered with message: ' + data.message);
+    });
+      </script>
+    {% endif %}
+    
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+        #note {
+        position: absolute;
+        z-index: 6001;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fde073;
+        text-align: center;
+        line-height: 2.5;
+        overflow: hidden;
+        -webkit-box-shadow: 0 0 5px black;
+        -moz-box-shadow:    0 0 5px black;
+        box-shadow:         0 0 5px black;
+    }
+    .cssanimations.csstransforms #note {
+        -webkit-transform: translateY(-50px);
+        -webkit-animation: slideDown 2.5s 0.1s 1 ease forwards;
+        -moz-transform:    translateY(-50px);
+        -moz-animation:    slideDown 2.5s 0.5s 1 ease forwards;
+    }
+
+    #close {
+      position: absolute;
+      right: 10px;
+      top: 9px;
+      text-indent: -9999px;
+      background: url(images/close.png);
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+    }
+    .cssanimations.csstransforms #close {
+      display: none;
+    }
+
+    @-webkit-keyframes slideDown {
+        0%, 100% { -webkit-transform: translateY(-50px); }
+        10%, 90% { -webkit-transform: translateY(0px); }
+    }
+    @-moz-keyframes slideDown {
+        0%, 100% { -moz-transform: translateY(-50px); }
+        10%, 90% { -moz-transform: translateY(0px); }
+    }
+
+
+</style>
+
+</head>
+
+
+<body>
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/">Root menu</a>
+          <a href="/tables">Tables application</a>
+          <a href="/votes">Quizz application</a>
+          <a href="/photos">Photos applications</a>
+          <a href="/photos_display">Display all photos</a>
+        </div>
+
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ugliest Web Application - Matchs for category {{ category_name }} </span> 
+      {% if hasvoted %}
+      <div id="note">
+          Thanks for your vote. <a id="close">[close]</a>
+      </div>
+      {% endif %}
+
+		<div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Questions for category {{ category_name}}</h3>
+                <div class="pull-right">
+                  <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                    <i class="glyphicon glyphicon-filter"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="panel-body">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+              </div>
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                      <th>Question</th>
+                      <th>Answers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for entry in entries %}
+                  <tr>
+                    <td>{{ entry.question[0:40] }} ... </td>
+                    <td><a href="../placevote?gameactivity__c={{ category_id }}&match_id={{ entry.matchid }}">{{ entry.participant_home }} - {{ entry.participant_visitor }}</a></td>
+                   
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>    
+        </div>
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Ugliest web application - 2017 - <a href="mailto:arieunier@salesforce.com?Subject=Hello%20again" target="_top">Contact</a></p>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+      
+      <!-- jQuery -->
+      <script src="../static/js/bootstrap-panel.js"></script>
+      <script>
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+    <script>
+        close = document.getElementById("close");
+        close.addEventListener('click', function() {
+          note = document.getElementById("note");
+          note.style.display = 'none';
+        }, false);
+      </script>
+              
+  </body>
+</html>                              
+

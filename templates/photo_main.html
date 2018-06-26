@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take or select photo(s)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/stylesheets/thumbnail-gallery.css" rel="stylesheet">
+    <link href="../static/stylesheets/mouseover.css" rel="stylesheet">
+    <link href="../static/stylesheets/table.css" rel="stylesheet">
+
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+
+    <link href="../static/stylesheets/background.css" rel="stylesheet">
+ 
+    {% if FA_APIKEY %}
+    <script type="text/javascript" src="../static/js/fa-sdk-web.js"></script>
+        <script type="text/javascript">
+            FollowAnalytics.initialize({
+                FAID: '{{ FA_APIKEY }}',
+                bundleId: 'Mobile App',
+                defaultIcon: 'https://s3-eu-west-1.amazonaws.com/fa-sdks/sdk-web/web-sdk-assets/followanalytics192.png',
+                optInAnalytics: true,
+                analyticsScope: FollowAnalytics.AnalyticsScope.FULL
+            });
+            FollowAnalytics.setOptInAnalytics(true);
+            FollowAnalytics.registerForPushNotifications();
+            FollowAnalytics.setUserId('{{ userid }}')
+            FollowAnalytics.logEvent('Example log name', details)
+            FollowAnalytics.isRegisteredForPushNotifications();
+        </script>
+    {% endif %}
+
+    {% if PUSHER_KEY %}
+    <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+    <script>
+      var pusher = new Pusher( '{{ PUSHER_KEY }}' , {
+      cluster: 'eu'
+      });
+      var channel = pusher.subscribe( '{{ userid }}' );
+      channel.bind('my-event', function(data) {
+      alert('An event was triggered with message: ' + data.message);
+    });
+      </script>
+    {% endif %}
+    
+    <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+    
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+    
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+    
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+    
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+            .image-upload > input {
+              visibility:hidden;
+              width:0;
+              height:0
+            }
+            .button-add > input {
+              background-image: url("../static/upload_blue.png"); /* 16px x 16px */
+              background-color: transparent; /* make the button transparent */
+              background-repeat: no-repeat;  /* make the background image appear only once */
+              background-position: 0px 0px;  /* equivalent to 'top left' */
+              border: none;           /* assuming we don't want any borders */
+              cursor: pointer;        /* make the cursor like hovering over an <a> element */
+              height: 16px;           /* make this the size of your image */
+              padding-left: 16px;     /* make text start to the right of the image */
+              vertical-align: middle; /* align the text vertically centered */
+            }
+            .buttonimage {
+              display:block;
+              margin-left: auto; 
+              margin-right: auto; 
+              width: 50%; 
+            }
+            #note_ok {
+              position: absolute;
+              z-index: 6001;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: #fde073;
+              text-align: center;
+              line-height: 2.5;
+              overflow: hidden;
+              -webkit-box-shadow: 0 0 5px black;
+              -moz-box-shadow:    0 0 5px black;
+              box-shadow:         0 0 5px black;
+              }
+              .cssanimations.csstransforms #note_ok {
+                  -webkit-transform: translateY(-50px);
+                  -webkit-animation: slideDown 2.5s 0.1s 1 ease forwards;
+                  -moz-transform:    translateY(-50px);
+                  -moz-animation:    slideDown 2.5s 0.5s 1 ease forwards;
+              }
+              
+              #note_ko {
+              position: absolute;
+              z-index: 6001;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: #f47442;
+              text-align: center;
+              line-height: 2.5;
+              overflow: hidden;
+              -webkit-box-shadow: 0 0 5px black;
+              -moz-box-shadow:    0 0 5px black;
+              box-shadow:         0 0 5px black;
+              }
+              .cssanimations.csstransforms #note_ko {
+                  -webkit-transform: translateY(-50px);
+                  -webkit-animation: slideDown 2.5s 0.1s 1 ease forwards;
+                  -moz-transform:    translateY(-50px);
+                  -moz-animation:    slideDown 2.5s 0.5s 1 ease forwards;
+              }
+
+              
+              #close {
+                position: absolute;
+                right: 10px;
+                top: 9px;
+                text-indent: -9999px;
+                height: 16px;
+                width: 16px;
+                cursor: pointer;
+              }
+              .cssanimations.csstransforms #close {
+                display: none;
+              }
+
+
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
+    </style>
+    
+    
+    <script type="text/javascript">
+      function fileSelected() {
+        var count = document.getElementById('fileToUpload').files.length;
+              document.getElementById('details').innerHTML = "";
+              for (var index = 0; index < count; index ++)
+              {
+                     var file = document.getElementById('fileToUpload').files[index];
+                     var fileSize = 0;
+                     if (file.size > 1024 * 1024)
+                            fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+                     else
+                            fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+                     document.getElementById('details').innerHTML += '<div align="center">Name: ' + file.name + '<br>Size: ' + fileSize + '<br>Type: ' + file.type;
+                     document.getElementById('details').innerHTML += '<p></div><p></p>';
+              }
+      }
+      
+
+      function uploadFile() {
+        var fd = new FormData();
+              var count = document.getElementById('fileToUpload').files.length;
+              for (var index = 0; index < count; index ++)
+              {
+                     var file = document.getElementById('fileToUpload').files[index];
+                     fd.append('fileToUpload', file);
+              }
+        var xhr = new XMLHttpRequest(evt);
+        xhr.upload.addEventListener("progress", uploadProgress, false);
+        xhr.addEventListener("load", uploadComplete, false);
+        xhr.addEventListener("error", uploadFailed, false);
+        xhr.addEventListener("abort", uploadCanceled, false);
+        xhr.open("POST", "/photos_post");
+        xhr.send(fd);
+      }
+      function uploadProgress(evt) {
+        if (evt.lengthComputable) {
+          var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+          document.getElementById('progress').innerHTML = percentComplete.toString() + '%';
+        }
+        else {
+          document.getElementById('progress').innerHTML = 'Upload error!';
+        }
+      }
+      function uploadComplete(evt) {
+        //alert(evt.target.responseText);
+      }
+      function uploadFailed(evt) {
+        //alert("Error sendin file...");
+      }
+      function uploadCanceled(evt) {
+        //alert("Upload cancelled by the user or network error!");
+      }
+    </script>
+
+    
+</head>
+
+
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/">Root menu</a>
+        <a href="/tables">Tables application</a>
+        <a href="/votes">Quizz application</a>
+        <a href="/photos">Photos applications</a>
+        <a href="/photos_display">Display all photos</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Selfie Time</span>
+      <div class="container">
+  {% if status_upload %}
+  <div id="note_ok">
+      {{ status_upload }}. <a id="close">[close]</a>
+  </div>
+  {% endif %}
+
+  {% if error_upload %}
+  <div id="note_ko">
+      {{ error_upload }}. <a id="close">[close]</a>
+  </div>
+  {% endif %}
+
+  <span style="font-size:18px;cursor:pointer">Please share with us what you thought about this session: take a picture of yourself and we'll analyse your beautifull smile</span>
+  <form id="form1" enctype="multipart/form-data" method="post" action='/photos_post'>
+    <div class="image-upload" align="center">
+        <label for="fileToUpload">
+          <div>
+                <img src="../static/camera_blue.png" style="display:block ; margin-left: auto; margin-right: auto; width: 50%; pointer-events: none">
+          </div>
+        </label>
+        <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera">
+      </div>
+    <div id="details"></div>
+    <p></p>
+    <div id="progress"></div>
+    <p></p>
+    <div>
+        <input type="image" onclick="uploadFile()" src="../static/upload_blue.png" class="buttonimage"/>
+    </div>   
+    
+
+
+
+  </form>
+        <!-- jQuery -->
+        <script src="../static/js/bootstrap-panel.js"></script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            </script>
+
+</body>
+</html>
