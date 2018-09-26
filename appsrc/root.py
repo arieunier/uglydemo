@@ -14,6 +14,48 @@ RENDER_INDEX_BOOTSTRAP="index_bootstrap.html"
 RENDER_ROOT="index_root.html"
 
 
+# poc function
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    try:
+        cookie, cookie_exists =  utils.getCookie()
+
+        if (postgres.__checkHerokuLogsTable()):
+                postgres.__saveLogEntry(request, cookie)
+        logger.debug(utils.get_debug_all(request))
+        if ('phone' not in request.args):
+            return utils.returnResponse("Please provide a phone number", 403, cookie, cookie_exists)
+        entry_phone = request.args['phone']
+        if (entry_phone == '' or entry_phone == None):
+            return utils.returnResponse("Please provide a phone number", 403, cookie, cookie_exists)
+        
+
+
+        key = {'url' : request.url}
+        tmp_dict = None
+        #data_dict = None
+        tmp_dict = rediscache.__getCache(key)
+        if ((tmp_dict == None) or (tmp_dict == '')):
+            logger.info("Data not found in cache")
+            data_dict = postgres.__execRequest('select name, mobilephone, phone, email, sfid from salesforce.contact where phone = %(phone)s or mobilephone=%(phone)s', {'phone':entry_phone} )
+            logger.info(data_dict)
+            rediscache.__setCache(key, data_dict, 60)
+
+            data = ujson.dumps(data_dict)
+        else:
+            logger.info("Data found in redis, using it directly")
+            data = tmp_dict
+
+
+        
+        return utils.returnResponse(data, 200, cookie, cookie_exists)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        cookie, cookie_exists =  utils.getCookie()
+        return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists)
+
 
 
 @app.route('/oauth', methods=['GET'])
