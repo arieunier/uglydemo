@@ -113,4 +113,4 @@ def receiveFromKafka(mode):
         #consumer.commit(message.offset)
         i += 1
 
-
+sendToKafka("subscribe")

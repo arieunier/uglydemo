@@ -1,5 +1,6 @@
 import redis 
 import os
+import ujson
 from datetime import datetime 
 from libs import logs   
 
@@ -28,19 +29,22 @@ def __display_RedisContent():
             logger.info(entry)
 
 def __setCache(key, data, ttl):
+    key_str = ujson.dumps(key)
     if (REDIS_CONN != None):
         logger.debug('Storing in Redis')
-        REDIS_CONN.set(key, data)
-        REDIS_CONN.expire(key, ttl)
+        REDIS_CONN.set(key_str, data)
+        REDIS_CONN.expire(key_str, ttl)
 
 def __getCache(key):
+    key_str = ujson.dumps(key)
     if (REDIS_CONN != None):
         logger.debug('Reading in Redis')
-        return REDIS_CONN.get(key)
+        return REDIS_CONN.get(key_str)
     return None 
 
 def __delCache(key):
+    key_str = ujson.dumps(key)
     if (REDIS_CONN != None):
         logger.debug('Deleting in Redis')
-        REDIS_CONN.delete(key)
+        REDIS_CONN.delete(key_str)
     
