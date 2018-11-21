@@ -58,7 +58,7 @@ def contact():
 
 
 
-@app.route('/oauth', methods=['GET'])
+@app.route('/oauth2', methods=['GET'])
 def oauth():
     try:
         cookie, cookie_exists =  utils.getCookie()
