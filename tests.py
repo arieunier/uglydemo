@@ -1,6 +1,3 @@
-
-
-
 if __name__ == "__main__":
     print("Executing tests")
     print("test - database connection ... Success ")

@@ -7,8 +7,6 @@ from flask_bootstrap import Bootstrap
 from libs import postgres , utils , logs, rediscache, notification
 from appsrc import app, logger 
 
-
-
 RENDER_BETS_MAIN="votes_main.html"
 RENDER_BETS_MATCHS="votes_matchs.html"
 RENDER_PLACE_BET="votes_place_new.html"

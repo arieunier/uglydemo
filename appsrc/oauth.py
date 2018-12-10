@@ -6,10 +6,10 @@ from libs import  utils, rediscache
 from uuid import uuid4
 import urllib
 import requests
-import ujson
+import ujson, os
 
-APP_CLIENT_ID = "3MVG9TSaZ8P6zP1oXkMT5WIwgzVlOBV3Urqlg2YFon3Rm4SHogUcOrkxdyD0QRccBNl0lIvxsQWs3JBJzQWFR"
-APP_CLIENT_SECRET = "358448473132570702"
+APP_CLIENT_ID = os.getenv("APP_CLIENT_ID")
+APP_CLIENT_SECRET =  os.getenv("APP_CLIENT_SECRET")
 SF_REQUEST_TOKEN_URL='https://login.salesforce.com/services/oauth2/token'
 SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/oauth2/authorize?'
 REDIRECT_URI_CODE = "http://localhost:5000/sfconnectedapp"
