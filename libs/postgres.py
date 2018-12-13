@@ -207,6 +207,21 @@ def __saveImageAnalysisEntry(attributes):
             """
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,attributes)
 
+def __saveLeadEntry(name, email, formvalue):
+    if (MANUAL_ENGINE_POSTGRES != None):
+        externalid = uuid.uuid4().__str__()
+        creationdate  = datetime.now()
+        sqlRequest = """ insert into salesforce.FormContent__c(Name, email__c, FormValue__c, externalid__c, createddate) values 
+         (%(name)s, %(email)s, %(formvalue)s, %(externalid)s, %(createddate)s)   """
+
+        MANUAL_ENGINE_POSTGRES.execute(sqlRequest,
+            {
+            'name' : name,
+            'externalid' : externalid,
+            'formvalue' : formvalue,
+            'email' : email,
+            'createddate' : creationdate })    
+
 def __saveLogEntry(request, userid):
     if (MANUAL_ENGINE_POSTGRES != None):
         url = request.url

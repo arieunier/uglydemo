@@ -17,3 +17,4 @@ pika
 cognitive_face
 pillow
 pusher
+wtforms

@@ -7,12 +7,20 @@ from flask_bootstrap import Bootstrap
 from libs import postgres , utils , logs, rediscache, notification
 from appsrc import app, logger
 from flask import make_response
+from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+from flask import Flask, render_template, flash, request
+from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+ 
 
-
+app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 
 RENDER_INDEX_BOOTSTRAP="index_bootstrap.html"
 RENDER_ROOT="index_root.html"
-
+class ReusableForm(Form):
+    name = TextField('name:', validators=[validators.required()])
+    email = TextField('email:', validators=[validators.required(), validators.Length(min=3, max=35)])
+    formvalue = TextField('formvalue:', validators=[validators.required(), validators.Length(min=3, max=35)])
+ 
 
 # poc function
 
@@ -160,3 +168,34 @@ def error():
         error_code = int(request.args['error_code'])
     return utils.returnResponse("Error !! ", error_code, cookie, cookie_exists)    
 
+@app.route('/form', methods=['GET', 'POST'])
+def form():
+    try:
+        cookie, cookie_exists =  utils.getCookie()
+        logger.debug(utils.get_debug_all(request))
+
+        form = ReusableForm(request.form)
+ 
+        print(form.errors)
+        if request.method == 'POST':
+            name=request.form['name']
+            formvalue=request.form['formvalue']
+            email=request.form['email']
+            postgres.__saveLeadEntry(name, email, formvalue)
+            return utils.returnResponse("Thanks for registering", 200, cookie, cookie_exists)
+        
+        print(form)
+        if form.validate():
+            # Save the comment here.
+            flash('Hello ' + name)
+        else:
+            flash('All the form fields are required. ')
+        
+        data = render_template('form.html', form=form)
+        
+        return utils.returnResponse(data, 200, cookie, cookie_exists)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        cookie, cookie_exists =  utils.getCookie()
+        return utils.returnResponse("An error occured, check logDNA for more information", 200, cookie, cookie_exists)
