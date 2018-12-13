@@ -1,6 +1,79 @@
 {
   "mappings": [
     {
+      "object_name": "Bet__c",
+      "config": {
+        "indexes": {
+          "webuser__c": {
+            "unique": false
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          },
+          "externalid__c": {
+            "unique": true
+          },
+          "userid__c": {
+            "unique": false
+          }
+        },
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "externalid__c",
+        "applied_at": "2018-06-04T13:12:23.912939Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": true,
+        "fields": {
+          "webuser__c": {},
+          "Winner__c": {},
+          "useragent__c": {},
+          "webuser__r__userid__c": {},
+          "Name": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "Id": {},
+          "userid__c": {},
+          "externalid__c": {},
+          "Match__c": {}
+        }
+      }
+    },
+    {
+      "object_name": "FormContent__c",
+      "config": {
+        "access": "read_write",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "IsDeleted": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "externalid__c": {},
+          "email__c": {},
+          "FormValue__c": {}
+        },
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "externalid__c": {
+            "unique": true
+          }
+        },
+        "upsert_field": "externalid__c"
+      }
+    },
+    {
       "object_name": "GameActivity__c",
       "config": {
         "access": "read_only",
@@ -24,159 +97,6 @@
           }
         },
         "applied_at": "2018-06-08T16:28:26.980928Z"
-      }
-    },
-    {
-      "object_name": "WinesAndSpirits__c",
-      "config": {
-        "access": "read_only",
-        "sf_notify_enabled": true,
-        "sf_polling_seconds": 600,
-        "sf_max_daily_api_calls": 30000,
-        "fields": {
-          "Description__c": {},
-          "image__c": {},
-          "Name": {},
-          "LastModifiedDate": {},
-          "IsDeleted": {},
-          "SystemModstamp": {},
-          "CreatedDate": {},
-          "Id": {}
-        },
-        "indexes": {
-          "LastModifiedDate": {
-            "unique": false
-          },
-          "SystemModstamp": {
-            "unique": false
-          },
-          "Id": {
-            "unique": true
-          }
-        }
-      }
-    },
-    {
-      "object_name": "heroku_logs__c",
-      "config": {
-        "indexes": {
-          "SystemModstamp": {
-            "unique": false
-          },
-          "Id": {
-            "unique": true
-          },
-          "externalid__c": {
-            "unique": true
-          }
-        },
-        "sf_max_daily_api_calls": 30000,
-        "access": "read_write",
-        "upsert_field": "externalid__c",
-        "applied_at": "2018-06-04T11:40:32.456056Z",
-        "sf_polling_seconds": 600,
-        "sf_notify_enabled": false,
-        "fields": {
-          "method__c": {},
-          "useragent__c": {},
-          "Name": {},
-          "IsDeleted": {},
-          "SystemModstamp": {},
-          "url__c": {},
-          "creationdate__c": {},
-          "CreatedDate": {},
-          "CreatedById": {},
-          "Id": {},
-          "userid__c": {},
-          "externalid__c": {}
-        }
-      }
-    },
-    {
-      "object_name": "Product2",
-      "config": {
-        "access": "read_only",
-        "sf_notify_enabled": false,
-        "sf_polling_seconds": 600,
-        "sf_max_daily_api_calls": 30000,
-        "fields": {
-          "image__c": {},
-          "Name": {},
-          "DisplayUrl": {},
-          "IsDeleted": {},
-          "SystemModstamp": {},
-          "CreatedDate": {},
-          "pic__c": {},
-          "CreatedById": {},
-          "Id": {},
-          "Description": {}
-        },
-        "indexes": {
-          "SystemModstamp": {
-            "unique": false
-          },
-          "Id": {
-            "unique": true
-          }
-        },
-        "applied_at": "2018-03-28T08:50:21.079683Z"
-      }
-    },
-    {
-      "object_name": "Participant__c",
-      "config": {
-        "access": "read_only",
-        "sf_notify_enabled": true,
-        "sf_polling_seconds": 600,
-        "sf_max_daily_api_calls": 30000,
-        "fields": {
-          "CreatedDate": {},
-          "Id": {},
-          "IsDeleted": {},
-          "Name": {},
-          "SystemModstamp": {},
-          "image__c": {},
-          "Description__c": {}
-        },
-        "indexes": {
-          "Id": {
-            "unique": true
-          },
-          "SystemModstamp": {
-            "unique": false
-          }
-        },
-        "applied_at": "2018-04-18T21:54:48.688060Z"
-      }
-    },
-    {
-      "object_name": "Match__c",
-      "config": {
-        "access": "read_only",
-        "sf_notify_enabled": true,
-        "sf_polling_seconds": 600,
-        "sf_max_daily_api_calls": 30000,
-        "fields": {
-          "Participant_Visitor__c": {},
-          "GameActivity__c": {},
-          "Name": {},
-          "IsDeleted": {},
-          "SystemModstamp": {},
-          "Date__c": {},
-          "CreatedDate": {},
-          "Participant_Home__c": {},
-          "question__c": {},
-          "Id": {}
-        },
-        "indexes": {
-          "SystemModstamp": {
-            "unique": false
-          },
-          "Id": {
-            "unique": true
-          }
-        },
-        "applied_at": "2018-04-19T07:15:04.734666Z"
       }
     },
     {
@@ -244,12 +164,96 @@
       }
     },
     {
-      "object_name": "Bet__c",
+      "object_name": "Match__c",
       "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "Participant_Visitor__c": {},
+          "GameActivity__c": {},
+          "Name": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "Date__c": {},
+          "CreatedDate": {},
+          "Participant_Home__c": {},
+          "question__c": {},
+          "Id": {}
+        },
         "indexes": {
-          "webuser__c": {
+          "SystemModstamp": {
             "unique": false
           },
+          "Id": {
+            "unique": true
+          }
+        },
+        "applied_at": "2018-04-19T07:15:04.734666Z"
+      }
+    },
+    {
+      "object_name": "Participant__c",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "IsDeleted": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "image__c": {},
+          "Description__c": {}
+        },
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          }
+        },
+        "applied_at": "2018-04-18T21:54:48.688060Z"
+      }
+    },
+    {
+      "object_name": "Product2",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": false,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "image__c": {},
+          "Name": {},
+          "DisplayUrl": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "pic__c": {},
+          "CreatedById": {},
+          "Id": {},
+          "Description": {}
+        },
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          }
+        },
+        "applied_at": "2018-03-28T08:50:21.079683Z"
+      }
+    },
+    {
+      "object_name": "heroku_logs__c",
+      "config": {
+        "indexes": {
           "SystemModstamp": {
             "unique": false
           },
@@ -258,30 +262,27 @@
           },
           "externalid__c": {
             "unique": true
-          },
-          "userid__c": {
-            "unique": false
           }
         },
         "sf_max_daily_api_calls": 30000,
         "access": "read_write",
         "upsert_field": "externalid__c",
-        "applied_at": "2018-06-04T13:12:23.912939Z",
+        "applied_at": "2018-06-04T11:40:32.456056Z",
         "sf_polling_seconds": 600,
-        "sf_notify_enabled": true,
+        "sf_notify_enabled": false,
         "fields": {
-          "webuser__c": {},
-          "Winner__c": {},
+          "method__c": {},
           "useragent__c": {},
-          "webuser__r__userid__c": {},
           "Name": {},
           "IsDeleted": {},
           "SystemModstamp": {},
+          "url__c": {},
+          "creationdate__c": {},
           "CreatedDate": {},
+          "CreatedById": {},
           "Id": {},
           "userid__c": {},
-          "externalid__c": {},
-          "Match__c": {}
+          "externalid__c": {}
         }
       }
     },
@@ -318,14 +319,17 @@
     }
   ],
   "connection": {
-    "app_name": "yourdemo",
+    "app_name": "arieunier-test-docker",
     "organization_id": "00D0N000000k4t2UAA",
-    "exported_at": "2018-06-12T07:38:29.344161+00:00",
+    "exported_at": "2018-12-13T15:21:36.177754+00:00",
     "features": {
       "poll_db_no_merge": true,
       "poll_external_ids": false,
       "rest_count_only": false
-    }
+    },
+    "api_version": "44.0",
+    "name": "",
+    "logplex_log_enabled": false
   },
   "version": 1
 }
