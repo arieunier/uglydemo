@@ -43,37 +43,6 @@
       }
     },
     {
-      "object_name": "FormContent__c",
-      "config": {
-        "access": "read_write",
-        "sf_notify_enabled": true,
-        "sf_polling_seconds": 600,
-        "sf_max_daily_api_calls": 30000,
-        "fields": {
-          "CreatedDate": {},
-          "Id": {},
-          "IsDeleted": {},
-          "Name": {},
-          "SystemModstamp": {},
-          "externalid__c": {},
-          "email__c": {},
-          "FormValue__c": {}
-        },
-        "indexes": {
-          "Id": {
-            "unique": true
-          },
-          "SystemModstamp": {
-            "unique": false
-          },
-          "externalid__c": {
-            "unique": true
-          }
-        },
-        "upsert_field": "externalid__c"
-      }
-    },
-    {
       "object_name": "GameActivity__c",
       "config": {
         "access": "read_only",
