@@ -96,6 +96,40 @@
                   .sidenav {padding-top: 15px;}
                   .sidenav a {font-size: 18px;}
                 }
+                #note {
+                    position: absolute;
+                    z-index: 6001;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background: #fde073;
+                    text-align: center;
+                    line-height: 2.5;
+                    overflow: hidden;
+                    -webkit-box-shadow: 0 0 5px black;
+                    -moz-box-shadow:    0 0 5px black;
+                    box-shadow:         0 0 5px black;
+                }
+                .cssanimations.csstransforms #note {
+                    -webkit-transform: translateY(-50px);
+                    -webkit-animation: slideDown 2.5s 0.1s 1 ease forwards;
+                    -moz-transform:    translateY(-50px);
+                    -moz-animation:    slideDown 2.5s 0.5s 1 ease forwards;
+                }
+            
+                #close {
+                  position: absolute;
+                  right: 10px;
+                  top: 9px;
+                  text-indent: -9999px;
+                  background: url(images/close.png);
+                  height: 16px;
+                  width: 16px;
+                  cursor: pointer;
+                }
+                .cssanimations.csstransforms #close {
+                  display: none;
+                }
         </style>
         
     </head>
@@ -111,8 +145,18 @@
                   <a href="/photos_display">Display all photos</a>
                   <a href="/form">Insert a form content</a>
                 </div>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ugliest Web Application - Insert lead object</span>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ugliest Web Application - Insert FormContent object</span>
             
+            
+            {% if registered %}
+            <div id="note">
+                Thanks for your registering, we'll contact you shortly. <a id="close">[close]</a>
+            </div>
+            {% endif %}
+      
+            
+
+
             <div class="container">
                 <form action="" method="post" role="form">
                         {{ form.csrf }}
@@ -140,15 +184,26 @@
             $('#example').DataTable();
         });
     </script>
-          <script>
-                function openNav() {
-                    document.getElementById("mySidenav").style.width = "250px";
-                }
-                
-                function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                }
-                </script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <script>
+        close = document.getElementById("close");
+        close.addEventListener('click', function() {
+            note = document.getElementById("note");
+            note.style.display = 'none';
+        }, false);
+    </script>
 
   </body>
+
+
+
 </html>

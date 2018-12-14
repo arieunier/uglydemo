@@ -182,7 +182,8 @@ def form():
             formvalue=request.form['formvalue']
             email=request.form['email']
             postgres.__saveLeadEntry(name, email, formvalue)
-            return utils.returnResponse("Thanks for registering", 200, cookie, cookie_exists)
+            data = render_template('form.html', form=form, registered=True)
+            return utils.returnResponse(data, 200, cookie, cookie_exists)
         
         print(form)
         if form.validate():
