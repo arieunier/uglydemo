@@ -20,11 +20,12 @@
     {"plan": "heroku-postgresql:hobby-dev"}, 
     {"plan": "heroku-redis:hobby-dev"},
     {"plan": "herokuconnect:free"},
-    {"plan": "newrelic:hawke"},
+    {"plan": "newrelic:free"},
     {"plan": "bucketeer:hobbyist"},
     {"plan": "cloudinary:starter"},
     {"plan": "cloudamqp:tiger"},
-    {"plan": "pusher:sandbox"}
+    {"plan": "pusher:sandbox"},
+    {"plan": "logdna:free"}
   ],
   "buildpacks": [
     {
