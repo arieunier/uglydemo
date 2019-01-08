@@ -37,7 +37,6 @@ echo "Adding Cloudinary"
 heroku addons:create cloudinary:starter
 echo "Adding CloudAMQP"
 heroku addons:create cloudamqp:tiger
-
 echo "Adding Pusher"
 heroku addons:create pusher:sandbox
 

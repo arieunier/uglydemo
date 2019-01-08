@@ -18,7 +18,13 @@
   },
   "addons": [
     {"plan": "heroku-postgresql:hobby-dev"}, 
-    {"plan": "heroku-redis:hobby-dev"}
+    {"plan": "heroku-redis:hobby-dev"},
+    {"plan": "herokuconnect:free"},
+    {"plan": "newrelic:hawke"},
+    {"plan": "bucketeer:hobbyist"},
+    {"plan": "cloudinary:starter"},
+    {"plan": "cloudamqp:tiger"},
+    {"plan": "pusher:sandbox"}
   ],
   "buildpacks": [
     {
