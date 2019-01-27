@@ -1,7 +1,6 @@
 from heroku_kafka import HerokuKafkaProducer, HerokuKafkaConsumer
 from kafka import  TopicPartition
 from kafka.structs import OffsetAndMetadata
-from libs import postgres
 import os 
 import uuid, ujson
 
