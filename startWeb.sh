@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cp newrelic.ini.template newrelic.ini
 newrelic-admin generate-config $NEW_RELIC_LICENSE_KEY newrelic.ini
 env
