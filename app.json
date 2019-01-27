@@ -14,6 +14,10 @@
     "worker-rabbitmq" : {
       "quantity": 0,
       "size": "standard-2x"
+    },
+    "worker-kafka" : {
+      "quantity": 0,
+      "size": "standard-1x"
     }
   },
   "addons": [

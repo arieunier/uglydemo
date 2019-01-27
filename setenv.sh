@@ -5,11 +5,6 @@ export BUCKETEER_AWS_SECRET_ACCESS_KEY=`heroku config:get BUCKETEER_AWS_SECRET_A
 export BUCKETEER_BUCKET_NAME=`heroku config:get BUCKETEER_BUCKET_NAME --app yourdemo`
 export CLOUDINARY_URL=`heroku config:get CLOUDINARY_URL --app yourdemo`
 export DATABASE_URL=`heroku config:get DATABASE_URL --app yourdemo`
-#export KAFKA_CLIENT_CERT=`heroku config:get KAFKA_CLIENT_CERT`
-#export KAFKA_CLIENT_CERT_KEY=`heroku config:get KAFKA_CLIENT_CERT_KEY`
-#export KAFKA_PREFIX=`heroku config:get KAFKA_PREFIX`
-#export KAFKA_TRUSTED_CERT=`heroku config:get KAFKA_TRUSTED_CERT`
-#export KAFKA_URL=`heroku config:get KAFKA_URL`
 export LOGDNA_KEY=`heroku config:get LOGDNA_KEY --app yourdemo`
 export NEW_RELIC_APP_NAME=`heroku config:get NEW_RELIC_APP_NAME --app yourdemo`
 export NEW_RELIC_CONFIG_FILE=`heroku config:get NEW_RELIC_CONFIG_FILE --app yourdemo`
@@ -20,10 +15,18 @@ export REDIS_URL=`heroku config:get REDIS_URL --app yourdemo`
 export STAGING_DATABASE_URL=`heroku config:get STAGING_DATABASE_URL --app yourdemo`
 export CLOUDAMQP_APIKEY=`heroku config:get CLOUDAMQP_APIKEY --app yourdemo`
 export CLOUDAMQP_URL=`heroku config:get CLOUDAMQP_URL --app yourdemo`
-#export FOLLOWANALYTICS_API_KEY=`heroku config:get FOLLOWANALYTICS_API_KEY`
-#export FOLLOWANALYTICS_API_TOKEN=`heroku config:get FOLLOWANALYTICS_API_TOKEN`
-#export FOLLOWANALYTICS_SOR_IDENTIFIER=`heroku config:get FOLLOWANALYTICS_SOR_IDENTIFIER`
 export PUSHER_SOCKET_URL=`heroku config:get PUSHER_SOCKET_URL --app yourdemo`
 export PUSHER_URL=`heroku config:get PUSHER_URL --app yourdemo`
-export APP_CLIENT_ID="3MVG9TSaZ8P6zP1oXkMT5WIwgzVlOBV3Urqlg2YFon3Rm4SHogUcOrkxdyD0QRccBNl0lIvxsQWs3JBJzQWFR"
-export APP_CLIENT_SECRET="358448473132570702"
+#oauth flow
+export APP_CLIENT_ID="3MVG9TSaZ8P6zP1oXkMT5WIwgzXQZXKdG560bpIt_.O7NGAwNDcr1b1WS_3EG7Hi9JBgSvcdcqr4E.N5gP8Yi"
+export APP_CLIENT_SECRET="youcantknow"
+# kafka part
+export KAFKA_CLIENT_CERT=`heroku config:get KAFKA_CLIENT_CERT  --app yourdemo`
+export KAFKA_CLIENT_CERT_KEY=`heroku config:get KAFKA_CLIENT_CERT_KEY  --app yourdemo`
+export KAFKA_PREFIX=`heroku config:get KAFKA_PREFIX  --app yourdemo`
+export KAFKA_TRUSTED_CERT=`heroku config:get KAFKA_TRUSTED_CERT  --app yourdemo`
+export KAFKA_URL=`heroku config:get KAFKA_URL  --app yourdemo`
+export KAFKA_TOPIC_READ="topicRead"
+export KAFKA_TOPIC_WRITE="topicWrite"
+# logs
+export LOG_LEVEL=debug
