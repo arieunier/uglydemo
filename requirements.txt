@@ -16,5 +16,5 @@ heroku-kafka
 pika
 cognitive_face
 pillow
-#pusher
+pusher
 wtforms
