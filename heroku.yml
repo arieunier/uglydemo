@@ -4,8 +4,14 @@ build:
     worker-rabbitmq: Dockerfile
 run:
   web : cp newrelic.ini.template newrelic.ini; newrelic-admin generate-config $NEW_RELIC_LICENSE_KEY newrelic.ini; env; newrelic-admin run-program gunicorn --workers=4 run:app
-  worker-rabbitmq: export PYTHONPATH=.:./libs; python worker_rabbitmq.py 
-  worker-kafka: export PYTHONPATH=.:./libs; python worker_kafka.py 
+  worker-rabbitmq: 
+      command:
+        - export PYTHONPATH=.:./libs; python worker_rabbitmq.py 
+      image: worker
+  worker-kafka: 
+      command:
+        - export PYTHONPATH=.:./libs; python worker_kafka.py 
+      image:  worker
 release:
   command:
     - echo "This command will be executed BEFORE starting the program on a docker hopefully"
