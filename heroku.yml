@@ -9,10 +9,10 @@ run:
       command: 
           - /opt/app/startWorkerRabbitMq.sh
       image: web
-  #worker-kafka: 
-  #    command:
-  #      - /opt/app/startWorkerKafka.sh
-  #    image:  web
+  worker-kafka: 
+      command:
+        - /opt/app/startWorkerKafka.sh
+      image:  web
 release:
   command:
     - echo "This command will be executed BEFORE starting the program on a docker hopefully"
