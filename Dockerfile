@@ -11,16 +11,18 @@ RUN apk add --no-cache --update python3 python3 python-dev py-setuptools py-yaml
     rm -r /root/.cache
 RUN apk add --no-cache --update postgresql-dev gcc python3-dev musl-dev openssl libffi-dev zlib zlib-dev jpeg jpeg-dev
 RUN apk add --no-cache --update ffmpeg
+
 ADD ./requirements.txt /tmp/requirements.txt
 
 # Install dependencies
 run echo "pip update"
 RUN pip install --upgrade pip
+run pip install -U cffi
+run pip install -U pillow 
+
 run echo "installing pip requirements"
-run pip install --no-cache-dir -U -r /tmp/requirements.txt
-#run pip install -U cffi
-#run pip install -U pillow 
-#run pip install Flask gunicorn Jinja2 psycopg2  SQLAlchemy urllib3 psycopg2-binary ujson redis newrelic uuid flask-bootstrap boto3 pika cognitive_face pillow pusher
+run pip install -U  --no-cache-dir Flask gunicorn Jinja2 psycopg2  SQLAlchemy urllib3 psycopg2-binary ujson redis newrelic uuid flask-bootstrap boto3 pika cognitive_face pillow
+run pip install -U --no-cache-dir -U -r /tmp/requirements.txt --upgrade 
 #kafka-python
 #heroku-kafka
 #RUN pip install --no-cache-dir -q -r /tmp/requirements.txt
