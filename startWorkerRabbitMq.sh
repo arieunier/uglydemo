@@ -1,3 +1,4 @@
-#!/bin/bash
-export PYTHONPATH=.:./libs
-python worker_rabbitmq.py 
+#!/bin/sh
+PYTHONPATH=.:./libs
+export PYTHONPATH
+python3 worker_rabbitmq.py 

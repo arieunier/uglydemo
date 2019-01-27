@@ -6,8 +6,8 @@ build:
 run:
   web : /opt/app/startWeb.sh
   worker-rabbitmq: 
-      command:
-        - ./startWorkerRabbitMq.sh
+      command: 
+          - /opt/app/startWorkerRabbitMq.sh
       image: web
   #worker-kafka: 
   #    command:

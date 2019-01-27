@@ -1,3 +1,4 @@
-#!/bin/bash
-export PYTHONPATH=.:./libs
-python worker_kafka.py 
+#!/bin/sh
+PYTHONPATH=.:./libs
+export PYTHONPATH
+python3 worker_kafka.py 
