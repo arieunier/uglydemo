@@ -3,14 +3,14 @@ build:
     web: Dockerfile
     worker-rabbitmq: Dockerfile
 run:
-  web : cp newrelic.ini.template newrelic.ini; newrelic-admin generate-config $NEW_RELIC_LICENSE_KEY newrelic.ini; env; newrelic-admin run-program gunicorn --workers=4 run:app
+  web : /app/startWeb.sh
   worker-rabbitmq: 
       command:
-        - export PYTHONPATH=.:./libs; python worker_rabbitmq.py 
+        - /app/startWorkerRabbitMq.sh
       image: web
   worker-kafka: 
       command:
-        - export PYTHONPATH=.:./libs; python worker_kafka.py 
+        - /app/startWorkerKafka.sh
       image:  web
 release:
   command:
