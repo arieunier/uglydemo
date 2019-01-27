@@ -24,7 +24,7 @@ run pip install -U pusher
 
 run echo "installing pip requirements"
 #run pip install -U  --no-cache-dir Flask gunicorn Jinja2 psycopg2  SQLAlchemy urllib3 psycopg2-binary ujson redis newrelic uuid flask-bootstrap boto3 pika cognitive_face pillow
-run pip install -U --no-cache-dir -U -r /tmp/requirements.txt --upgrade 
+run pip install -U --no-cache-dir -U -r /tmp/requirements.txt 
 #kafka-python
 #heroku-kafka
 #RUN pip install --no-cache-dir -q -r /tmp/requirements.txt
