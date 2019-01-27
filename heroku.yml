@@ -8,5 +8,5 @@ run:
   worker-kafka: export PYTHONPATH=.:./libs; python worker_kafka.py 
 release:
   command:
-    - echo "This command will be executed BEFORE starting the program"
+    - echo "This command will be executed BEFORE starting the program on a docker hopefully"
   image: web
