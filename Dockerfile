@@ -30,7 +30,7 @@ run pip install -U --no-cache-dir -U -r /tmp/requirements.txt
 #RUN pip install --no-cache-dir -q -r /tmp/requirements.txt
 
 # Add our code
-ADD ./ /opt/app/
+ADD . /opt/app/
 WORKDIR /opt/app
 
 # Expose is NOT supported by Heroku
@@ -39,6 +39,8 @@ WORKDIR /opt/app
 # Run the image as a non-root user
 #RUN adduser -D myuser
 #USER myuser
+
+run  chmod -R 755 /usr/lib/python3.6/site-packages/
 
 # Run the app.  CMD is required to run on Heroku
 # $PORT is set by Heroku			

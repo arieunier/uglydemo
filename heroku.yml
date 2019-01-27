@@ -2,12 +2,13 @@ build:
   docker:
     web: Dockerfile
     worker-rabbitmq: Dockerfile
+    #worker-kafka: Dockerfile
 run:
-  web : ./startWeb.sh
-  #worker-rabbitmq: 
-  #    command:
-  #      - /opt/app/startWorkerRabbitMq.sh
-  #    image: web
+  web : /opt/app/startWeb.sh
+  worker-rabbitmq: 
+      command:
+        - ./startWorkerRabbitMq.sh
+      image: web
   #worker-kafka: 
   #    command:
   #      - /opt/app/startWorkerKafka.sh
