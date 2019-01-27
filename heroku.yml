@@ -7,11 +7,11 @@ run:
   worker-rabbitmq: 
       command:
         - export PYTHONPATH=.:./libs; python worker_rabbitmq.py 
-      image: worker
+      image: web
   worker-kafka: 
       command:
         - export PYTHONPATH=.:./libs; python worker_kafka.py 
-      image:  worker
+      image:  web
 release:
   command:
     - echo "This command will be executed BEFORE starting the program on a docker hopefully"
