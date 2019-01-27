@@ -11,10 +11,11 @@ newrelic
 uuid
 flask-bootstrap
 boto3
-kafka-python
+kafka-python==1.3.5
 heroku-kafka
 pika
 cognitive_face
 pillow
 pusher
+pyopenssl
 wtforms
