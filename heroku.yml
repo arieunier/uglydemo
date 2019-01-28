@@ -1,10 +1,10 @@
 build:
   docker:
-    #web: Dockerfile
+    web: Dockerfile
     worker-rabbitmq: Dockerfile
     worker-kafka: Dockerfile
 run:
-  #web : /opt/app/startWeb.sh
+  web : /opt/app/startWeb.sh
   worker-rabbitmq: 
       command: 
           - /opt/app/startWorkerRabbitMq.sh
@@ -17,3 +17,5 @@ release:
   command:
     - echo "This command will be executed BEFORE starting the program on a docker hopefully"
   image: web
+
+
