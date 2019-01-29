@@ -25,6 +25,25 @@ if (DATABASE_URL != ''):
     session_postgres = dbSession_postgres()
     logger.info("{} - Initialization done Postgresql ".format(datetime.now()))
 
+def __getSFUsers():
+    key = {"sqlRequest" : "getSFUsers"}
+    tmp_dict = rediscache.__getCache(key)
+    if ((tmp_dict == None) or (tmp_dict == '')):
+
+        logger.info("Data not found in cache : heroku log data not known")
+        sql ="select name, sfid from salesforce.user order by name ASC"
+        data = __execRequest(sql, {})  
+        rediscache.__setCache(key, ujson.dumps(data), 60)
+    else:
+        logger.info("Data found in redis, using it directly")
+        data = ujson.loads(tmp_dict)
+
+    logger.debug(data)
+    return data   
+
+
+    
+
 
 def __getGameActivityById(gameactivity__c):
     key = {"sqlRequest" : "__getGameActivityById", "activityId" : gameactivity__c}
@@ -206,6 +225,28 @@ def __saveImageAnalysisEntry(attributes):
             %(ImageWidth__c)s, %(ImageHeight__c)s, %(FaceTop__c)s, %(FaceLeft__c)s, %(FaceWidth__c)s, %(FaceHeight__c)s  )
             """
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,attributes)
+
+
+def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host):
+    if (MANUAL_ENGINE_POSTGRES != None):
+        externalid = uuid.uuid4().__str__()
+        creationdate  = datetime.now()
+        sqlRequest = """ insert into salesforce.guest__c(Firstname__c, Lastname__c, Email__c, Company__c, Phone_Number__c, Host__c) values 
+         (%(Firstname)s, %(Lastname)s, %(Email)s, %(Company)s, %(PhoneNumber)s, %(Host)s)   """
+
+        MANUAL_ENGINE_POSTGRES.execute(sqlRequest,
+            {
+            'Firstname' : Firstname,
+            'Lastname' : Lastname,
+            'Company' : Company,
+            'Email' : Email,
+            'PhoneNumber' : PhoneNumber,
+            'Host' : Host })    
+
+
+
+
+
 
 def __saveLeadEntry(name, email, formvalue):
     if (MANUAL_ENGINE_POSTGRES != None):

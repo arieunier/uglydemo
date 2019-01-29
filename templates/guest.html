@@ -21,24 +21,6 @@
         <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
 
         <link href="../static/stylesheets/background.css" rel="stylesheet">
-        
-        {% if FA_APIKEY %}
-        <script type="text/javascript" src="../static/js/fa-sdk-web.js"></script>
-            <script type="text/javascript">
-                FollowAnalytics.initialize({
-                    FAID: '{{ FA_APIKEY }}',
-                    bundleId: 'Mobile App',
-                    defaultIcon: 'https://s3-eu-west-1.amazonaws.com/fa-sdks/sdk-web/web-sdk-assets/followanalytics192.png',
-                    optInAnalytics: true,
-                    analyticsScope: FollowAnalytics.AnalyticsScope.FULL
-                });
-                FollowAnalytics.setOptInAnalytics(true);
-                FollowAnalytics.registerForPushNotifications();
-                FollowAnalytics.setUserId('{{ userid }}')
-                FollowAnalytics.logEvent('Example log name', details)
-                FollowAnalytics.isRegisteredForPushNotifications();
-            </script>
-        {% endif %}
 
         {% if PUSHER_KEY %}
         <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
@@ -145,7 +127,7 @@
                   <a href="/photos_display">Display all photos</a>
                   <a href="/form">Insert a form content</a>
                 </div>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ugliest Web Application - Insert FormContent object</span>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Guest Registration Self Service</span>
             
             
             {% if registered %}
@@ -161,17 +143,29 @@
                 <form action="" method="post" role="form">
                         {{ form.csrf }}
                     <div class="form-group">
-                        <label for="name">name:</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?" required=True>
+                        <label for="Firstname">Firstname:</label>
+                        <input type="text" class="form-control" id="Firstname" name="Firstname" placeholder="What's your Firstname?" required=True>
 
-                        <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Your email will be used to contact you." required=True>
+                        <label for="Lastname">Lastname:</label>
+                        <input type="text" class="form-control" id="Lastname" name="Lastname" placeholder="What's your Lastname?" required=True>
+
+                        <label for="Email">Email:</label>
+                        <input type="text" class="form-control" id="Email" name="Email" placeholder="Your email will be used to contact you." required=True>
                      
-                        <label for="formvalue">Free text:</label>
-                        <input type="text" class="form-control" id="formvalue" name="formvalue" placeholder="Reason you reach out to us?" required=True>
+                        <label for="company">Company:</label>
+                        <input type="text" class="form-control" id="Company" name="Company" placeholder="Your company" required=True>
                      
+                        <label for="PhoneNumber">Phone Number:</label>
+                        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Your phone number" required=True>
+
+                        <label for="Host">Your host:</label>
+                        <select name="Host"> 
+                            {% for entry in hosts %}
+                                <option value={{ entry['sfid'] }}>{{ entry['name'] }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-success">Sign Up</button>
+                    <button type="submit" class="btn btn-success">Register</button>
                 </form> 
             </div>
 
