@@ -30,3 +30,5 @@ export KAFKA_TOPIC_READ="topicRead"
 export KAFKA_TOPIC_WRITE="topicWrite"
 # logs
 export LOG_LEVEL=debug
+# blower$
+export BLOWERIO_URL=`heroku config:get BLOWERIO_URL  --app yourdemo`

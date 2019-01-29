@@ -39,7 +39,6 @@ KAFKA_GROUP_ID=os.getenv('KAFKA_CONSUMERGRP', KAFKA_PREFIX + 'my-consumer-group'
 
 
 
-
 logger.debug("KAFKA_PREFIX="+KAFKA_PREFIX)
 logger.debug("KAKFA_TOPIC_READ="+KAFKA_TOPIC_READ)
 logger.debug("KAKFA_TOPIC_WRITE="+KAFKA_TOPIC_WRITE)
@@ -90,7 +89,7 @@ def receiveFromKafka(mode):
         ssl_ca= KAFKA_TRUSTED_CERT, # Client trusted cert string
         prefix= KAFKA_PREFIX, # Prefix provided by heroku,
         auto_offset_reset="smallest",
-        max_poll_records=10,
+        max_poll_records=100,
         enable_auto_commit=True,
         auto_commit_interval_ms=100,
         group_id=KAFKA_GROUP_ID,
@@ -145,6 +144,19 @@ def receiveFromKafka(mode):
             dictValue = ujson.loads(message.value)
             logger.debug(dictValue)
             
+            if ('Action_Type__c' in dictValue['data']['payload']):
+                logger.info("Action type detected = " +dictValue['data']['payload']['Action_Type__c'])
+                
+
+
+            #{'2019-01-29 15:46:51.220','DEBUG',36,kafka_utils.py:146-receiveFromKafka:-->
+            # {'data': {'schema': 'e3flgnDmzh5aELarIPsEKw', 
+            #   'payload': 
+            #   {'Guest_Phone_Number__c': '643395652', 'Host_Lastname__c': 'Rieunier', 'CreatedById': '0050N000007G26yQAC', 'Action_Type__c': 'SendSMS', 'CreatedDate': '2019-01-29T15:46:50.210Z', 
+            #    'Host_Firstname__c': 'Augustin', 'Guest_Firstname__c': 'Marco', 'Guest_Lastname__c': 'Verrati'}, 
+            #   'event': {'replayId': 18}}, 'channel': '/event/Host_Accept_Guest__e'}}
+
+
             consumer.commit()
         except Exception as e :
             import traceback
