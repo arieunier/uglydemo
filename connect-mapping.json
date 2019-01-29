@@ -43,6 +43,35 @@
       }
     },
     {
+      "object_name": "Contact",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "AccountId": {},
+          "AssistantName": {},
+          "Name": {},
+          "Birthdate": {},
+          "IsDeleted": {},
+          "AssistantPhone": {},
+          "SystemModstamp": {},
+          "CreatedDate": {},
+          "Id": {},
+          "CleanStatus": {}
+        },
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          }
+        }
+      }
+    },
+    {
       "object_name": "GameActivity__c",
       "config": {
         "access": "read_only",
@@ -66,6 +95,47 @@
           }
         },
         "applied_at": "2018-06-08T16:28:26.980928Z"
+      }
+    },
+    {
+      "object_name": "Guest__c",
+      "config": {
+        "access": "read_write",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "Lastname__c": {},
+          "Company__c": {},
+          "Check_in__c": {},
+          "Email__c": {},
+          "Firstname__c": {},
+          "External_Picture_URL__c": {},
+          "Phone_Number__c": {},
+          "Name": {},
+          "Check_out__c": {},
+          "OwnerId": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "Status__c": {},
+          "CreatedDate": {},
+          "Id": {},
+          "Host__c": {},
+          "externalid__c": {},
+          "AcceptedByHost__c": {}
+        },
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          },
+          "externalid__c": {
+            "unique": true
+          }
+        },
+        "upsert_field": "externalid__c"
       }
     },
     {
@@ -220,6 +290,32 @@
       }
     },
     {
+      "object_name": "User",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": false,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "Name": {},
+          "SystemModstamp": {},
+          "ContactId": {},
+          "FirstName": {},
+          "LastName": {}
+        },
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          }
+        }
+      }
+    },
+    {
       "object_name": "heroku_logs__c",
       "config": {
         "indexes": {
@@ -288,9 +384,9 @@
     }
   ],
   "connection": {
-    "app_name": "arieunier-test-docker",
+    "app_name": "yourdemo",
     "organization_id": "00D0N000000k4t2UAA",
-    "exported_at": "2018-12-13T15:21:36.177754+00:00",
+    "exported_at": "2019-01-29T19:29:09.726567+00:00",
     "features": {
       "poll_db_no_merge": true,
       "poll_external_ids": false,
