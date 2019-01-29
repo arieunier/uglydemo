@@ -4,7 +4,7 @@ from kafka.structs import OffsetAndMetadata
 import os 
 import uuid, ujson
 
-from libs import logs
+from libs import logs,blower
 
 logger = logs.logger_init(loggername='app',
             filename="log.log",
@@ -60,7 +60,7 @@ def testKafkaHelperRCV():
     for message in consumer:
         logger.debug(message)
 
-def sendToKafka(data):
+def sendToKafka(data, topic=None):
     producer = HerokuKafkaProducer(
         url= KAFKA_URL, # Url string provided by heroku
         ssl_cert= KAFKA_CLIENT_CERT, # Client cert string
@@ -73,8 +73,10 @@ def sendToKafka(data):
     The .send method will automatically prefix your topic with the KAFKA_PREFIX
     NOTE: If the message doesn't seem to be sending try `producer.flush()` to force send.
     """
-    logger.debug("about to send {} to topic {}".format(data, KAFKA_TOPIC_WRITE))
-    producer.send(KAFKA_TOPIC_WRITE, data.encode())
+    if topic==None:
+        topic=KAFKA_TOPIC_WRITE
+    logger.debug("about to send {} to topic {}".format(data, topic))
+    producer.send(topic, data.encode())
     producer.flush()
     logger.debug("done")
 
@@ -145,16 +147,25 @@ def receiveFromKafka(mode):
             logger.debug(dictValue)
             
             if ('Action_Type__c' in dictValue['data']['payload']):
+                # Will now write to the actionType topic
                 logger.info("Action type detected = " +dictValue['data']['payload']['Action_Type__c'])
-                
+                actionTypeTopic = dictValue['data']['payload']['Action_Type__c']
+                sendToKafka(ujson.dumps(dictValue['data']['payload']),actionTypeTopic )
+                # sends the sms
+                message = "Dear {} {} , {} {} is aware of your arrival and will be here shortly".format(
+                    dictValue['data']['payload']['Guest_Firstname__c'],
+                    dictValue['data']['payload']['Guest_Lastname__c'],
+                    dictValue['data']['payload']['Host_Firstname__c'],
+                    dictValue['data']['payload']['Host_Lastname__c'],
+                )
+                blower.sendMessage(message, dictValue['data']['payload']['Guest_Phone_Number__c'])
 
-
-            #{'2019-01-29 15:46:51.220','DEBUG',36,kafka_utils.py:146-receiveFromKafka:-->
-            # {'data': {'schema': 'e3flgnDmzh5aELarIPsEKw', 
-            #   'payload': 
-            #   {'Guest_Phone_Number__c': '643395652', 'Host_Lastname__c': 'Rieunier', 'CreatedById': '0050N000007G26yQAC', 'Action_Type__c': 'SendSMS', 'CreatedDate': '2019-01-29T15:46:50.210Z', 
-            #    'Host_Firstname__c': 'Augustin', 'Guest_Firstname__c': 'Marco', 'Guest_Lastname__c': 'Verrati'}, 
-            #   'event': {'replayId': 18}}, 'channel': '/event/Host_Accept_Guest__e'}}
+                #{'2019-01-29 15:46:51.220','DEBUG',36,kafka_utils.py:146-receiveFromKafka:-->
+                # {'data': {'schema': 'e3flgnDmzh5aELarIPsEKw', 
+                #   'payload': 
+                #   {'Guest_Phone_Number__c': '643395652', 'Host_Lastname__c': 'Rieunier', 'CreatedById': '0050N000007G26yQAC', 'Action_Type__c': 'SendSMS', 'CreatedDate': '2019-01-29T15:46:50.210Z', 
+                #    'Host_Firstname__c': 'Augustin', 'Guest_Firstname__c': 'Marco', 'Guest_Lastname__c': 'Verrati'}, 
+                #   'event': {'replayId': 18}}, 'channel': '/event/Host_Accept_Guest__e'}}
 
 
             consumer.commit()
