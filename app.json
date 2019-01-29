@@ -28,7 +28,8 @@
     {"plan": "cloudinary:starter"},
     {"plan": "cloudamqp:lemur"},
     {"plan": "pusher:sandbox"},
-    {"plan": "logdna:zepto"}
+    {"plan": "logdna:zepto"},
+    {"plan": "blowerio:starter"}
   ],
   "buildpacks": [
     {
