@@ -17,18 +17,18 @@
     },
     "worker-kafka" : {
       "quantity": 0,
-      "size": "standard-1x"
+      "size": "standard-2x"
     }
   },
   "addons": [
-    {"plan": "heroku-postgresql:hobby-dev"}, 
+    {"plan": "heroku-postgresql:hobby-dev"},
     {"plan": "heroku-redis:hobby-dev"},
-    {"plan": "newrelic:free"},
+    {"plan": "newrelic:hawke"},
     {"plan": "bucketeer:hobbyist"},
     {"plan": "cloudinary:starter"},
-    {"plan": "cloudamqp:tiger"},
+    {"plan": "cloudamqp:lemur"},
     {"plan": "pusher:sandbox"},
-    {"plan": "logdna:free"}
+    {"plan": "logdna:zepto"}
   ],
   "buildpacks": [
     {
@@ -45,6 +45,21 @@
       "STAGING_DATABASE_URL": {
         "Description" : "staging database - for review apps",
         "required" : false
+      },
+      "LOG_LEVEL": {
+        "Description" : "Log level for applications",
+        "value" : "DEBUG",
+        "required" : true
+      },
+      "KAFKA_TOPIC_READ": {
+        "Description" : "Kafka incoming topic",
+        "value" : "topicRead",
+        "required" : true
+      },
+      "KAFKA_TOPIC_WRITE": {
+        "Description" : "Kafka outgoing topic",
+        "value" : "topicWrite",
+        "required" : true
       }
   },
   "environments": {
