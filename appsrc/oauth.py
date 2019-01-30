@@ -19,6 +19,39 @@ API_URL = '/services/data/v44.0'
 
 
 
+@app.route('/oauth2', methods=['GET'])
+def oauth():
+    try:
+        cookie, cookie_exists =  utils.getCookie()
+
+        if (postgres.__checkHerokuLogsTable()):
+            postgres.__saveLogEntry(request, cookie)
+        logger.debug(utils.get_debug_all(request))
+
+        key = {'url' : request.url}
+        tmp_dict = None
+        #data_dict = None
+        tmp_dict = rediscache.__getCache(key)
+        if ((tmp_dict == None) or (tmp_dict == '')):
+            logger.info("Data not found in cache")
+
+
+            data = render_template("oauth.html", FA_APIKEY=utils.FOLLOWANALYTICS_API_KEY, userid=cookie)
+
+            rediscache.__setCache(key, data, 60)
+        else:
+            logger.info("Data found in redis, using it directly")
+            data = tmp_dict
+            
+        
+        return utils.returnResponse(data, 200, cookie, cookie_exists)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        cookie, cookie_exists =  utils.getCookie()
+        return utils.returnResponse("An error occured, check logDNA for more information", 200, cookie, cookie_exists)
+
+
 
 @app.route('/sfconnectedapp')
 def sfconnectedapp():
@@ -97,10 +130,6 @@ def homepage():
 
     return utils.returnResponse(data, 200, cookie, cookie_exists)
 
-
-
-
-
 def make_authorization_url():
     # Generate a random string for the state parameter
     # Save it for use later to prevent xsrf attacks
@@ -125,6 +154,7 @@ def is_valid_state(state):
     val = rediscache.__getCache(state)
     logger.info(val)
     return  val != None and val != '' and val == b'created'
+
 
 
 #if __name__ == '__main__':

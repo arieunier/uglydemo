@@ -39,6 +39,8 @@ echo "Adding CloudAMQP"
 heroku addons:create cloudamqp:tiger
 echo "Adding Pusher"
 heroku addons:create pusher:sandbox
+echo "adding blowerio"
+heroku addons:create blowerio:starter
 
 
 echo "adding CF env"
