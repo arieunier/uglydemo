@@ -18,6 +18,14 @@
     "worker-browsernotification" : {
       "quantity": 1,
       "size": "standard-1x"
+    },
+    "worker-smsgenericmessage" : {
+      "quantity": 1,
+      "size": "standard-1x"
+    },
+    "worker-smsguestmessage" : {
+      "quantity": 1,
+      "size": "standard-1x"
     }
   },
   "addons": [
@@ -53,13 +61,28 @@
         "required" : true
       },
       "KAFKA_TOPIC_READ": {
-        "Description" : "Kafka incoming topic",
+        "Description" : "Kafka incoming default topic",
         "value" : "topicRead",
         "required" : true
       },
       "KAFKA_TOPIC_WRITE": {
-        "Description" : "Kafka outgoing topic",
+        "Description" : "Kafka outgoing default topic",
         "value" : "topicWrite",
+        "required" : true
+      },
+      "KAFKA_TOPIC_BROWSERNOTIFICATION": {
+        "Description" : "Kafka incoming topic for platform event used to send browsers notifications",
+        "value" : "salesforce.push_notification__e",
+        "required" : true
+      },
+      "KAFKA_TOPIC_SMSGUEST": {
+        "Description" : "Kafka incoming topic for platform event used to communicate with guests over SMS",
+        "value" : "host_accept_guest__e",
+        "required" : true
+      },
+      "KAFKA_TOPIC_SMSGENERIC": {
+        "Description" : "Kafka incoming topic for platform event used to communicate with guests over SMS from lightning",
+        "value" : "send_smss__e",
         "required" : true
       },
       "CF_KEY": {
