@@ -11,12 +11,6 @@ fi
 
 APPLICATION_NAME=$1
 
-echo "######### Adding Redis addon"
-heroku addons:create heroku-redis:premium-0 --app $APPLICATION_NAME
-
-echo "######### Adding redismonitor"
-heroku addons:create redismonitor:free --app $APPLICATION_NAME
-
 echo "######### Adding Heroku Connect addon"
 heroku addons:create herokuconnect --app $APPLICATION_NAME
 
@@ -31,24 +25,36 @@ heroku config:add NEW_RELIC_CONFIG_FILE='/app/newrelic.ini'  --app $APPLICATION_
 heroku config:add NEW_RELIC_LOG_LEVEL=debug --app $APPLICATION_NAME
 heroku config:set NEW_RELIC_APP_NAME="$APPLICATION_NAME" --app $APPLICATION_NAME
 
-echo "Adding Bucketeer"
-heroku addons:create bucketeer:hobbyist
 echo "Adding Cloudinary"
 heroku addons:create cloudinary:starter
+
+echo "Adding Bucketeer"
+heroku addons:create bucketeer:hobbyist
 echo "Adding CloudAMQP"
 heroku addons:create cloudamqp:tiger
+
 echo "Adding Pusher"
 heroku addons:create pusher:sandbox
-echo "adding blowerio"
-heroku addons:create blowerio:starter
+
+# updates: all below addons are now used by accessing variables from another application.
+# they'll be attached during the app creation
+
+echo "Attaching Buckeeter addon from another application"
+
+#echo "adding blowerio"
+#heroku addons:create blowerio:starter
+#echo "######### Adding Redis addon"
+#heroku addons:create heroku-redis:premium-0 --app $APPLICATION_NAME
+#echo "######### Adding redismonitor"
+#heroku addons:create redismonitor:free --app $APPLICATION_NAME
 
 
 echo "adding CF env"
 heroku config:set CF_KEY='UPDATE_WITH_OWN_KEY'
+
+
 #heroku releases --app $APPLICATION_NAME
 #heroku config --app $APPLICATION_NAME
 #heroku info --app $APPLICATION_NAME
 #heroku restart --app $APPLICATION_NAME
-
-
 #heroku kafka:topics:create `heroku config:get KAFKA_PREFIX`web-to-kafka

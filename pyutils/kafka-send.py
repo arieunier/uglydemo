@@ -1,7 +1,7 @@
 from libs import kafka_utils
 import ujson
 
-kafka_utils.KAFKA_TOPIC_WRITE='topicWrite'
+kafka_utils.KAFKA_TOPIC_WRITE='topicRead'
 
 for i in range(30):
     data = {'key' : i, 'value' : 'value of ' + str(i)}

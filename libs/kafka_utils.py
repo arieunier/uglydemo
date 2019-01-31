@@ -4,7 +4,7 @@ from kafka.structs import OffsetAndMetadata
 import os 
 import uuid, ujson
 
-from libs import logs,blower
+from libs import logs,blower, encode, notification
 
 logger = logs.logger_init(loggername='app',
             filename="log.log",
@@ -81,8 +81,13 @@ def sendToKafka(data, topic=None):
     logger.debug("done")
 
 
-def receiveFromKafka(mode):
+def receiveFromKafka(mode, topic_override=None):
 
+    TOPIC = KAFKA_TOPIC_READ
+    if (topic_override != None):
+        TOPIC = topic_override
+
+    logger.info("Will use topic = {}".format(TOPIC))
     consumer = HerokuKafkaConsumer(
         #KAKFA_TOPIC, # Optional: You don't need to pass any topic at all
         url= KAFKA_URL, # Url string provided by heroku
@@ -104,9 +109,9 @@ def receiveFromKafka(mode):
     """
     partition=1
     
-    tp = TopicPartition(KAFKA_PREFIX + KAFKA_TOPIC_READ, partition)
+    tp = TopicPartition(KAFKA_PREFIX + TOPIC, partition)
     if (mode == "subscribe"):
-        consumer.subscribe(topics=(KAFKA_TOPIC_READ))
+        consumer.subscribe(topics=(TOPIC))
     elif (mode == "assign"):
         consumer.assign([tp])
 
@@ -115,7 +120,7 @@ def receiveFromKafka(mode):
     for assignment in assignments:
         logger.debug(assignment)
     
-    partitions=consumer.partitions_for_topic(KAFKA_PREFIX + KAFKA_TOPIC_READ)
+    partitions=consumer.partitions_for_topic(KAFKA_PREFIX + TOPIC)
     if (partitions):
         for partition in partitions:
             logger.debug("Partition="+str(partition))
@@ -146,40 +151,33 @@ def receiveFromKafka(mode):
             dictValue = ujson.loads(message.value)
             logger.debug(dictValue)
             
-            if ('Action_Type__c' in dictValue['data']['payload']):
-                # Will now write to the actionType topic
-                logger.info("Action type detected = " +dictValue['data']['payload']['Action_Type__c'])
-                actionTypeTopic = dictValue['data']['payload']['Action_Type__c']
-                sendToKafka(ujson.dumps(dictValue['data']['payload']),actionTypeTopic )
-                # sends the sms
-                message = "Dear {} {} , {} {} is aware of your arrival and will be here shortly".format(
-                    dictValue['data']['payload']['Guest_Firstname__c'],
-                    dictValue['data']['payload']['Guest_Lastname__c'],
-                    dictValue['data']['payload']['Host_Firstname__c'],
-                    dictValue['data']['payload']['Host_Lastname__c'],
-                )
-                blower.sendMessage(message, dictValue['data']['payload']['Guest_Phone_Number__c'])
-
-                #{'2019-01-29 15:46:51.220','DEBUG',36,kafka_utils.py:146-receiveFromKafka:-->
-                # {'data': {'schema': 'e3flgnDmzh5aELarIPsEKw', 
-                #   'payload': 
-                #   {'Guest_Phone_Number__c': '643395652', 'Host_Lastname__c': 'Rieunier', 'CreatedById': '0050N000007G26yQAC', 'Action_Type__c': 'SendSMS', 'CreatedDate': '2019-01-29T15:46:50.210Z', 
-                #    'Host_Firstname__c': 'Augustin', 'Guest_Firstname__c': 'Marco', 'Guest_Lastname__c': 'Verrati'}, 
-                #   'event': {'replayId': 18}}, 'channel': '/event/Host_Accept_Guest__e'}}
-
+            if ('channel' in  dictValue): # means it's coming from a Platform EVENT
+                if ('host_accept_guest__e'  in dictValue['channel'].lower()): 
+                    logger.info("about to send a SMS using BLOWER")
+                    message = "Dear {} {} , {} {} is aware of your arrival and will be here shortly".format(
+                        dictValue['data']['payload']['Guest_Firstname__c'],
+                        dictValue['data']['payload']['Guest_Lastname__c'],
+                        dictValue['data']['payload']['Host_Firstname__c'],
+                        dictValue['data']['payload']['Host_Lastname__c'],
+                    )
+                    blower.sendMessage(message, dictValue['data']['payload']['Guest_Phone_Number__c'])
+                elif ('send_smss__e' in dictValue['channel'].lower()):
+                    logger.info("about to send a SMS using BLOWER")
+                    message = dictValue['data']['payload']['message__c']
+                    phone_Number = dictValue['data']['payload']['phone_Number__c'],
+                    blower.sendMessage(message, phone_Number)   
+                elif ('push_notification__e' in dictValue['channel'].lower()):
+                    logger.info("about to send a BROWSER NOTIFICATION using PUSHER")
+                    message = dictValue['data']['payload']['message__c']
+                    userid = dictValue['data']['payload']['userid__c'],
+                    notification.sendNotification(userid, message)
 
             consumer.commit()
         except Exception as e :
             import traceback
             traceback.print_exc()
-            #consumer.commit()
+            consumer.commit()
 
         i += 1
 
 
-#receiveFromKafka("subscribe")
-#import ujson
-#data = ujson.dumps({'key':'value'})
-#print(data)
-#sendToKafka_HardCoded(data)
-#testKafkaHelperRCV()
