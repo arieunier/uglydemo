@@ -4,7 +4,7 @@ from kafka.structs import OffsetAndMetadata
 import os 
 import uuid, ujson
 
-from libs import logs,blower, encode, notification
+from libs import logs,blower, notification
 
 logger = logs.logger_init(loggername='app',
             filename="log.log",
