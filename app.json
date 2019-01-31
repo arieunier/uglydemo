@@ -77,12 +77,12 @@
       },
       "KAFKA_TOPIC_SMSGUEST": {
         "Description" : "Kafka incoming topic for platform event used to communicate with guests over SMS",
-        "value" : "host_accept_guest__e",
+        "value" : "salesforce.host_accept_guest__e",
         "required" : true
       },
       "KAFKA_TOPIC_SMSGENERIC": {
         "Description" : "Kafka incoming topic for platform event used to communicate with guests over SMS from lightning",
-        "value" : "send_smss__e",
+        "value" : "salesforce.send_smss__e",
         "required" : true
       },
       "CF_KEY": {
