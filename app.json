@@ -61,6 +61,11 @@
         "Description" : "Kafka outgoing topic",
         "value" : "topicWrite",
         "required" : true
+      },
+      "CF_KEY": {
+      "Description" : "Cloudinary key for Image Recognition",
+      "value" : "Update Me",
+      "required" : true
       }
   },
   "environments": {
