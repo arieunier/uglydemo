@@ -16,15 +16,15 @@
       "size": "standard-1x"
     },
     "worker-browsernotification" : {
-      "quantity": 1,
+      "quantity": 0,
       "size": "standard-1x"
     },
     "worker-smsgenericmessage" : {
-      "quantity": 1,
+      "quantity": 0,
       "size": "standard-1x"
     },
     "worker-smsguestmessage" : {
-      "quantity": 1,
+      "quantity": 0,
       "size": "standard-1x"
     }
   },
