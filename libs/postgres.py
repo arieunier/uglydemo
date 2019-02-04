@@ -154,6 +154,25 @@ def __getMatchById(match_id):
     return data
 
 
+def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url):
+    sqlRequest = """
+    insert into public.badge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url) values
+    ((id)s, (guest_id)s, (guest_firstname)s, (guest_lastname)s, (guest_company)s, (host_firstname)s, (host_lastname)s, (badge_status)s, (badge_url)s)
+    """
+    if (MANUAL_ENGINE_POSTGRES != None):
+        MANUAL_ENGINE_POSTGRES.execute(sqlRequest, {
+            'id': id,
+            'guest_id': guest_id,
+            'guest_firstname': guest_firstname,
+            'guest_lastname': guest_lastname,
+            'guest_company': guest_company,
+            'host_firstname': host_firstname,
+            'host_lastname': host_lastname,
+            'badge_status': badge_status,
+            'badge_url': badge_url
+        })
+
+
 def __execRequest(strReq, Attributes):
     if (MANUAL_ENGINE_POSTGRES != None):
         result = MANUAL_ENGINE_POSTGRES.execute(strReq, Attributes)

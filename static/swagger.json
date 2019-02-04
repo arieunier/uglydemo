@@ -65,6 +65,81 @@
                     }
                 }
             }
+        },
+        "/badges": 
+        {
+            "post": 
+            {
+                "summary": "Creates a new badge for a user",
+                "description": "",
+                "operationId": "creates Badge",
+                "parameters": [
+                    {
+                        "name": "guest_id",
+                        "in": "query",
+                        "description": "the guest_id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "guest_firstname",
+                        "in": "query",
+                        "description": "guest_firstname",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "guest_lastname",
+                        "in": "query",
+                        "description": "guest_lastname",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "guest_company",
+                        "in": "query",
+                        "description": "tguest_company",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "host_firstname",
+                        "in": "query",
+                        "description": "host_firstname",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "host_lastname",
+                        "in": "query",
+                        "description": "host_lastname",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": "the message to send",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": 
+                {
+                    "200": 
+                    {
+                        "description": "success",
+                        "schema": 
+                        {
+                            "$ref": "#/definitions/simpleResponse"
+                        }
+                    },
+                    "404": 
+                    {
+                        "description": "Invalid input"
+                    }
+                }
+            }
         }
     },
     "definitions": {

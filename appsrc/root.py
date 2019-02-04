@@ -60,10 +60,6 @@ def contact():
         cookie, cookie_exists =  utils.getCookie()
         return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists)
 
-
-
-
-
 @app.route('/<filename>', methods=['GET'])
 def static_proxy(filename):
     if (filename == None or filename == ''):
