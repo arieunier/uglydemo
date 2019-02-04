@@ -11,7 +11,7 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
  
-
+GUESTFILE = "guest_v2.html"
 class ReusableForm(Form):
     Firstname = TextField('Firstname:', validators=[validators.required()])
     Lastname = TextField('Lastname:', validators=[validators.required()])
@@ -22,7 +22,7 @@ class ReusableForm(Form):
 
            
 
-@app.route('/guest', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def guest():
     try:
         cookie, cookie_exists =  utils.getCookie()
@@ -40,7 +40,7 @@ def guest():
             PhoneNumber=request.form['PhoneNumber']
             Host=request.form['Host']
             postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host)
-            data = render_template('guest.html', form=form, hosts=hosts['data'], registered=True)
+            data = render_template(GUESTFILE, form=form, hosts=hosts['data'], registered=True)
 
             return utils.returnResponse(data, 200, cookie, cookie_exists)
         
@@ -53,7 +53,7 @@ def guest():
         
         # gets the user
         
-        data = render_template('guest.html', form=form, hosts=hosts['data'])
+        data = render_template(GUESTFILE, form=form, hosts=hosts['data'])
         
         return utils.returnResponse(data, 200, cookie, cookie_exists)
     except Exception as e:

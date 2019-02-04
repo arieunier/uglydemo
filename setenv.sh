@@ -1,4 +1,4 @@
-APPNAME='infinite-escarpment-68092'
+APPNAME='yourdemo'
 
 export PYTHONPATH=.:./libs/:./appsrc/:./pyutils
 export BUCKETEER_AWS_ACCESS_KEY_ID=`heroku config:get BUCKETEER_AWS_ACCESS_KEY_ID --app $APPNAME`
