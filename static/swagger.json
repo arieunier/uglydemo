@@ -115,13 +115,6 @@
                         "description": "host_lastname",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "message",
-                        "in": "query",
-                        "description": "the message to send",
-                        "required": true,
-                        "type": "string"
                     }
                 ],
                 "responses": 
