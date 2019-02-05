@@ -65,8 +65,8 @@ def badgesmanagement():
         key = {'cookie' : cookie}
         tmp_dict = None
         #data_dict = None
-        tmp_dict = "a"
-        #tmp_dict = rediscache.__getCache(key)
+        
+        tmp_dict = rediscache.__getCache(key)
         if ((tmp_dict == None) or (tmp_dict == '')):
             logger.info("Data not found in cache")
             logger.debug(utils.get_debug_all(request))
@@ -91,7 +91,7 @@ def badgesmanagement():
                 actiontype = actionform.split('.')[0]
                 actionvalue = actionform.split('.')[1]
                 sqlUpdate = "update public.badge set badge_status=%(status)s where id=%(id)s"
-                sqlResult = postgres.__execRequestWithNoResult(sqlUpdate, {'status':actiontype, 'id':actionvalue})
+                postgres.__execRequestWithNoResult(sqlUpdate, {'status':actiontype, 'id':actionvalue})
             
             logger.info(tmp_dict)
             sqlRequest = "select Id, guest_firstname, guest_lastname, badge_status, creation_date from public.badge order by creation_date"
@@ -113,8 +113,6 @@ def save_created_state(state):
     # saves into redis
     rediscache.__setCache(state, "created", 3600)
         
-
-
 
 @app.route('/badges', methods=['POST', 'GET'])
 def badges():

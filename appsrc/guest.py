@@ -21,7 +21,7 @@ class ReusableForm(Form):
     Host = TextField('Host:', validators=[validators.required()])
 
            
-
+@app.route('/guest', methods=['GET', 'POST'])
 @app.route('/', methods=['GET', 'POST'])
 def guest():
     try:
