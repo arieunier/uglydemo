@@ -40,7 +40,7 @@ def guest():
             PhoneNumber=request.form['PhoneNumber']
             Host=request.form['Host']
             postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host)
-            data = render_template(GUESTFILE, form=form, hosts=hosts['data'], registered=True)
+            data = render_template(GUESTFILE)
 
             return utils.returnResponse(data, 200, cookie, cookie_exists)
         
@@ -54,6 +54,8 @@ def guest():
         # gets the user
         
         data = render_template(GUESTFILE, form=form, hosts=hosts['data'])
+
+
         
         return utils.returnResponse(data, 200, cookie, cookie_exists)
     except Exception as e:

@@ -156,8 +156,8 @@ def __getMatchById(match_id):
 
 def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url):
     sqlRequest = """
-    insert into public.badge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url) values
-    (%(id)s, %(guest_id)s, %(guest_firstname)s, %(guest_lastname)s, %(guest_company)s, %(host_firstname)s, %(host_lastname)s, %(badge_status)s, %(badge_url)s)
+    insert into public.badge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url, creation_date) values
+    (%(id)s, %(guest_id)s, %(guest_firstname)s, %(guest_lastname)s, %(guest_company)s, %(host_firstname)s, %(host_lastname)s, %(badge_status)s, %(badge_url)s, NOW())
     """
     if (MANUAL_ENGINE_POSTGRES != None):
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest, {
@@ -172,6 +172,9 @@ def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, 
             'badge_url': badge_url
         })
 
+def __execRequestWithNoResult(strReq):
+    if (MANUAL_ENGINE_POSTGRES != None):
+        result = MANUAL_ENGINE_POSTGRES.execute(strReq, None)
 
 def __execRequest(strReq, Attributes):
     if (MANUAL_ENGINE_POSTGRES != None):

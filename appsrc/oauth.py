@@ -1,24 +1,24 @@
 from flask import request, abort 
 import urllib
-from flask import Flask
+from flask import Flask, redirect
 from appsrc import app, logger
-from libs import  utils, rediscache
+from libs import  utils, rediscache, postgres
 from uuid import uuid4
 import urllib
 import requests
 import ujson, os
 
-APP_CLIENT_ID = os.getenv("APP_CLIENT_ID")
-APP_CLIENT_SECRET =  os.getenv("APP_CLIENT_SECRET")
-SF_REQUEST_TOKEN_URL='https://login.salesforce.com/services/oauth2/token'
-SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/oauth2/authorize?'
-REDIRECT_URI_CODE = "http://localhost:5000/sfconnectedapp"
+APP_CLIENT_ID = os.getenv("APP_CLIENT_ID", "ChangeMe")
+APP_CLIENT_SECRET =  os.getenv("APP_CLIENT_SECRET", "ChangeMe")
+SF_REQUEST_TOKEN_URL= os.getenv("SF_REQUEST_TOKEN_URL",'https://test.salesforce.com/services/oauth2/token')
+SF_AUTHORIZE_TOKEN_URL= os.getenv("SF_AUTHORIZE_TOKEN_URL",'https://test.salesforce.com/services/oauth2/authorize?')
+REDIRECT_URI_CODE = os.getenv("REDIRECT_URI_CODE", "http://localhost:5000/sfconnectedapp")
 SF_INSTANCE_URL = ""
 API_URL = '/services/data/v44.0'
 ##app = Flask(__name__)
 
 
-
+"""
 @app.route('/oauth2', methods=['GET'])
 def oauth():
     try:
@@ -50,8 +50,7 @@ def oauth():
         traceback.print_exc()
         cookie, cookie_exists =  utils.getCookie()
         return utils.returnResponse("An error occured, check logDNA for more information", 200, cookie, cookie_exists)
-
-
+"""
 
 @app.route('/sfconnectedapp')
 def sfconnectedapp():
@@ -95,9 +94,9 @@ def sfconnectedapp():
     key = {'cookie' : cookie}
     rediscache.__setCache(key, ujson.dumps(response), 3600)
 
-
-    return "got a code! %s" % response 
-
+    return redirect("/badgesmanagement", code=302)
+    
+    #return "got a code! %s" % response 
 
 @app.route('/oauth')
 def homepage():
@@ -124,11 +123,14 @@ def homepage():
             url = SF_AUTHORIZE_TOKEN_URL + urllib.parse.urlencode(params)
             logger.info(url)
             data = text % url
+            return utils.returnResponse(data, 200, cookie, cookie_exists)
     else:
         data = tmp_dict
+        return redirect("/badgesmanagement", 302)
+        #return badges.__display_all_badges(request, cookie, cookie_exists, data)
+    
     
 
-    return utils.returnResponse(data, 200, cookie, cookie_exists)
 
 def make_authorization_url():
     # Generate a random string for the state parameter
@@ -146,6 +148,7 @@ def make_authorization_url():
     logger.error(url)
     return url
 
+
 def save_created_state(state):
     # saves into redis
     rediscache.__setCache(state, "created", 3600)
@@ -154,7 +157,6 @@ def is_valid_state(state):
     val = rediscache.__getCache(state)
     logger.info(val)
     return  val != None and val != '' and val == b'created'
-
 
 
 #if __name__ == '__main__':

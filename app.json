@@ -89,7 +89,32 @@
       "Description" : "Cloudinary key for Image Recognition",
       "value" : "Update Me",
       "required" : true
-      }
+      },
+      "APP_CLIENT_ID": {
+        "Description" : "oAuth Consumer Key with Salesforce",
+        "value" : "Update Me",
+        "required" : true
+        },
+      "APP_CLIENT_SECRET": {
+        "Description" : "oAuth Consumer Secret with Salesforce",
+        "value" : "Update Me",
+        "required" : true
+        },
+      "REDIRECT_URI_CODE": {
+        "Description" : "oAuth Consumer Secret with Salesforce",
+        "value" : "Update Me",
+        "required" : true
+      },
+      "SF_REQUEST_TOKEN_URL": {
+        "Description" : "Salesforce oauth token url",
+        "value" : "https://salesforce.com/services/oauth2/token",
+        "required" : true
+      } ,
+      "SF_AUTHORIZE_TOKEN_URL": {
+        "Description" : "Salesforce oauth autorize url",
+        "value" : "https://salesforce.com/services/oauth2/authorize?",
+        "required" : true
+      }  
   },
   "environments": {
     "test": {

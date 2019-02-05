@@ -7,6 +7,9 @@ from flask_bootstrap import Bootstrap
 from libs import postgres , utils , logs, rediscache, notification, kafka_utils
 from appsrc import app, logger
 from flask import make_response
+import traceback
+import urllib
+from uuid import uuid4
 
 # badge content
 # uid 
@@ -19,16 +22,89 @@ from flask import make_response
 # status
 # badge image url
 
-"""
-    create table public.badge(id varchar(35) not null, guest_id varchar(35) not null, guest_firstname varchar(255) not null, guest_lastname varchar(255) not null,
-    guest_company varchar(255), host_firstname varchar(35) not null, host_lastname varchar(35) not null, badge_status varchar(35), badge_url varchar(255))
-
-    insert into public.badge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url) values
-    ('123', 'a0E0E000001sXBkUAM', 'test', 'test', 'test', 'first', 'last', 'status', 'www.google.fr')
-"""
+BADGE_FILE="badgesmanagement.html"
 
 #functions
 # add
+
+APP_CLIENT_ID = os.getenv("APP_CLIENT_ID", "ChangeMe")
+APP_CLIENT_SECRET =  os.getenv("APP_CLIENT_SECRET", "ChangeMe")
+SF_REQUEST_TOKEN_URL= os.getenv("SF_REQUEST_TOKEN_URL",'https://test.salesforce.com/services/oauth2/token')
+SF_AUTHORIZE_TOKEN_URL= os.getenv("SF_AUTHORIZE_TOKEN_URL",'https://test.salesforce.com/services/oauth2/authorize?')
+REDIRECT_URI_CODE = os.getenv("REDIRECT_URI_CODE", "http://localhost:5000/sfconnectedapp")
+SF_INSTANCE_URL = ""
+API_URL = '/services/data/v44.0'
+
+
+
+@app.route("/initBadges", methods=['GET'])
+def initBadges():
+    try:
+
+        # sqlRequestDrop = "drop table public.badge";
+        #postgres.__execRequestWithNoResult(sqlRequestDrop)
+        sqlRequestCreate = """
+        create table public.badge(id varchar(255) not null primary key, guest_id varchar(255) not null, guest_firstname varchar(255) not null, guest_lastname varchar(255) not null,
+        guest_company varchar(255), host_firstname varchar(255) not null, host_lastname varchar(255) not null, badge_status varchar(255), badge_url varchar(255), creation_date timestamp not null)
+
+        """
+        
+        postgres.__execRequestWithNoResult(sqlRequestCreate)
+        return "{'Result':'Ok'}"
+    except Exception as e :
+        traceback.print_exc()
+        cookie, cookie_exists =  utils.getCookie()
+        return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists) 
+
+
+@app.route('/badgesmanagement', methods=['GET'])
+def badgesmanagement():
+    try:
+        logger.debug(utils.get_debug_all(request))
+        cookie, cookie_exists =  utils.getCookie()
+        key = {'cookie' : cookie}
+        tmp_dict = None
+        #data_dict = None
+        tmp_dict = rediscache.__getCache(key)
+        if ((tmp_dict == None) or (tmp_dict == '')):
+            logger.info("Data not found in cache")
+            logger.debug(utils.get_debug_all(request))
+            text = 'User is not authenticated, please log in ! <a href="%s">Authenticate with Salesforce</a>'
+                    
+            state = str(uuid4())
+            save_created_state(state)
+            params = {"client_id": APP_CLIENT_ID,
+                    "response_type": "code",
+                    "state": state,
+                    "redirect_uri": REDIRECT_URI_CODE,
+                    "scope": "full refresh_token"}
+
+            url = SF_AUTHORIZE_TOKEN_URL + urllib.parse.urlencode(params)
+            logger.info(url)
+            data = text % url
+            return utils.returnResponse(data, 200, cookie, cookie_exists)
+        else:
+            logger.info(tmp_dict)
+            sqlRequest = sqlRequest = "select Id, guest_firstname, guest_lastname, badge_status, creation_date from public.badge order by creation_date"
+            sqlResult = postgres.__execRequest(sqlRequest, None)
+            data = render_template(BADGE_FILE,
+                            columns=sqlResult['columns'],
+                            entries = sqlResult['data'])
+            return utils.returnResponse(data, 200, cookie, cookie_exists) 
+
+
+    except Exception as e :
+        import traceback
+        traceback.print_exc()
+        cookie, cookie_exists =  utils.getCookie()
+        return utils.returnResponse("An error occured, check logDNA for more information", 200, cookie, cookie_exists)
+
+
+def save_created_state(state):
+    # saves into redis
+    rediscache.__setCache(state, "created", 3600)
+        
+
 
 
 @app.route('/badges', methods=['POST', 'GET'])
@@ -45,7 +121,7 @@ def badges():
             host_lastname = request.args.get('host_lastname')
             # id is auto generated
             uid = uuid.uuid4().__str__()
-            badge_status = 'INACTIVE'
+            badge_status = 'ACTIVE'
             badge_url = "FIXME"
             # status is set to default -> INACTIVE (status are inactive / active )
             # url will be calculated
@@ -62,9 +138,12 @@ def badges():
         elif (request.method == 'GET'):
             logger.error(utils.get_debug_all(request))
             cookie, cookie_exists =  utils.getCookie()
-            # gets inseeid
-            sqlRequest = "select * from public.badge"
-            data = postgres.__execRequest(sqlRequest, None)
+            sqlRequest = sqlRequest = "select * from public.badge"
+            attributes = None
+            if ('badge_id' in request.args):
+                sqlRequest += " where id = %(badge_id)s"
+                attributes = {"badge_id": request.args.get('badge_id')}
+            data = postgres.__execRequest(sqlRequest, attributes)
             return utils.returnResponse(ujson.dumps(data), 200, cookie, cookie_exists) 
 
     except Exception as e:
@@ -73,12 +152,7 @@ def badges():
         cookie, cookie_exists =  utils.getCookie()
         return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists) 
 
-
-
-
 # with user identity management
 
 # revoke
-
-# get
 

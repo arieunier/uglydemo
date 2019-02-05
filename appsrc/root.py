@@ -66,7 +66,7 @@ def static_proxy(filename):
         return root()
     return app.send_static_file(filename)
 
-@app.route('/index', methods=['GET'])
+@app.route('/ugly', methods=['GET'])
 def root():
     try:
         cookie, cookie_exists =  utils.getCookie()
