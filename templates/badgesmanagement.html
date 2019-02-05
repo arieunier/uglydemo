@@ -7,8 +7,31 @@
         <meta name="description" content="">
         <meta name="author" content="">
    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
 
         <style type="text/css">
+            .inline {
+                display: inline;
+              }
+              
+              .link-button {
+                background: none;
+                border: none;
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+                font-size: 1em;
+                font-family: serif;
+              }
+              .link-button:focus {
+                outline: none;
+              }
+              .link-button:active {
+                color:red;
+              }
             .form-style-6{
                 font: 95% Arial, Helvetica, sans-serif;
                 max-width: 400px;
@@ -93,33 +116,52 @@
     <body>
             <div class="form-style-6">
                     <h1>Badges Management Application</h1>
-                    <table id="example" class="table table-striped table-inverse table-bordered table-hover" cellspacing="0" width="100%"> 
-                            <thead>
-                                <th> Creation Date </th>
-                                <th> Firstname </th>
-                                <th> LastName </th>
-                                <th> Badge Status </th>
-                            </thead>
-                        <tbody>
-                                {% for entry in entries %}
-                                <tr>
-                                        <td> {{ entry['creation_date'] }} </td>
-                                    <td> {{ entry['guest_firstname'] }} </td>
-                                    <td> {{ entry['guest_lastname'] }} </td>
-                                    <td> {{ entry['badge_status'] }} </td>
-                                </tr>
-                                {% endfor %}
-                        </tbody>
-                        <tfoot>
-                                <th> {{ columns['guest_firstname'] }} </th>
-                                <th> {{ columns['guest_lastname'] }} </th>
-                                <th> {{ columns['badge_status'] }} </th>
-                        </tfoot>
-                      </table>
-                      
+            </div>     
+            <div class="container"></div>
+                <table class="table table-hover w-auto" id="table"> 
+                        <thead>
+                            <th> Creation Date </th>
+                            <th> Firstname </th>
+                            <th> LastName </th>
+                            <th> Badge Status </th>
+                            <th> Activate </th>
+                            <th> Revoke </th>
+                        </thead>
+                    <tbody>
+                            {% for entry in entries %}
+                            <tr>
+                                <td> {{ entry['creation_date'] }} </td>
+                                <td> {{ entry['guest_firstname'] }} </td>
+                                <td> {{ entry['guest_lastname'] }} </td>
+                                <td> {{ entry['badge_status'] }} </td>
+                                <td>
+                                <form method="post" action="/badgesmanagement" class="inline">
+                                <button type="submit" name="action" value="ACTIVE.{{ entry['id'] }}" class="link-button">
+                                        Activate
+                                      </button>
+                                </form>
+                                </td>                                      
+                                <td>
+                                <form method="post" action="/badgesmanagement" class="inline">
+                                <button type="submit" name="action" value="INACTIVE.{{ entry['id'] }}" class="link-button">
+                                                Revoke
+                                    </button>
+                                </form>
+                                </td>                                      
 
-                      
-                
+                            </tr>
+                            {% endfor %}
+                    </tbody>
+                    <tfoot>
+                            <th> Creation Date </th>
+                            <th> Firstname </th>
+                            <th> LastName </th>
+                            <th> Badge Status </th>
+                            <th> Activate </th>
+                            <th> Revoke </th>
+                    </tfoot>
+                </table>
+            </div>
   </body>
 </html>
 

@@ -172,9 +172,10 @@ def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, 
             'badge_url': badge_url
         })
 
-def __execRequestWithNoResult(strReq):
+def __execRequestWithNoResult(strReq, attributes=None):
     if (MANUAL_ENGINE_POSTGRES != None):
-        result = MANUAL_ENGINE_POSTGRES.execute(strReq, None)
+        result = MANUAL_ENGINE_POSTGRES.execute(strReq, attributes)
+
 
 def __execRequest(strReq, Attributes):
     if (MANUAL_ENGINE_POSTGRES != None):

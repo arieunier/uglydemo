@@ -57,7 +57,7 @@ def initBadges():
         return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists) 
 
 
-@app.route('/badgesmanagement', methods=['GET'])
+@app.route('/badgesmanagement', methods=['GET', 'POST'])
 def badgesmanagement():
     try:
         logger.debug(utils.get_debug_all(request))
@@ -65,7 +65,8 @@ def badgesmanagement():
         key = {'cookie' : cookie}
         tmp_dict = None
         #data_dict = None
-        tmp_dict = rediscache.__getCache(key)
+        tmp_dict = "a"
+        #tmp_dict = rediscache.__getCache(key)
         if ((tmp_dict == None) or (tmp_dict == '')):
             logger.info("Data not found in cache")
             logger.debug(utils.get_debug_all(request))
@@ -84,8 +85,16 @@ def badgesmanagement():
             data = text % url
             return utils.returnResponse(data, 200, cookie, cookie_exists)
         else:
+            if request.method == 'POST':
+                logger.info("post detected")
+                actionform = request.form['action']
+                actiontype = actionform.split('.')[0]
+                actionvalue = actionform.split('.')[1]
+                sqlUpdate = "update public.badge set badge_status=%(status)s where id=%(id)s"
+                sqlResult = postgres.__execRequestWithNoResult(sqlUpdate, {'status':actiontype, 'id':actionvalue})
+            
             logger.info(tmp_dict)
-            sqlRequest = sqlRequest = "select Id, guest_firstname, guest_lastname, badge_status, creation_date from public.badge order by creation_date"
+            sqlRequest = "select Id, guest_firstname, guest_lastname, badge_status, creation_date from public.badge order by creation_date"
             sqlResult = postgres.__execRequest(sqlRequest, None)
             data = render_template(BADGE_FILE,
                             columns=sqlResult['columns'],
