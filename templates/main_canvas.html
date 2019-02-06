@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Flask!</title>
+		<!-- Include all the canvas JS dependencies in one file -->
+		<script type="text/javascript" src="/static/js/canvas-all.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="/static/css/canvas.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/talk.css"/>
+	</head>
+	<body>
+		<script>
+    Sfdc.canvas(function() {
+        var sr = JSON.parse('{{ request_json|safe }}');
+        // Save the token
+        Sfdc.canvas.oauth.token(sr.client.oauthToken);
+        var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
+        /**
+         * Check if we are in sites/communities.  If so, derive the url accordingly.
+         */
+        var isSites=null != sr.context.user.networkId;
+        var siteHost = isSites ? sr.context.user.siteUrl : sr.client.instanceUrl;
+        if (siteHost.lastIndexOf("/") == siteHost.length-1){
+            siteHost = siteHost.substring(0,siteHost.length-1);
+        }
+        Sfdc.canvas.byId('fullname').innerHTML = sr.context.user.fullName;
+        Sfdc.canvas.byId('profile').src = (photoUri.indexOf("http")==0 ? "" :siteHost) + photoUri;
+        Sfdc.canvas.byId('firstname').innerHTML = sr.context.user.firstName;
+        Sfdc.canvas.byId('lastname').innerHTML = sr.context.user.lastName;
+        Sfdc.canvas.byId('username').innerHTML = sr.context.user.userName;
+        Sfdc.canvas.byId('email').innerHTML = sr.context.user.email;
+        Sfdc.canvas.byId('company').innerHTML = sr.context.organization.name;
+		
+		var queryUrl = sr.context.links.queryUrl;
+		Sfdc.canvas.client.ajax(queryUrl+'?q=SELECT+Id+FROM+Lead+LIMIT+1',
+			{client:sr.client,
+				success: function(data) {
+					console.log(data);
+				}
+			}
+		);
+    });
+
+</script>
+ <div id="page">
+  <div id="content">
+    <div id="header">
+      <h1>Hello <span id='fullname'></span>...</h1>
+      <h2>Welcome to the Force.com Canvas Python example!</h2>
+    </div>
+
+    <div id="canvas-content">
+      <h1>Canvas Request</h1>
+      <h2>Below is some information received in the Canvas Request:</h2>
+      <div id="canvas-request">
+        <table border="0" width="100%">
+	        <tr>
+	            <td></td>
+	            <td><b>First Name: </b><span id='firstname'></span></td>
+	            <td><b>Last Name: </b><span id='lastname'></span></td>
+	        </tr>
+	        <tr>
+	            <td><img id='profile' border="0" src="" /></td>
+	            <td><b>Username: </b><span id='username'></span></td>
+	            <td colspan="2"><b>Email Address: </b><span id='email'></span></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td colspan="3"><b>Company: </b><span id='company'></span></td>
+	        </tr>
+       </table>
+    </div>
+
+    </div>
+  </div>
+
+	<div id="footercont">
+	    <div id="footerleft">
+	        <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a></p>
+	    </div>
+	    <div id="footerright">
+	        <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a></p>
+	    </div>
+	</div>
+</div>
+	</body>
+</html>

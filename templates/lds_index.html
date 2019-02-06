@@ -1,0 +1,175 @@
+<html lang="en">
+	<head>
+    <!------ Include the above in your HEAD tag ---------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="/../static/assets/styles/salesforce-lightning-design-system.css" />
+
+    {% if PUSHER_KEY %}
+    <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+    <script>
+      var pusher = new Pusher( '{{ PUSHER_KEY }}' , {
+      cluster: 'eu'
+      });
+      var channel = pusher.subscribe( '{{ userid }}' );
+      channel.bind('my-event', function(data) {
+      alert('An event was triggered with message: ' + data.message);
+    });
+      </script>
+    {% endif %}
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+    </style>
+
+
+
+    </head>
+
+
+	<body>
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/">Root menu</a>
+          <a href="/tables">Tables application</a>
+          <a href="/votes">Quizz application</a>
+          <a href="/photos">Selfie application</a>
+          <a href="/photos_display">Display all photos</a>
+          <a href="/form">Insert a form content</a>
+        </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ugliest Web Application - Main Menu</span>
+    
+
+		<div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Modules</h3>
+                <div class="pull-right">
+                  <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                    <i class="glyphicon glyphicon-filter"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="panel-body">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+              </div>
+              <div class="slds-tabs_default">
+                <ul class="slds-tabs_default__nav" role="tablist">
+                  <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a>
+                  </li>
+                  <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a>
+                  </li>
+                  <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a>
+                  </li>
+                </ul>
+                <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
+                <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+                <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
+              </div>
+              
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                      <th>Module Name</th><th>Description</th><th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td>Tables </td>
+                    <td>Displays Salesforce Tables </td>
+                    <td><a href="../tables"> Go</a> </td>
+                  </tr>
+                  
+                  <tr>
+                        <td>Quizz</td>
+                        <td>Answer simple questions</td>
+                        <td><a href="../votes"> Go</a> </td>
+                 </tr>
+                 <tr>
+                    <td>Cheese </td>
+                    <td>Selfie time!</td>
+                    <td><a href="../photos"> Go</a> </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>    
+        </div>
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Ugliest web application - 2017 - <a href="mailto:arieunier@salesforce.com?Subject=Hello%20again" target="_top">Contact</a></p>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+      
+      <!-- jQuery -->
+      <script src="../static/js/bootstrap-panel.js"></script>
+      <script>
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+
+  </body>
+</html>                              

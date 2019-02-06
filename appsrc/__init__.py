@@ -24,7 +24,7 @@ logs.logger_init(loggername='app',
 
 logger = logs.logger 
 
-from appsrc import root, votes, tables, photo, oauth, guest, form, notifications, badges
+from appsrc import root, votes, tables, photo, oauth, guest, form, notifications, badges, canvas
 
 
 """

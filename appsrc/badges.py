@@ -29,8 +29,8 @@ BADGE_FILE="badgesmanagement.html"
 
 APP_CLIENT_ID = os.getenv("APP_CLIENT_ID", "ChangeMe")
 APP_CLIENT_SECRET =  os.getenv("APP_CLIENT_SECRET", "ChangeMe")
-SF_REQUEST_TOKEN_URL= os.getenv("SF_REQUEST_TOKEN_URL",'https://test.salesforce.com/services/oauth2/token')
-SF_AUTHORIZE_TOKEN_URL= os.getenv("SF_AUTHORIZE_TOKEN_URL",'https://test.salesforce.com/services/oauth2/authorize?')
+SF_REQUEST_TOKEN_URL= os.getenv("SF_REQUEST_TOKEN_URL",'https://login.salesforce.com/services/oauth2/token')
+SF_AUTHORIZE_TOKEN_URL= os.getenv("SF_AUTHORIZE_TOKEN_URL",'https://login.salesforce.com/services/oauth2/authorize?')
 REDIRECT_URI_CODE = os.getenv("REDIRECT_URI_CODE", "http://localhost:5000/sfconnectedapp")
 SF_INSTANCE_URL = ""
 API_URL = '/services/data/v44.0'
