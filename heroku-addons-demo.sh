@@ -41,18 +41,24 @@ heroku addons:create pusher:sandbox
 
 echo "Attaching Buckeeter addon from another application"
 
-#echo "adding blowerio"
-#heroku addons:create blowerio:starter
-#echo "######### Adding Redis addon"
-#heroku addons:create heroku-redis:premium-0 --app $APPLICATION_NAME
-#echo "######### Adding redismonitor"
-#heroku addons:create redismonitor:free --app $APPLICATION_NAME
+echo "adding blowerio"
+heroku addons:create blowerio:starter
 
 
 echo "adding CF env"
 heroku config:set CF_KEY='UPDATE_WITH_OWN_KEY'
-
-
+echo "adding other environment variables"
+heroku config:set CF_KEY='LOG_LEVEL=DEBUG'
+heroku config:set CF_KEY='KAFKA_TOPIC_READ=topicRead'
+heroku config:set CF_KEY='KAFKA_TOPIC_WRITE=topicWrite '
+heroku config:set CF_KEY='KAFKA_TOPIC_BROWSERNOTIFICATION=salesforce.push_notification__e'
+heroku config:set CF_KEY='KAFKA_TOPIC_SMSGUEST=salesforce.host_accept_guest__e'
+heroku config:set CF_KEY='KAFKA_TOPIC_SMSGENERIC=salesforce.send_smss__e'
+heroku config:set CF_KEY='APP_CLIENT_ID='
+heroku config:set CF_KEY='APP_CLIENT_SECRET='
+heroku config:set CF_KEY='REDIRECT_URI_CODE=https://yourdemo.herokuapp.com/sfconnectedapp'
+heroku config:set CF_KEY='SF_REQUEST_TOKEN_URL=https://login.salesforce.com/services/oauth2/token'
+heroku config:set CF_KEY='SF_AUTHORIZE_TOKEN_URL=https://login.salesforce.com/services/oauth2/authorize?'
 #heroku releases --app $APPLICATION_NAME
 #heroku config --app $APPLICATION_NAME
 #heroku info --app $APPLICATION_NAME
