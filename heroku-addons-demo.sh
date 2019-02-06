@@ -11,8 +11,12 @@ fi
 
 APPLICATION_NAME=$1
 
+
 echo "######### Adding Heroku Connect addon"
 heroku addons:create herokuconnect --app $APPLICATION_NAME
+
+echo "######### Adding Redis addon"
+heroku addons:create heroku-redis:premium-0 --app $APPLICATION_NAME
 
 echo "######### Updating environment variables"
 heroku config:add STAGING_DATABASE_URL=`heroku config:get DATABASE_URL --app $APPLICATION_NAME` --app $APPLICATION_NAME
@@ -56,7 +60,7 @@ heroku config:set KAFKA_TOPIC_SMSGUEST='salesforce.host_accept_guest__e'
 heroku config:set KAFKA_TOPIC_SMSGENERIC='salesforce.send_smss__e'
 heroku config:set APP_CLIENT_ID=''
 heroku config:set APP_CLIENT_SECRET=''
-heroku config:set REDIRECT_URI_CODE='https://yourdemo.herokuapp.com/sfconnectedapp'
+heroku config:set REDIRECT_URI_CODE='https://'$APPLICATION_NAME'.herokuapp.com/sfconnectedapp'
 heroku config:set SF_REQUEST_TOKEN_URL='https://login.salesforce.com/services/oauth2/token'
 heroku config:set SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/oauth2/authorize?'
 
