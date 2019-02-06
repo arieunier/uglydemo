@@ -26,6 +26,7 @@ def returnResponse(data, code, cookie_value, cookie_exists):
     resp = make_response(data, code )
     if (cookie_exists == False):
         resp.set_cookie(APPNAME, cookie_value)
+        
     return resp 
 
       

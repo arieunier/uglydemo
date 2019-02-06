@@ -65,9 +65,11 @@ def badgesmanagement():
         key = {'cookie' : cookie}
         tmp_dict = None
         #data_dict = None
-        
+        key_fromCanvas = {'cookie' : cookie, 'fromCanvas':True}
+
         tmp_dict = rediscache.__getCache(key)
-        if ((tmp_dict == None) or (tmp_dict == '')):
+        tmp_dict_fromCanvas = rediscache.__getCache(key_fromCanvas)
+        if ( ((tmp_dict == None) or (tmp_dict == '')) and ((tmp_dict_fromCanvas == None) or (tmp_dict_fromCanvas == ''))) :
             logger.info("Data not found in cache")
             logger.debug(utils.get_debug_all(request))
             text = 'User is not authenticated, please log in ! <a href="%s">Authenticate with Salesforce</a>'

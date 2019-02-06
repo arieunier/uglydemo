@@ -102,17 +102,17 @@
         },
       "REDIRECT_URI_CODE": {
         "Description" : "oAuth Consumer Secret with Salesforce",
-        "value" : "Update Me",
+        "value" : "https://yourdemo.herokuapp.com/sfconnectedapp",
         "required" : true
       },
       "SF_REQUEST_TOKEN_URL": {
         "Description" : "Salesforce oauth token url",
-        "value" : "https://salesforce.com/services/oauth2/token",
+        "value" : "https://login.salesforce.com/services/oauth2/token",
         "required" : true
       } ,
       "SF_AUTHORIZE_TOKEN_URL": {
         "Description" : "Salesforce oauth autorize url",
-        "value" : "https://salesforce.com/services/oauth2/authorize?",
+        "value" : "https://login.salesforce.com/services/oauth2/authorize?",
         "required" : true
       }  
   },

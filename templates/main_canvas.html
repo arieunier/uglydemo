@@ -7,11 +7,112 @@
 		
 		<link rel="stylesheet" type="text/css" href="/static/css/canvas.css"/>
 		<link rel="stylesheet" type="text/css" href="/static/css/talk.css"/>
+		<style type="text/css">
+            .inline {
+                display: inline;
+              }
+              
+              .link-button {
+                background: none;
+                border: none;
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+                font-size: 1em;
+                font-family: serif;
+              }
+              .link-button:focus {
+                outline: none;
+              }
+              .link-button:active {
+                color:red;
+              }
+            .form-style-6{
+                font: 95% Arial, Helvetica, sans-serif;
+                max-width: 400px;
+                margin: 10px auto;
+                padding: 16px;
+                background: #F7F7F7;
+            }
+            .form-style-6 h1{
+                background: #43D1AF;
+                padding: 20px 0;
+                font-size: 140%;
+                font-weight: 300;
+                text-align: center;
+                color: #fff;
+                margin: -16px -16px 16px -16px;
+            }
+            .form-style-6 input[type="text"],
+            .form-style-6 input[type="date"],
+            .form-style-6 input[type="datetime"],
+            .form-style-6 input[type="email"],
+            .form-style-6 input[type="number"],
+            .form-style-6 input[type="search"],
+            .form-style-6 input[type="time"],
+            .form-style-6 input[type="url"],
+            .form-style-6 textarea,
+            .form-style-6 select 
+            {
+                -webkit-transition: all 0.30s ease-in-out;
+                -moz-transition: all 0.30s ease-in-out;
+                -ms-transition: all 0.30s ease-in-out;
+                -o-transition: all 0.30s ease-in-out;
+                outline: none;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                width: 100%;
+                background: #fff;
+                margin-bottom: 4%;
+                border: 1px solid #ccc;
+                padding: 3%;
+                color: #555;
+                font: 95% Arial, Helvetica, sans-serif;
+            }
+            .form-style-6 input[type="text"]:focus,
+            .form-style-6 input[type="date"]:focus,
+            .form-style-6 input[type="datetime"]:focus,
+            .form-style-6 input[type="email"]:focus,
+            .form-style-6 input[type="number"]:focus,
+            .form-style-6 input[type="search"]:focus,
+            .form-style-6 input[type="time"]:focus,
+            .form-style-6 input[type="url"]:focus,
+            .form-style-6 textarea:focus,
+            .form-style-6 select:focus
+            {
+                box-shadow: 0 0 5px #43D1AF;
+                padding: 3%;
+                border: 1px solid #43D1AF;
+            }
+            
+            .form-style-6 input[type="submit"],
+            .form-style-6 input[type="button"]{
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                width: 100%;
+                padding: 3%;
+                background: #43D1AF;
+                border-bottom: 2px solid #30C29E;
+                border-top-style: none;
+                border-right-style: none;
+                border-left-style: none;	
+                color: #fff;
+            }
+            .form-style-6 input[type="submit"]:hover,
+            .form-style-6 input[type="button"]:hover{
+                background: #2EBC99;
+            }
+		</style>
+		
 	</head>
 	<body>
 		<script>
     Sfdc.canvas(function() {
-        var sr = JSON.parse('{{ request_json|safe }}');
+		console.log('{{ request_json|safe }}');
+		var sr = JSON.parse('{{ request_json|safe }}');
+		
         // Save the token
         Sfdc.canvas.oauth.token(sr.client.oauthToken);
         var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
@@ -23,13 +124,16 @@
         if (siteHost.lastIndexOf("/") == siteHost.length-1){
             siteHost = siteHost.substring(0,siteHost.length-1);
         }
-        Sfdc.canvas.byId('fullname').innerHTML = sr.context.user.fullName;
+        //Sfdc.canvas.byId('fullname').innerHTML = sr.context.user.fullName;
         Sfdc.canvas.byId('profile').src = (photoUri.indexOf("http")==0 ? "" :siteHost) + photoUri;
         Sfdc.canvas.byId('firstname').innerHTML = sr.context.user.firstName;
         Sfdc.canvas.byId('lastname').innerHTML = sr.context.user.lastName;
         Sfdc.canvas.byId('username').innerHTML = sr.context.user.userName;
-        Sfdc.canvas.byId('email').innerHTML = sr.context.user.email;
-        Sfdc.canvas.byId('company').innerHTML = sr.context.organization.name;
+		Sfdc.canvas.byId('email').innerHTML = sr.context.user.email;
+		Sfdc.canvas.byId('locationUrl').innerHTML = sr.context.environment.locationUrl;
+		Sfdc.canvas.byId('parameters').innerHTML = sr.context.environment.parameters.record;
+		Sfdc.canvas.byId('company').innerHTML = sr.context.organization.name;
+
 		
 		var queryUrl = sr.context.links.queryUrl;
 		Sfdc.canvas.client.ajax(queryUrl+'?q=SELECT+Id+FROM+Lead+LIMIT+1',
@@ -45,28 +149,69 @@
  <div id="page">
   <div id="content">
     <div id="header">
-      <h1>Hello <span id='fullname'></span>...</h1>
-      <h2>Welcome to the Force.com Canvas Python example!</h2>
-    </div>
+	  <h1>Single Guest Badge Management System</h1>
+	  <h2>Guest Id: <span id="parameters"></span> </h2>
+	</div>
+	
+	<div class="container"></div>
+		<table class="table table-hover w-auto" id="table"> 
+			<thead>
+				<th> Creation Date </th>
+				<th> Badge Status </th>
+				<th> Activate </th>
+				<th> Revoke </th>
+			</thead>
+			<tbody>
+					{% for entry in entries %}
+					<tr>
+						<td> {{ entry['creation_date'] }} </td>
+						<td> {{ entry['badge_status'] }} </td>
+						<td>
+						<form method="post" action="/singleguestbadgemanagement?guest_id={{ entry['guest_id'] }}" class="inline">
+						<button type="submit" name="action" value="ACTIVE.{{ entry['id'] }}" class="link-button">
+								Activate
+							</button>
+						</form>
+						</td>                                      
+						<td>
+						<form method="post" action="/singleguestbadgemanagement?guest_id={{ entry['guest_id'] }}" class="inline">
+						<button type="submit" name="action" value="INACTIVE.{{ entry['id'] }}" class="link-button">
+										Revoke
+							</button>
+						</form>
+						</td>                                      
 
-    <div id="canvas-content">
-      <h1>Canvas Request</h1>
-      <h2>Below is some information received in the Canvas Request:</h2>
-      <div id="canvas-request">
+					</tr>
+					{% endfor %}
+			</tbody>
+			<tfoot>
+					<th> Creation Date </th>
+					<th> Badge Status </th>
+					<th> Activate </th>
+					<th> Revoke </th>
+			</tfoot>
+		</table>
+	</div>
+
+	<br>
+
+    <div id="canvas-request-1">
+      <h3>Canvas Request</h3>
+	  <h4>Below is some information received in the Canvas Request:</h4>
+      <div id="canvas-request-2">
+		<b>Object context: </b><span id="locationUrl"></span>
+		<br>
+		<b>Parameters: </b><span id="parameters"></span>
         <table border="0" width="100%">
 	        <tr>
 	            <td></td>
 	            <td><b>First Name: </b><span id='firstname'></span></td>
-	            <td><b>Last Name: </b><span id='lastname'></span></td>
-	        </tr>
+				<td><b>Last Name: </b><span id='lastname'></span></td>
+			</tr>
 	        <tr>
 	            <td><img id='profile' border="0" src="" /></td>
 	            <td><b>Username: </b><span id='username'></span></td>
 	            <td colspan="2"><b>Email Address: </b><span id='email'></span></td>
-	        </tr>
-	        <tr>
-	            <td></td>
-	            <td colspan="3"><b>Company: </b><span id='company'></span></td>
 	        </tr>
        </table>
     </div>
