@@ -48,17 +48,19 @@ heroku addons:create blowerio:starter
 echo "adding CF env"
 heroku config:set CF_KEY='UPDATE_WITH_OWN_KEY'
 echo "adding other environment variables"
-heroku config:set CF_KEY='LOG_LEVEL=DEBUG'
-heroku config:set CF_KEY='KAFKA_TOPIC_READ=topicRead'
-heroku config:set CF_KEY='KAFKA_TOPIC_WRITE=topicWrite '
-heroku config:set CF_KEY='KAFKA_TOPIC_BROWSERNOTIFICATION=salesforce.push_notification__e'
-heroku config:set CF_KEY='KAFKA_TOPIC_SMSGUEST=salesforce.host_accept_guest__e'
-heroku config:set CF_KEY='KAFKA_TOPIC_SMSGENERIC=salesforce.send_smss__e'
-heroku config:set CF_KEY='APP_CLIENT_ID='
-heroku config:set CF_KEY='APP_CLIENT_SECRET='
-heroku config:set CF_KEY='REDIRECT_URI_CODE=https://yourdemo.herokuapp.com/sfconnectedapp'
-heroku config:set CF_KEY='SF_REQUEST_TOKEN_URL=https://login.salesforce.com/services/oauth2/token'
-heroku config:set CF_KEY='SF_AUTHORIZE_TOKEN_URL=https://login.salesforce.com/services/oauth2/authorize?'
+heroku config:set LOG_LEVEL='DEBUG'
+heroku config:set KAFKA_TOPIC_READ='topicRead'
+heroku config:set KAFKA_TOPIC_WRITE='topicWrite '
+heroku config:set KAFKA_TOPIC_BROWSERNOTIFICATION='salesforce.push_notification__e'
+heroku config:set KAFKA_TOPIC_SMSGUEST='salesforce.host_accept_guest__e'
+heroku config:set KAFKA_TOPIC_SMSGENERIC='salesforce.send_smss__e'
+heroku config:set APP_CLIENT_ID=''
+heroku config:set APP_CLIENT_SECRET=''
+heroku config:set REDIRECT_URI_CODE='https://yourdemo.herokuapp.com/sfconnectedapp'
+heroku config:set SF_REQUEST_TOKEN_URL='https://login.salesforce.com/services/oauth2/token'
+heroku config:set SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/oauth2/authorize?'
+
+heroku addons:attach kafka-cylindrical-19303
 #heroku releases --app $APPLICATION_NAME
 #heroku config --app $APPLICATION_NAME
 #heroku info --app $APPLICATION_NAME
