@@ -12,6 +12,9 @@ from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
  
 GUESTFILE = "guest_v2.html"
+GUESTTHANKS = "guest_thanks.html"
+
+
 class ReusableForm(Form):
     Firstname = TextField('Firstname:', validators=[validators.required()])
     Lastname = TextField('Lastname:', validators=[validators.required()])
@@ -26,12 +29,15 @@ class ReusableForm(Form):
 def guest():
     try:
         cookie, cookie_exists =  utils.getCookie()
+
+        if (postgres.__checkHerokuLogsTable()):
+            postgres.__saveLogEntry(request, cookie)
+
         logger.debug(utils.get_debug_all(request))
 
         form = ReusableForm(request.form)
         hosts = postgres.__getSFUsers()
 
-        print(form.errors)
         if request.method == 'POST':
             Firstname=request.form['Firstname']
             Lastname=request.form['Lastname']
@@ -39,8 +45,8 @@ def guest():
             Company=request.form['Company']
             PhoneNumber=request.form['PhoneNumber']
             Host=request.form['Host']
-            postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host)
-            data = render_template(GUESTFILE)
+            postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie)
+            data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
 
             return utils.returnResponse(data, 200, cookie, cookie_exists)
         
@@ -53,7 +59,7 @@ def guest():
         
         # gets the user
         
-        data = render_template(GUESTFILE, form=form, hosts=hosts['data'])
+        data = render_template(GUESTFILE, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY)
 
 
         
