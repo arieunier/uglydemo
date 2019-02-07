@@ -15,7 +15,6 @@
           });
           var channel = pusher.subscribe( '{{ userid }}' );
           channel.bind('my-event', function(data) {
-            window.navigator.vibrate(200);
           alert('An event was triggered with message: ' + data.message);
         });
           </script>
