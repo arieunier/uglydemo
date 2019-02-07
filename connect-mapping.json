@@ -43,35 +43,6 @@
       }
     },
     {
-      "object_name": "Contact",
-      "config": {
-        "access": "read_only",
-        "sf_notify_enabled": true,
-        "sf_polling_seconds": 600,
-        "sf_max_daily_api_calls": 30000,
-        "fields": {
-          "AccountId": {},
-          "AssistantName": {},
-          "Name": {},
-          "Birthdate": {},
-          "IsDeleted": {},
-          "AssistantPhone": {},
-          "SystemModstamp": {},
-          "CreatedDate": {},
-          "Id": {},
-          "CleanStatus": {}
-        },
-        "indexes": {
-          "SystemModstamp": {
-            "unique": false
-          },
-          "Id": {
-            "unique": true
-          }
-        }
-      }
-    },
-    {
       "object_name": "GameActivity__c",
       "config": {
         "access": "read_only",
@@ -100,18 +71,36 @@
     {
       "object_name": "Guest__c",
       "config": {
-        "access": "read_write",
-        "sf_notify_enabled": true,
-        "sf_polling_seconds": 600,
+        "indexes": {
+          "webuser__c": {
+            "unique": false
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "Id": {
+            "unique": true
+          },
+          "externalid__c": {
+            "unique": true
+          }
+        },
         "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "externalid__c",
+        "applied_at": "2019-01-29T11:53:58.629442Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": true,
         "fields": {
           "Lastname__c": {},
+          "webuser__c": {},
           "Company__c": {},
           "Check_in__c": {},
           "Email__c": {},
           "Firstname__c": {},
           "External_Picture_URL__c": {},
           "Phone_Number__c": {},
+          "webuser__r__userid__c": {},
           "Name": {},
           "Check_out__c": {},
           "OwnerId": {},
@@ -123,19 +112,7 @@
           "Host__c": {},
           "externalid__c": {},
           "AcceptedByHost__c": {}
-        },
-        "indexes": {
-          "SystemModstamp": {
-            "unique": false
-          },
-          "Id": {
-            "unique": true
-          },
-          "externalid__c": {
-            "unique": true
-          }
-        },
-        "upsert_field": "externalid__c"
+        }
       }
     },
     {
@@ -386,7 +363,7 @@
   "connection": {
     "app_name": "yourdemo",
     "organization_id": "00D0N000000k4t2UAA",
-    "exported_at": "2019-01-29T19:29:09.726567+00:00",
+    "exported_at": "2019-02-07T09:34:08.336486+00:00",
     "features": {
       "poll_db_no_merge": true,
       "poll_external_ids": false,
