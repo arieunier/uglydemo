@@ -36,7 +36,15 @@ def guest():
         logger.debug(utils.get_debug_all(request))
 
         form = ReusableForm(request.form)
+        
         hosts = postgres.__getSFUsers()
+        key = {'url' : request.url, 'cookie' : cookie}
+        tmp_dict = rediscache.__getCache(key)
+        data = ""
+        if ((tmp_dict != None) and (tmp_dict != '')):    
+            # means user has already registered, forwarding him to the guest thanks
+            data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+            return utils.returnResponse(data, 200, cookie, cookie_exists)
 
         if request.method == 'POST':
             Firstname=request.form['Firstname']
@@ -47,22 +55,17 @@ def guest():
             Host=request.form['Host']
             postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie)
             data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
-
+            rediscache.__setCache(key, data.encode('utf-8'), 3600)
             return utils.returnResponse(data, 200, cookie, cookie_exists)
         
-        print(form)
         if form.validate():
             # Save the comment here.
             flash('Hello ' + Firstname)
         else:
             flash('All the form fields are required. ')
         
-        # gets the user
-        
         data = render_template(GUESTFILE, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY)
 
-
-        
         return utils.returnResponse(data, 200, cookie, cookie_exists)
     except Exception as e:
         import traceback

@@ -90,7 +90,7 @@
               right: 10px;
               top: 9px;
               text-indent: -9999px;
-              background: url(/static/images/close.png);
+              background: url('/static/images/close.png');
               height: 16px;
               width: 16px;
               cursor: pointer;
@@ -98,7 +98,16 @@
             .cssanimations.csstransforms #close {
               display: none;
             }
-    </style>
+            @-webkit-keyframes slideDown {
+                0%, 100% { -webkit-transform: translateY(-50px); }
+                10%, 90% { -webkit-transform: translateY(0px); }
+            }
+            @-moz-keyframes slideDown {
+                0%, 100% { -moz-transform: translateY(-50px); }
+                10%, 90% { -moz-transform: translateY(0px); }
+            }
+        
+        </style>
 
         <style type="text/css">
             .form-style-6{
@@ -184,15 +193,13 @@
         
     <body>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" align="center"></span>
-            
-            
 
             {% if registered %}
             <div id="note">
                 Thanks for your registering Your host will be here shortly. <a id="close">[close]</a>
             </div>
             {% endif %}
-      
+
             
 
 
@@ -228,6 +235,8 @@ function adjust_textarea(h) {
 }
 </script>
     
+      <!-- jQuery -->
+      <script src="../static/js/bootstrap-panel.js"></script>
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

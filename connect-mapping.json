@@ -95,7 +95,6 @@
           "Lastname__c": {},
           "webuser__c": {},
           "Company__c": {},
-          "Check_in__c": {},
           "Email__c": {},
           "Firstname__c": {},
           "External_Picture_URL__c": {},
@@ -296,6 +295,9 @@
       "object_name": "heroku_logs__c",
       "config": {
         "indexes": {
+          "webuser__c": {
+            "unique": false
+          },
           "SystemModstamp": {
             "unique": false
           },
@@ -309,12 +311,14 @@
         "sf_max_daily_api_calls": 30000,
         "access": "read_write",
         "upsert_field": "externalid__c",
-        "applied_at": "2018-06-04T11:40:32.456056Z",
+        "applied_at": "2019-02-07T15:46:24.509638Z",
         "sf_polling_seconds": 600,
-        "sf_notify_enabled": false,
+        "sf_notify_enabled": true,
         "fields": {
           "method__c": {},
+          "webuser__c": {},
           "useragent__c": {},
+          "webuser__r__userid__c": {},
           "Name": {},
           "IsDeleted": {},
           "SystemModstamp": {},
@@ -361,9 +365,9 @@
     }
   ],
   "connection": {
-    "app_name": "yourdemo",
-    "organization_id": "00D0N000000k4t2UAA",
-    "exported_at": "2019-02-07T09:34:08.336486+00:00",
+    "app_name": "yourdemo-scratchorgs",
+    "organization_id": "00D0E0000009bOWUAY",
+    "exported_at": "2019-02-07T15:57:31.834727+00:00",
     "features": {
       "poll_db_no_merge": true,
       "poll_external_ids": false,

@@ -294,8 +294,8 @@ def __saveLogEntry(request, userid):
         creationdate  = datetime.now()
 
 
-        sqlRequest = """insert into salesforce.heroku_logs__c (userid__c, name, url__c, creationdate__c, externalid__c, useragent__c, method__c) values 
-            ( %(userid)s, %(name)s, %(url)s, %(creationdate)s, %(externalid)s, %(useragent)s , %(method)s ) """
+        sqlRequest = """insert into salesforce.heroku_logs__c (userid__c, name, url__c, creationdate__c, externalid__c, useragent__c, method__c, webuser__r__userid__c) values 
+            ( %(userid)s, %(name)s, %(url)s, %(creationdate)s, %(externalid)s, %(useragent)s , %(method)s , %(userid)s ) """
 
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,
                     {'tablename' : SALESFORCE_SCHEMA + '.' + HEROKU_LOGS_TABLE,
