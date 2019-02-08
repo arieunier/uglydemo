@@ -11,8 +11,9 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
  
-GUESTFILE = "guest_v2.html"
-GUESTTHANKS = "guest_thanks.html"
+#GUESTFILE = "guest_v2.html"
+GUESTFILE = "GuestApp.html"
+GUESTTHANKS = "GuestThanks.html"
 
 
 class ReusableForm(Form):
@@ -42,7 +43,7 @@ def guest():
         tmp_dict = rediscache.__getCache(key)
         data = ""
         if ((tmp_dict != None) and (tmp_dict != '')):    
-            # means user has already registered, forwarding him to the guest thanks
+            #means user has already registered, forwarding him to the guest thanks
             data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
             return utils.returnResponse(data, 200, cookie, cookie_exists)
 
