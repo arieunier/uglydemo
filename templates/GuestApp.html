@@ -37,6 +37,64 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
+
+
+        
+    <script type="text/javascript">
+        function fileSelected() {
+          var count = document.getElementById('fileToUpload').files.length;
+                document.getElementById('details').innerHTML = "";
+                for (var index = 0; index < count; index ++)
+                {
+                       var file = document.getElementById('fileToUpload').files[index];
+                       var fileSize = 0;
+                       if (file.size > 1024 * 1024)
+                              fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+                       else
+                              fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+                       document.getElementById('details').innerHTML += '<div align="center">Name: ' + file.name + '<br>Size: ' + fileSize + '<br>Type: ' + file.type;
+                       document.getElementById('details').innerHTML += '<p></div><p></p>';
+                }
+        }
+        
+  
+        function uploadFile() {
+          var fd = new FormData();
+                var count = document.getElementById('fileToUpload').files.length;
+                for (var index = 0; index < count; index ++)
+                {
+                       var file = document.getElementById('fileToUpload').files[index];
+                       fd.append('fileToUpload', file);
+                }
+          var xhr = new XMLHttpRequest(evt);
+          xhr.upload.addEventListener("progress", uploadProgress, false);
+          xhr.addEventListener("load", uploadComplete, false);
+          xhr.addEventListener("error", uploadFailed, false);
+          xhr.addEventListener("abort", uploadCanceled, false);
+          xhr.open("POST", "/photos_post");
+          xhr.send(fd);
+        }
+        function uploadProgress(evt) {
+          if (evt.lengthComputable) {
+            var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+            document.getElementById('progress').innerHTML = percentComplete.toString() + '%';
+          }
+          else {
+            document.getElementById('progress').innerHTML = 'Upload error!';
+          }
+        }
+        function uploadComplete(evt) {
+          //alert(evt.target.responseText);
+        }
+        function uploadFailed(evt) {
+          //alert("Error sendin file...");
+        }
+        function uploadCanceled(evt) {
+          //alert("Upload cancelled by the user or network error!");
+        }
+      </script>
+
+      
 </head>
 
 <body>
@@ -61,7 +119,7 @@
                     <div class="section-subheading center">Please enter accurate information to process your request as quick as possible.</div>
                 </div>
                 <div class="form-wrapper squeezed w-form">
-                    <form name="wf-form-signup-form" data-name="Signup Form" action="" method="post" role="form">
+                    <form name="wf-form-signup-form" enctype="multipart/form-data" data-name="Signup Form" action="" method="post" role="form">
                         {{ form.csrf }}
                         <div class="w-row">
                             <div class="column-remove-padding w-col w-col-6">
@@ -87,7 +145,20 @@
                                 </select>
                             </div>
                         </div>
-                        <input type="submit" value="Register" data-wait="Please wait..." class="button full-width w-button" />
+                        <div class="w-row">
+                                <div class="w-col w-col-6">
+                                    <div class="text-block">Please provide a picture of yourself<br>‍</div>
+                                </div>
+                                <div class="image-upload" align="center">
+                                    <label for="fileToUpload"></label>
+                                    <div>
+                                            <img src="../static/camera_blue.png" style="display:block ; margin-left: auto; margin-right: auto; width: 5%; pointer-events: none">
+                                      </div>         
+                                    <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera">
+                                </div>
+                                </label>
+                            </div>
+                        <input type="submit" value="Register" onclick="uploadFile()" data-wait="Please wait..." class="button full-width w-button" />
                 </div>
             </div>
         </section>

@@ -250,12 +250,12 @@ def __saveImageAnalysisEntry(attributes):
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,attributes)
 
 
-def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie):
+def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie, picture):
     if (MANUAL_ENGINE_POSTGRES != None):
         externalid = uuid.uuid4().__str__()
         creationdate  = datetime.now()
-        sqlRequest = """ insert into salesforce.guest__c(Firstname__c, Lastname__c, Email__c, Company__c, Phone_Number__c, Host__c, webuser__r__userid__c) values 
-         (%(Firstname)s, %(Lastname)s, %(Email)s, %(Company)s, %(PhoneNumber)s, %(Host)s, %(cookie)s)   """
+        sqlRequest = """ insert into salesforce.guest__c(Firstname__c, Lastname__c, Email__c, Company__c, Phone_Number__c, Host__c, webuser__r__userid__c, External_Picture_URL__c) values 
+         (%(Firstname)s, %(Lastname)s, %(Email)s, %(Company)s, %(PhoneNumber)s, %(Host)s, %(cookie)s, %(picture)s)   """
 
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,
             {
@@ -264,7 +264,8 @@ def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, coo
             'Company' : Company,
             'Email' : Email,
             'PhoneNumber' : PhoneNumber,
-            'Host' : Host ,'cookie' : cookie , })    
+            'Host' : Host ,'cookie' : cookie ,
+            'picture':picture})    
 
 
 
