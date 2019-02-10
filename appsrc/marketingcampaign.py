@@ -165,7 +165,7 @@ def marketingcampaign():
                 data = render_template(MARKETFILE, 
                     form=form, 
                     brands=BRANDS)
-                #rediscache.__setCache(key, data.encode('utf-8'), 3600)
+                rediscache.__setCache(key, data.encode('utf-8'), 120)
 
             return utils.returnResponse(data, 200, cookie, cookie_exists)
     except Exception as e:
