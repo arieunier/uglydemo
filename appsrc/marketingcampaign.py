@@ -4,7 +4,7 @@ from datetime import datetime
 import ujson
 import uuid
 from flask_bootstrap import Bootstrap
-from libs import postgres , utils , logs, rediscache, notification
+from libs import postgres , utils , logs, rediscache, notification, rabbitmq
 from appsrc import app, logger
 from flask import make_response
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
@@ -83,11 +83,22 @@ def AWS_upload(file):
         awsFilename = aws.uploadData(completeFilename, remotefilename)
         os.remove(completeFilename)
         logger.info("File saved in AWS as " + awsFilename)
-        return awsFilename
+
+        rabbitdata = {
+            'id' : imageid,
+            'user-agent' : request.headers['User-Agent'],
+            'url' : request.url,
+            'image_width' : img_width,
+            "image_height" : img_height,
+            'cookie' : ""
+        } 
+
+
+        return awsFilename, rabbitdata
     except Exception as e:
         import traceback
         traceback.print_exc()
-        return ""
+        return "", {}
 
 
 
@@ -167,12 +178,21 @@ def marketingcampaign():
             FreeText = request.form['FreeText']
             Picture="https://3.bp.blogspot.com/-KIngJEZr94Q/Wsxoh-8kwuI/AAAAAAAAQyM/YlDJM1eBvzoDAUV79-0v_Us-amsjlFpkgCLcBGAs/s1600/aaa.jpg"
             if ("fileToUpload" in request.files):
-                Picture = AWS_upload(request.files['fileToUpload'])
-            
+                Picture, rabbitData = AWS_upload(request.files['fileToUpload'])
+                rabbitData['cookie'] = cookie
+                rabbitData['UPLOAD_IN_REDIS'] = False
+                rabbitData['remote_url'] = Picture
+                logger.debug(rabbitData)
+                rabbitmq.sendMessage(ujson.dumps(rabbitData), rabbitmq.CLOUDAMQP_QUEUE)
+
+
             postgres.__savePackagingReviewEntry(Name, Email, Brand, Grip, Plug, Portability, FreeText, Picture)
 
             data = render_template(MARKETTHANKS)
             #rediscache.__setCache(key, data.encode('utf-8'), 3600)
+
+  
+
 
             return utils.returnResponse(data, 200, cookie, cookie_exists)
         else: 
