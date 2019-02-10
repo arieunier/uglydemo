@@ -119,6 +119,30 @@ def initPackagingReviews():
         cookie, cookie_exists =  utils.getCookie()
         return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists) 
 
+@app.route("/brand-blazers", methods=['GET'])
+def brandblazers():
+    try:
+            logger.debug(utils.get_debug_all(request))
+            cookie, cookie_exists =  utils.getCookie()
+            sql = "select brandevaluated, freetext, image_url, creation_date from public.packagingreviews order by creation_date desc "
+            data = postgres.__execRequest(sql, None)
+
+            logger.info(data)
+
+            data = render_template("brand-blazers.html",
+                            columns=data['columns'],
+                            entries = data['data'])
+
+            return utils.returnResponse(data, 200, "cookie", cookie_exists)
+
+            return "ok"
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        cookie, cookie_exists =  utils.getCookie()
+        return utils.returnResponse("An error occured, check logDNA for more information", 200, cookie, cookie_exists)
+
+            
 
 
 @app.route('/marketingcampaign', methods=['GET', 'POST'])
