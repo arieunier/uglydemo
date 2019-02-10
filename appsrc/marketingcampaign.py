@@ -14,8 +14,8 @@ import traceback
 
 
 #GUESTFILE = "guest_v2.html"
-MARKETFILE = "marketingcampaign.html"
-MARKETTHANKS = "marketingcampaignThanks.html"
+MARKETFILE = "MarketingCampaign.html"
+MARKETTHANKS = "MarketingCampaignThanks.html"
 
 BRANDS = [
     {'name':'Evian'},
