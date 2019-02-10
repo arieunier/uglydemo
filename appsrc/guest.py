@@ -66,7 +66,7 @@ def AWS_upload(file):
         logger.info("RemoteFilename = " + remotefilename)
         logger.info("completeFilename = " + completeFilename)
         awsFilename = aws.uploadData(completeFilename, remotefilename)
-        #os.remove(completeFilename)
+        os.remove(completeFilename)
         logger.info("File saved in AWS as " + awsFilename)
         return awsFilename
     except Exception as e:

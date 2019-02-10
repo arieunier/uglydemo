@@ -269,6 +269,24 @@ def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, coo
 
 
 
+def __savePackagingReviewEntry(Name, Email, Brand, Grip, Plug, Portability, FreeText, Picture):
+    if (MANUAL_ENGINE_POSTGRES != None):
+        id = uuid.uuid4().__str__()
+        sqlRequest = """ insert into public.packagingreviews(id, ParticipantName,
+        ParticipantEmail, BrandEvaluated, GripReview, PlugReview, PortabilityReview, FreeText, image_url, creation_date)
+        values (%(id)s, %(Name)s, %(Email)s, %(Brand)s, %(Grip)s, %(Plug)s, %(Portability)s, %(FreeText)s, %(Picture)s, NOW() )  """
+
+        MANUAL_ENGINE_POSTGRES.execute(sqlRequest,
+            {
+            'id' : id,
+            'Name' : Name,
+            'Email' : Email,
+            'Brand' : Brand,
+            'Grip' : Grip,
+            'Plug' : Plug,
+            'Portability' : Portability ,
+            'FreeText' : FreeText ,
+            'Picture':Picture})    
 
 
 

@@ -152,13 +152,14 @@
                                 <div class="image-upload" align="center">
                                     <label for="fileToUpload"></label>
                                     <div>
-                                            <img src="../static/camera_blue.png" style="display:block ; margin-left: auto; margin-right: auto; width: 5%; pointer-events: none">
-                                      </div>         
-                                    <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera">
+                                            <img src="../static/camera_blue.png" id="upfile1" style="display:block ; margin-left: auto; margin-right: auto; width: 15%; cursor: pointer" />
+                                            <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera" style="display:none">
+                                    </div>
                                 </div>
                                 </label>
-                            </div>
+                        </div>
                         <input type="submit" value="Register" onclick="uploadFile()" data-wait="Please wait..." class="button full-width w-button" />
+                    </form>
                 </div>
             </div>
         </section>
@@ -166,6 +167,11 @@
     </div>
     <script src="../static/GuestApp_files/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    <script>
+            $("#upfile1").click(function () {
+                $("#fileToUpload").trigger('click');
+            });
+        </script>
 </body>
 
 </html>
