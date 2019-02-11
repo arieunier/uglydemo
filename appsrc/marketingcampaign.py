@@ -135,7 +135,7 @@ def brandblazers():
     try:
             logger.debug(utils.get_debug_all(request))
             cookie, cookie_exists =  utils.getCookie()
-            sql = "select brandevaluated, freetext, image_url, creation_date from public.packagingreviews order by creation_date desc "
+            sql = "select brandevaluated, freetext, image_url, creation_date from public.packagingreviews order by creation_date desc LIMIT 50 "
             data = postgres.__execRequest(sql, None)
 
             logger.info(data)
