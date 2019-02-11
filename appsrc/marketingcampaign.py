@@ -23,10 +23,10 @@ BRANDS = [
     {'name':'Aqua'},
     {'name':'Mizone'},
 {'name':'Bonafont'},
-{'name':'Font Vella'},
-{'name':'Zywiec Zdroj'},
+{'name':'Font-Vella'},
+{'name':'Zywiec-Zdroj'},
 {'name':'Villavicencio'},
-{'name':'Villa Del Sur'},    
+{'name':'Villa-Del-Sur'},    
 {'name':'Salus'},
 {'name':'Hayat'}
 ]
