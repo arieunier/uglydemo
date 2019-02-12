@@ -64,6 +64,11 @@
         "value" : "DEBUG",
         "required" : true
       },
+      "KAFKA_CONSUMERGRP-": {
+        "Description" : "Kafka default consumer group",
+        "value" : "my-consumer-group",
+        "required" : true
+      },
       "KAFKA_TOPIC_READ": {
         "Description" : "Kafka incoming default topic",
         "value" : "topicRead",

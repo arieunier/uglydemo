@@ -31,7 +31,7 @@ file = open('static/kafka_ca', "w")
 data = file.write(KAFKA_TRUSTED_CERT)
 file.close()
 
-KAFKA_PREFIX=  os.getenv('KAFKA_PREFIX')
+KAFKA_PREFIX=  os.getenv('KAFKA_PREFIX', '')
 KAFKA_TOPIC_READ= os.getenv('KAFKA_TOPIC_READ', "topicRead") #"salesforce.syncaccount__e"
 KAFKA_TOPIC_WRITE= os.getenv('KAFKA_TOPIC_WRITE', "topicWrite") #"ple2"
 
