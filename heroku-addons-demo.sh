@@ -49,7 +49,7 @@ echo "adding blowerio"
 heroku addons:create blowerio:starter
 
 # creates the db
-heroku pg:psql -f createBadge.sql
+heroku pg:psql -f createTables.sql
 
 echo "adding CF env"
 heroku config:set CF_KEY='UPDATE_WITH_OWN_KEY'
