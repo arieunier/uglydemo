@@ -1,0 +1,179 @@
+<html lang="en">
+	<head>
+
+    
+    <!------ Include the above in your HEAD tag ---------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap Core CSS  -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="../../static/stylesheets/bootstrap-panel.css" rel="stylesheet">
+    <link href="../../static/stylesheets/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+
+   
+    <!-- Custom CSS -->
+    <link href="../../static/stylesheets/thumbnail-gallery.css" rel="stylesheet">
+    <link href="../../static/stylesheets/mouseover.css" rel="stylesheet">
+    <!--  background color -->
+    <link href="../../static/stylesheets/background.css" rel="stylesheet">
+
+    <!-- 
+    {% if FA_APIKEY is defined %}
+    <script type="text/javascript" src="../../static/js/fa-sdk-web.js"></script>
+        <script type="text/javascript">
+            FollowAnalytics.initialize({
+                FAID: '{{ FA_APIKEY }}',
+                bundleId: 'Mobile App',
+                defaultIcon: 'https://s3-eu-west-1.amazonaws.com/fa-sdks/sdk-web/web-sdk-assets/followanalytics192.png',
+                optInAnalytics: true,
+                analyticsScope: FollowAnalytics.AnalyticsScope.FULL
+            });
+            FollowAnalytics.setOptInAnalytics(true);
+            FollowAnalytics.registerForPushNotifications();
+            FollowAnalytics.setUserId('{{ userid }}')
+            FollowAnalytics.logEvent('Example log name', details)
+            FollowAnalytics.isRegisteredForPushNotifications();
+        </script>
+    {% endif %}
+    -->
+    
+    {% if PUSHER_KEY %}
+    <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+    <script>
+      var pusher = new Pusher( '{{ PUSHER_KEY }}' , {
+      cluster: 'eu'
+      });
+      var channel = pusher.subscribe( '{{ userid }}' );
+      channel.bind('my-event', function(data) {
+      alert('An event was triggered with message: ' + data.message);
+    });
+      </script>
+    {% endif %}
+    
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+    </style>
+
+    </head>
+
+
+	<body>
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/">Root menu</a>
+          <a href="/tables">Tables application</a>
+          <a href="/guest">Welcome Guest application</a>
+          <a href="/votes">Quizz application</a>
+          <a href="/photos">Selfie application</a>
+          <a href="/photos_display">Display all photos</a>
+          <a href="/form">Insert a form content</a>
+        </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ugliest Web Application - Tables Menu</span>
+    
+
+
+		<div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Database Tables - Schema Salesforce </h3>
+                <div class="pull-right">
+                  <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                    <i class="glyphicon glyphicon-filter"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="panel-body">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+              </div>
+              <table class="table table-hover" id="dev-table">
+                <thead>
+                  <tr>
+                      <th>Table</th><th>Data exploration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for entry in entries %}
+                  <tr>
+                    <td>{{ entry.table_name }} </td>
+                    <td><a href="../getObjects?name={{ entry.table_name }}&output=html"> View data </a> </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>    
+        </div>
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Ugliest web application - 2017 - <a href="mailto:arieunier@salesforce.com?Subject=Hello%20again" target="_top">Contact</a></p>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+      
+      <!-- jQuery -->
+      <script src="../../static/js/bootstrap-panel.js"></script>
+      <script>
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+  </body>
+</html>                              

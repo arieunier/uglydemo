@@ -61,20 +61,25 @@ def AWS_upload(file, request):
         for orientation in ExifTags.TAGS.keys():
             if ExifTags.TAGS[orientation]=='Orientation':
                 break
-        exif=dict(image._getexif().items())
-        logger.debug(exif[orientation])
-        if exif[orientation] == 3:
-            image=image.rotate(180, expand=True)
-            image.save(filepath , quality=50, subsampling=0,)
-        elif exif[orientation] == 6:
-            image=image.rotate(270, expand=True)
-            image.save(filepath , quality=50, subsampling=0,)
-        elif exif[orientation] == 8:
-            image=image.rotate(90, expand=True)
-            image.save(filepath , quality=50, subsampling=0,)
-        
-        img_width = image.size[0]
-        img_height = image.size[1]
+        try:
+            exif=dict(image._getexif().items())
+            logger.debug(exif[orientation])
+            if exif[orientation] == 3:
+                image=image.rotate(180, expand=True)
+                image.save(filepath , quality=50, subsampling=0,)
+            elif exif[orientation] == 6:
+                image=image.rotate(270, expand=True)
+                image.save(filepath , quality=50, subsampling=0,)
+            elif exif[orientation] == 8:
+                image=image.rotate(90, expand=True)
+                image.save(filepath , quality=50, subsampling=0,)
+            
+            img_width = image.size[0]
+            img_height = image.size[1]
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+ 
         image.close()
 
         remotefilename = imageid + ".jpg"

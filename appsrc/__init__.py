@@ -24,7 +24,20 @@ logs.logger_init(loggername='app',
 
 logger = logs.logger 
 
-from appsrc import root, votes, tables, photo, oauth, guest, form, notifications, badges, canvas, marketingcampaign
+from appsrc import connectedapp, marketingapp,guestapp,  misc, uglyapp
+
+from connectedapp import canvas, oauth, badgesmanagement
+from guestapp import badges, guest
+from marketingapp import marketingcampaign
+from misc import notifications
+from uglyapp import photo, tables, ugly, votes 
+
+#, guestapp.badges, guestapp.guest, marketingapp.marketingcampaign,  misc.form, misc.notifications, uglyapp.photo, uglyapp.tables, uglyapp.ugly, uglyap.votes
+
+
+
+
+#root, votes, tables, photo, oauth, guest, form, notifications, badges, canvas, marketingcampaign
 
 
 """
