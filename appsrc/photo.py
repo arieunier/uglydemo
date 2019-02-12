@@ -235,6 +235,7 @@ def image():
             os.remove(completeFilename)
             logger.info("File saved in AWS")
             rabbitdata['remote_url'] = awsFilename
+            rabbitdata['destinationapp'] = 'cloudinary'
 
         # Sends data to RabbitMQ 
         logger.debug(rabbitdata)

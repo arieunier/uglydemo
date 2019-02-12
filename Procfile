@@ -1,3 +1,4 @@
+worker-defaultkafka: export PYTHONPATH=.:./libs; python worker_kafka.py  -t $KAFKA_TOPIC_READ
 worker-imagesanalysis: export PYTHONPATH=.:./libs; python worker_rabbitmq.py 
 worker-browsernotification: export PYTHONPATH=.:./libs; python worker_kafka.py -t  $KAFKA_TOPIC_BROWSERNOTIFICATION
 worker-smsguestmessage: export PYTHONPATH=.:./libs; python worker_kafka.py -t $KAFKA_TOPIC_SMSGUEST

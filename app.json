@@ -26,7 +26,11 @@
     "worker-smsguestmessage" : {
       "quantity": 0,
       "size": "standard-1x"
-    }
+    ,
+    "worker-defaultkafka" : {
+      "quantity": 0,
+      "size": "standard-1x"
+    }}
   },
   "addons": [
     {"plan": "heroku-postgresql:hobby-dev"},
