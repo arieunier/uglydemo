@@ -20,8 +20,11 @@ export CLOUDAMQP_URL=`heroku config:get CLOUDAMQP_URL --app $APPNAME`
 export PUSHER_SOCKET_URL=`heroku config:get PUSHER_SOCKET_URL --app $APPNAME`
 export PUSHER_URL=`heroku config:get PUSHER_URL --app $APPNAME`
 #oauth flow
-export APP_CLIENT_ID="3MVG9TSaZ8P6zP1oXkMT5WIwgzXQZXKdG560bpIt_.O7NGAwNDcr1b1WS_3EG7Hi9JBgSvcdcqr4E.N5gP8Yi"
-export APP_CLIENT_SECRET="youcantknow"
+export APP_CLIENT_ID=`heroku config:get APP_CLIENT_ID --app $APPNAME`
+export APP_CLIENT_SECRET=`heroku config:get APP_CLIENT_SECRET --app $APPNAME`
+export SF_AUTHORIZE_TOKEN_URL=`heroku config:get SF_AUTHORIZE_TOKEN_URL --app $APPNAME`
+export SF_REQUEST_TOKEN_URL=`heroku config:get SF_REQUEST_TOKEN_URL --app $APPNAME`
+
 # kafka part
 export KAFKA_CLIENT_CERT=`heroku config:get KAFKA_CLIENT_CERT  --app $APPNAME`
 export KAFKA_CLIENT_CERT_KEY=`heroku config:get KAFKA_CLIENT_CERT_KEY  --app $APPNAME`

@@ -176,6 +176,9 @@ def __execRequestWithNoResult(strReq, attributes=None):
     if (MANUAL_ENGINE_POSTGRES != None):
         result = MANUAL_ENGINE_POSTGRES.execute(strReq, attributes)
 
+def getBadgeById(badgeId):
+    return __execRequest('Select * from public.badge where id=%(id)s', {'id':badgeId})
+
 
 def __execRequest(strReq, Attributes):
     if (MANUAL_ENGINE_POSTGRES != None):
