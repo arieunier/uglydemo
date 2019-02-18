@@ -47,7 +47,7 @@ def guest():
         if ((tmp_dict != None) and (tmp_dict != '')):    
             #means user has already registered, forwarding him to the guest thanks
             data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
-            #return utils.returnResponse(data, 200, cookie, cookie_exists)
+            #rmeturn utils.returnResponse(data, 200, cookie, cookie_exists)
 
         if request.method == 'POST':
             Firstname=request.form['Firstname']

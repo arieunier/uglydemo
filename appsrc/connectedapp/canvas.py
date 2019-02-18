@@ -15,9 +15,9 @@ from libs import signedrequest
 import pprint 
 
 
-CANVAS_FILE="ConnectedApp/main_canvas.html"
-CALLBACK_FILE="ConnectedApp/callback.html"
-ERROR_FILE="ConnectedApp/500.html"
+CANVAS_FILE="ConnectedApps/main_canvas.html"
+CALLBACK_FILE="ConnectedApps/callback.html"
+ERROR_FILE="ConnectedApps/500.html"
 @app.route('/canvas', methods=['POST', 'GET'])
 def canvas_main():
     try:

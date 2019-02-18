@@ -67,10 +67,10 @@ def getObjects():
             if (output == 'html'):
                 logger.info("Treating request as a web request, output to Web page")
                 if ('image__c' in data_dict['columns']):
-                            data = render_template(RENDER_TABLE_DATA_IMG,
-                            columns=data_dict['columns'],
-                            object_name=object_name,
-                            entries = data_dict['data'], FA_APIKEY=utils.FOLLOWANALYTICS_API_KEY, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                                data = render_template(RENDER_TABLE_DATA_IMG,
+                                columns=data_dict['columns'],
+                                object_name=object_name,
+                                entries = data_dict['data'], FA_APIKEY=utils.FOLLOWANALYTICS_API_KEY, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
                 else:
                     data = render_template(RENDER_TABLE_DATA,
                                 columns=data_dict['columns'],
