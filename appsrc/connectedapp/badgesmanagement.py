@@ -12,7 +12,7 @@ import urllib
 from uuid import uuid4
 
 
-BADGE_FILE="ConnectedApp/badgesmanagement.html"
+BADGE_FILE="ConnectedApps/badgesmanagement.html"
 
 #functions
 # add
