@@ -11,6 +11,7 @@ DATABASE_URL = os.getenv('DATABASE_URL','')
 MANUAL_ENGINE_POSTGRES = None
 SALESFORCE_SCHEMA = os.getenv("POSTGRES_SCHEMA", "salesforce")
 HEROKU_LOGS_TABLE = os.getenv("HEROKU_LOGS_TABLE", "heroku_logs__c") 
+SECURITY_USER= os.getenv("SECURITY_USER")
 
 logger = logs.logger_init(loggername='app',
             filename="log.log",
@@ -171,6 +172,50 @@ def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, 
             'badge_status': badge_status,
             'badge_url': badge_url
         })
+
+def __insertCase(cookieid, subject, description, typeCase, reason):
+    # gets the securit user
+    security  = __execRequest("""
+    select * from salesforce.user where 
+    name=%(security_username)s 
+    order by createddate DESC limit 1 
+    """, {'security_username':SECURITY_USER})
+
+    # gets the Contact ID from GUEST ID
+    contact = __execRequest("""
+    select * from salesforce.guest__c where 
+    webuser__r__userid__c=%(cookieid)s 
+    order by createddate DESC limit 1 
+    """, {'cookieid':cookieid})
+    #contact = __execRequest("Select contact__c from salesforce.guest__c where id=%(guestId)s", {'id':guestId})
+    # gets the business hour Id
+    businessHour = __execRequest("Select id, sfid, name from salesforce.BusinessHours", None)
+    # now lets go yellow
+    externalid = uuid.uuid4().__str__()
+    
+    insertCase = """
+        insert into salesforce.case(priority, origin, contactid, subject, description, reason, type, external_id__c, businesshoursid ) values
+        ('High', 'Web', %(contactid)s, %(subject)s, %(description)s, %(reason)s, %(type)s, %(externalid)s, %(businesshourid)s )
+        """
+    
+    CaseAttributes =  { 'contactid' : contact['data'][0]['contact__c'],
+        'subject':subject,
+        'description' : description,
+        'reason' : reason,
+        'type' : typeCase,
+        'externalid' : externalid,
+        'businesshourid':businessHour['data'][0]['sfid']
+        }
+    if (len(security['data']) > 0):
+        # change the ownership of the case
+        insertCase = """
+        insert into salesforce.case(ownerid, priority, origin, contactid, subject, description, reason, type, external_id__c, businesshoursid ) values
+        (%(ownerid)s, 'High', 'Web', %(contactid)s, %(subject)s, %(description)s, %(reason)s, %(type)s, %(externalid)s, %(businesshourid)s )
+        """
+        CaseAttributes['ownerid']= security['data'][0]['sfid']
+    
+    __execRequestWithNoResult(insertCase,CaseAttributes)    
+    return ""
 
 def __execRequestWithNoResult(strReq, attributes=None):
     if (MANUAL_ENGINE_POSTGRES != None):

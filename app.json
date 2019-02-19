@@ -123,7 +123,12 @@
         "Description" : "Salesforce oauth autorize url",
         "value" : "https://login.salesforce.com/services/oauth2/authorize?",
         "required" : true
-      }  
+      }  , 
+      "SECURITY_USER" : {
+        "Description" : "The security user for case assignment",
+        "value" : "Integration User",
+        "required" : true
+      }
   },
   "environments": {
     "test": {

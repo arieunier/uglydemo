@@ -43,6 +43,68 @@
       }
     },
     {
+      "object_name": "BusinessHours",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": false,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "CreatedDate": {},
+          "Id": {},
+          "Name": {},
+          "SystemModstamp": {}
+        },
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          }
+        }
+      }
+    },
+    {
+      "object_name": "Case",
+      "config": {
+        "indexes": {
+          "SystemModstamp": {
+            "unique": false
+          },
+          "external_id__c": {
+            "unique": true
+          },
+          "Id": {
+            "unique": true
+          }
+        },
+        "sf_max_daily_api_calls": 30000,
+        "access": "read_write",
+        "upsert_field": "external_id__c",
+        "applied_at": "2019-02-19T10:44:23.792266Z",
+        "sf_polling_seconds": 600,
+        "sf_notify_enabled": true,
+        "fields": {
+          "Priority": {},
+          "Reason": {},
+          "Origin": {},
+          "AccountId": {},
+          "BusinessHoursId": {},
+          "Subject": {},
+          "OwnerId": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "external_id__c": {},
+          "CreatedDate": {},
+          "Type": {},
+          "Id": {},
+          "ContactId": {},
+          "Description": {}
+        }
+      }
+    },
+    {
       "object_name": "GameActivity__c",
       "config": {
         "access": "read_only",
@@ -88,11 +150,12 @@
         "sf_max_daily_api_calls": 30000,
         "access": "read_write",
         "upsert_field": "externalid__c",
-        "applied_at": "2019-01-29T11:53:58.629442Z",
+        "applied_at": "2019-02-07T12:36:59.899811Z",
         "sf_polling_seconds": 600,
         "sf_notify_enabled": true,
         "fields": {
           "Lastname__c": {},
+          "Contact__c": {},
           "webuser__c": {},
           "Company__c": {},
           "Email__c": {},
@@ -366,8 +429,8 @@
   ],
   "connection": {
     "app_name": "yourdemo-scratchorgs",
-    "organization_id": "00D0E0000009bOWUAY",
-    "exported_at": "2019-02-07T15:57:31.834727+00:00",
+    "organization_id": "00D4E000000DTVtUAO",
+    "exported_at": "2019-02-19T12:29:31.054163+00:00",
     "features": {
       "poll_db_no_merge": true,
       "poll_external_ids": false,
