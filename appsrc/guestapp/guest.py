@@ -142,7 +142,7 @@ def guest():
 
 
                 postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie, Picture)
-                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(GUESTTHANKS, registered=False, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
                 rediscache.__setCache(key, ujson.dumps({"Status":"Logged In"}), 3600)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
                     

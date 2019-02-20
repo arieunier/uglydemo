@@ -155,10 +155,11 @@ def __getMatchById(match_id):
     return data
 
 
-def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url):
+def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url,
+picture_url):
     sqlRequest = """
-    insert into public.badge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url, creation_date) values
-    (%(id)s, %(guest_id)s, %(guest_firstname)s, %(guest_lastname)s, %(guest_company)s, %(host_firstname)s, %(host_lastname)s, %(badge_status)s, %(badge_url)s, NOW())
+    insert into public.badge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url, creation_date, picture_url) values
+    (%(id)s, %(guest_id)s, %(guest_firstname)s, %(guest_lastname)s, %(guest_company)s, %(host_firstname)s, %(host_lastname)s, %(badge_status)s, %(badge_url)s, NOW(), %(picture_url)s)
     """
     if (MANUAL_ENGINE_POSTGRES != None):
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest, {
@@ -170,7 +171,8 @@ def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, 
             'host_firstname': host_firstname,
             'host_lastname': host_lastname,
             'badge_status': badge_status,
-            'badge_url': badge_url
+            'badge_url': badge_url,
+            'picture_url' : picture_url
         })
 
 def __insertCase(cookieid, subject, description, typeCase, reason):

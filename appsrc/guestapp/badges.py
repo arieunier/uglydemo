@@ -12,6 +12,9 @@ import urllib
 from uuid import uuid4
 
 
+BADGE_DATA="GuestApp/Badge.html"
+
+
 @app.route("/initBadges", methods=['GET'])
 def initBadges():
     try:
@@ -32,6 +35,27 @@ def initBadges():
         return utils.returnResponse("An error occured, check logDNA for more information", 403, cookie, cookie_exists) 
 
 
+@app.route("/badge/<badge_id>", methods=['GET'])
+def badgeById(badge_id):
+    # get the badge
+    if (badge_id != None and badge_id != ""):
+        cookie, cookie_exists =  utils.getCookie()
+        badge_content = postgres.__execRequest("Select * from badge where id=%(badge_id)s", {'badge_id':badge_id})
+        
+
+        logger.info(badge_content)
+        data = render_template(BADGE_DATA, 
+            GuestFirstname=badge_content['data'][0]['guest_firstname'],
+            GuestLastname = badge_content['data'][0]['guest_lastname'], 
+            GuestCompany=badge_content['data'][0]['guest_company'], 
+            HostFirstname=badge_content['data'][0]['host_firstname'], 
+            HostLastname=badge_content['data'][0]['host_lastname'],
+            ProfilePicture=badge_content['data'][0]['picture_url'], 
+            QRCode="https://pbs.twimg.com/profile_images/620937461603127296/Si6VZFLC_400x400.jpg")
+
+        utils.returnResponse(ujson.dumps(data), 200, cookie, cookie_exists) 
+
+
 @app.route('/badges', methods=['POST', 'GET'])
 def badges():
     try:
@@ -44,6 +68,7 @@ def badges():
             guest_company = request.args.get('guest_company')
             host_firstname = request.args.get('host_firstname')
             host_lastname = request.args.get('host_lastname')
+            picture_url = request.args.get('picture_url')
             # id is auto generated
             uid = uuid.uuid4().__str__()
             badge_status = 'ACTIVE'
@@ -57,7 +82,13 @@ def badges():
                 return utils.returnResponse("Please provide a guest_id", 403, None, None) 
             # check if siren__c exits
  
-            postgres.__insertBadge(uid, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url)
+            postgres.__insertBadge(uid, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url,picture_url)
+
+
+            # generates now the data
+            #data = render_template(BADGE_DATA, GuestFirstname=guest_firstname,
+            #GuestLastname = guest_lastname, GuestCompany=guest_company, HostFirstname=host_firstname, HostLastname=host_lastname,
+            #ProfilePicture=picture_url, QRCode="")
 
             return "{'Result':'Ok'}"
         elif (request.method == 'GET'):
@@ -80,4 +111,3 @@ def badges():
 # with user identity management
 
 # revoke
-
