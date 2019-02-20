@@ -53,8 +53,9 @@ def badgeById(badge_id):
             ProfilePicture=badge_content['data'][0]['picture_url'], 
             QRCode="https://pbs.twimg.com/profile_images/620937461603127296/Si6VZFLC_400x400.jpg")
 
-        utils.returnResponse(ujson.dumps(data), 200, cookie, cookie_exists) 
+        return utils.returnResponse(ujson.dumps(data), 200, cookie, cookie_exists) 
 
+    
 
 @app.route('/badges', methods=['POST', 'GET'])
 def badges():
