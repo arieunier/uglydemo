@@ -1,26 +1,124 @@
-<!DOCTYPE html>
-<table>
-<tbody>
-<tr>
-<td>
-<h2><strong>{{ GuestFirstname }} {{ GuestLastname }}</strong></h2>
-</td>
-<td>
-<p><img src="{{ ProfilePicture }}" alt="" width="100" height="100" /></p>
-</td>
-</tr>
-<tr>
-<td>{{ GuestCompany }}</td>
-<td>
-<p><img src="{{ QRCode }}" alt="" width="100" height="100" /></p>
-</td>
-</tr>
-<tr>
-<td>{{ HostName }} {{ HostLastname }}</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+<html>
+    <head>
+            <meta content="width=500, initial-scale=1" name="viewport" />
+            <style>
+                    html, body {
+                        width: 450px;
+                        height: 270px;
+                        margin: 0;
+                        padding: 0;
+                        background-color: white;
+                        top:0px;
+                        position:fixed;
+                    }
+                    #container {
+                        width: 400px;
+                        height: 250px;
+                        margin: 0;
+                        padding: 0;
+                        background-color: white;
+                        position:relative;
+                    }
+                    h1 {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    td, th {
+                        border: 1px solid black;
+                      }
+                      table {
+                        margin: 1px 0;
+                        border: 1px solid black;
+                        table-layout: fixed;
+                        width: 100%; /* must have this set */
+                      }
+                      html {
+                        background: #ccc;
+                      }
+                      body {
+                        max-width: 450px;
+                        margin: 0 auto;
+                        background: white;
+                        padding: 10px;
+                      }
+                      
+                      .sturdy td:nth-child(1),
+                      .sturdy td:nth-child(3) {
+                        width: 25%;
+                      }
+                      .sturdy td:nth-child(2) {
+                        width: 50%;
+                      } 
+                      
+                      .nobreak {
+                        white-space: nowrap;
+                      }
+                      
+                      .wider td {
+                        width: 300px;
+                      }
+                      
+                      
+                      .ignoreyou td:nth-child(1) {
+                        width: 10px;
+                      }
+                      .ignoreyou td:nth-child(2) {
+                        width: 30px;
+                      }
+                      
+                      .cut-off th:nth-child(1) {
+                        width: 75%;
+                      }
+                      .cut-off td:nth-child(1) {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                      }
+                      .cut-off th:nth-child(2) {
+                        width: 25%;
+                      }
+                      .cut-off td:nth-child(2) span {
+                        display: block;
+                        
+                      }
+                      
+                      
+                      .hide td {
+                        overflow: hidden;
+                      }
+                      
+                      .scroll-code td {
+                        overflow: auto;
+                      }
+                      td img{
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    
+                    }
+                </style>
+    </head>
+    <body>
+            <div id="container">
+                <table> 
+                    <tbody>
+                        <tr>
+                            <td><h2><strong>{{ GuestFirstname }} {{ GuestLastname }}</strong></h2></td>
+                            <td><p><img src="{{ ProfilePicture }}" alt="" width="100" height="100"/></p></td>
+                        </tr>
+                        <tr>
+                            <td>{{ GuestCompany }}</td>
+                            <td><p><img src="{{ QRCode }}" alt="" width="100" height="100"/></p></td>
+                        </tr>
+                        <tr>
+                            <td>{{ HostFirstname }} {{ HostLastname }}</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
 
-
+    
+    </body>
 </html>

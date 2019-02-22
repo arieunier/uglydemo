@@ -13,8 +13,9 @@ from uuid import uuid4
 
 
 BADGE_DATA="GuestApp/Badge.html"
-
-
+APPNAME = os.getenv("APPNAME", "yourdemo")
+APPURL="http://" + APPNAME + ".herokuapp.com/badge/"
+QRCODE_URL="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
 @app.route("/initBadges", methods=['GET'])
 def initBadges():
     try:
@@ -40,20 +41,26 @@ def badgeById(badge_id):
     # get the badge
     if (badge_id != None and badge_id != ""):
         cookie, cookie_exists =  utils.getCookie()
-        badge_content = postgres.__execRequest("Select * from badge where id=%(badge_id)s", {'badge_id':badge_id})
+        badge_content = postgres.__execRequest("Select * from badge where id=%(badge_id)s and badge_status='ACTIVE' " , {'badge_id':badge_id})
         
+        if (len(badge_content['data']) > 0):
+            logger.info(badge_content)
+            if ('output' in request.args):
+                if (request.args['output'] == 'json'):
+                    return utils.returnResponse(ujson.dumps(badge_content), 200, cookie, cookie_exists) 
+            QRCODE_COMPLETE_URL = QRCODE_URL + "'" + APPURL +  badge_content['data'][0]['id'] + "?output=json'"
+            logger.info(QRCODE_COMPLETE_URL)
+            data = render_template(BADGE_DATA, 
+                GuestFirstname=badge_content['data'][0]['guest_firstname'],
+                GuestLastname = badge_content['data'][0]['guest_lastname'], 
+                GuestCompany=badge_content['data'][0]['guest_company'], 
+                HostFirstname=badge_content['data'][0]['host_firstname'], 
+                HostLastname=badge_content['data'][0]['host_lastname'],
+                ProfilePicture=badge_content['data'][0]['picture_url'], 
+                QRCode=QRCODE_COMPLETE_URL)
 
-        logger.info(badge_content)
-        data = render_template(BADGE_DATA, 
-            GuestFirstname=badge_content['data'][0]['guest_firstname'],
-            GuestLastname = badge_content['data'][0]['guest_lastname'], 
-            GuestCompany=badge_content['data'][0]['guest_company'], 
-            HostFirstname=badge_content['data'][0]['host_firstname'], 
-            HostLastname=badge_content['data'][0]['host_lastname'],
-            ProfilePicture=badge_content['data'][0]['picture_url'], 
-            QRCode="https://pbs.twimg.com/profile_images/620937461603127296/Si6VZFLC_400x400.jpg")
-
-        return utils.returnResponse(data, 200, cookie, cookie_exists) 
+            return utils.returnResponse(data, 200, cookie, cookie_exists) 
+    return utils.returnResponse(ujson.dumps({'Error' : 'Unknown or incorrect badge id'}), 404, cookie, cookie_exists) 
 
     
 
@@ -73,7 +80,7 @@ def badges():
             # id is auto generated
             uid = uuid.uuid4().__str__()
             badge_status = 'ACTIVE'
-            badge_url = "FIXME"
+            badge_url = APPURL + uid
             # status is set to default -> INACTIVE (status are inactive / active )
             # url will be calculated
             
