@@ -94,7 +94,8 @@
         "value" : "salesforce.send_smss__e",
         "required" : true
       },
-      "CF_KEY": {
+      "CF_KEY": 
+      {
       "Description" : "Cloudinary key for Image Recognition",
       "value" : "Update Me",
       "required" : true
@@ -128,6 +129,14 @@
         "Description" : "The security user for case assignment",
         "value" : "Integration User",
         "required" : true
+      },
+      "HEROKU_APP_NAME": 
+        {
+          "required": true
+        },
+      "HEROKU_PARENT_APP_NAME": 
+      {
+          "required": true
       }
   },
   "environments": {

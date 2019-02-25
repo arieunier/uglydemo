@@ -14,7 +14,7 @@ from uuid import uuid4
 
 BADGE_DATA="GuestApp/Badge.html"
 APPNAME = os.getenv("APPNAME", "yourdemo")
-APPURL="http://" + APPNAME + ".herokuapp.com/badge/"
+APPURL="https://" + APPNAME + ".herokuapp.com/badge/"
 QRCODE_URL="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
 @app.route("/initBadges", methods=['GET'])
 def initBadges():
