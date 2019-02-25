@@ -132,14 +132,16 @@
       },
       "HEROKU_APP_NAME": 
         {
-          "required": true
+          "required": true,
+          "value" : "yourdemo-scratchorgs"
         },
       "HEROKU_PARENT_APP_NAME": 
       {
-          "required": true
+          "required": true,
+          "value" : "yourdemo-scratchorgs"
       }
   },
-  
+
   "environments": {
     "test": {
       "scripts": {
