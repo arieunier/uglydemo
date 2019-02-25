@@ -130,15 +130,10 @@
         "value" : "Integration User",
         "required" : true
       },
-      "HEROKU_APP_NAME": 
-        {
-          "required": true,
-          "value" : "yourdemo-scratchorgs"
-        },
-      "HEROKU_PARENT_APP_NAME": 
-      {
-          "required": true,
-          "value" : "yourdemo-scratchorgs"
+      "APPNAME" : {
+        "Description" : "name of the application",
+        "value" : "yourdemo",
+        "required" : true
       }
   },
 
