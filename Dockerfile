@@ -15,7 +15,7 @@ RUN apk add --no-cache --update ffmpeg
 ADD ./requirements.txt /tmp/requirements.txt
 
 # Install dependencies
-run echo "pip update"
+run echo "pip update "
 RUN pip install --upgrade pip
 run pip install -U cffi
 run pip install -U pillow 
