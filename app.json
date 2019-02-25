@@ -139,6 +139,7 @@
           "required": true
       }
   },
+  
   "environments": {
     "test": {
       "scripts": {
