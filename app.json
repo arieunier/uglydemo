@@ -132,7 +132,7 @@
       },
       "APPNAME" : {
         "Description" : "name of the application",
-        "value" : "yourdemo",
+        "value" : "yourdemo-cdo",
         "required" : true
       }
   },
