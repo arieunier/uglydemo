@@ -43,12 +43,11 @@ heroku addons:create pusher:sandbox
 # updates: all below addons are now used by accessing variables from another application.
 # they'll be attached during the app creation
 
-echo "Attaching Buckeeter addon from another application"
-
 echo "adding blowerio"
 heroku addons:create blowerio:starter
 
-# creates the db
+
+echo "Creates the badge db "
 heroku pg:psql -f createTables.sql
 
 echo "adding CF env"
@@ -58,6 +57,7 @@ heroku config:set LOG_LEVEL='DEBUG'
 heroku config:set KAFKA_TOPIC_READ='topicRead'
 heroku config:set KAFKA_TOPIC_WRITE='topicWrite '
 heroku config:set KAFKA_TOPIC_BROWSERNOTIFICATION='salesforce.push_notification__e'
+heroku config:set KAFKA-CONSUMERGRP="my-consumer-group"
 heroku config:set KAFKA_TOPIC_SMSGUEST='salesforce.host_accept_guest__e'
 heroku config:set KAFKA_TOPIC_SMSGENERIC='salesforce.send_smss__e'
 heroku config:set APP_CLIENT_ID=''
@@ -66,9 +66,10 @@ heroku config:set REDIRECT_URI_CODE='https://'$APPLICATION_NAME'.herokuapp.com/s
 heroku config:set SF_REQUEST_TOKEN_URL='https://login.salesforce.com/services/oauth2/token'
 heroku config:set SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/oauth2/authorize?'
 
-heroku addons:attach kafka-cylindrical-19303
-#heroku releases --app $APPLICATION_NAME
-#heroku config --app $APPLICATION_NAME
-#heroku info --app $APPLICATION_NAME
-#heroku restart --app $APPLICATION_NAME
-#heroku kafka:topics:create `heroku config:get KAFKA_PREFIX`web-to-kafka
+echo "Configuring Kafka"
+heroku addons:attach kafka-polished-22221
+heroku config:set APPNAME=$APPLICATION_NAME
+heroku config:set CF_KEY='FILL ME'
+heroku config:set APP_CLIENT_ID='FILL ME'
+heroku config:set APP_CLIENT_SECRET='FILL ME'
+heroku config:set SECURITY_USER='Sly Resident'
