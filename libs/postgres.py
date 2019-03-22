@@ -359,13 +359,21 @@ def __saveLogEntry(request, userid):
     if (MANUAL_ENGINE_POSTGRES != None):
         url = request.url
         useragent = request.headers['user-agent']
-        externalid = uuid.uuid4().__str__()
+        
         creationdate  = datetime.now()
 
 
+        sqlRequestUserId = """
+            insert into salesforce.webusers__c(name, userid__c, useragent__c) values 
+            (%(userid)s, %(userid)s, %(useragent)s)
+                ON CONFLICT (userid__c) DO NOTHING"""
+        MANUAL_ENGINE_POSTGRES.execute(sqlRequestUserId,
+                    {'useragent':useragent,
+                    'userid' : userid})    
+
         sqlRequest = """insert into salesforce.heroku_logs__c (userid__c, name, url__c, creationdate__c, externalid__c, useragent__c, method__c, webuser__r__userid__c) values 
             ( %(userid)s, %(name)s, %(url)s, %(creationdate)s, %(externalid)s, %(useragent)s , %(method)s , %(userid)s ) """
-
+        externalid = uuid.uuid4().__str__()
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,
                     {'tablename' : SALESFORCE_SCHEMA + '.' + HEROKU_LOGS_TABLE,
                     'url' : url,
@@ -376,13 +384,6 @@ def __saveLogEntry(request, userid):
                     'method' : request.method,
                     'userid' : userid})    
 
-        sqlRequestUserId = """
-            insert into salesforce.webusers__c(name, userid__c, useragent__c) values 
-            (%(userid)s, %(userid)s, %(useragent)s)
-                ON CONFLICT (userid__c) DO NOTHING"""
-        MANUAL_ENGINE_POSTGRES.execute(sqlRequestUserId,
-                    {'useragent':useragent,
-                    'userid' : userid})    
 
 
 def __checkHerokuLogsTable():
