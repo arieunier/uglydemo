@@ -1,6 +1,6 @@
 #Grab the latest alpine image
 FROM alpine:latest
-
+# test
 # Install python and pip
 RUN apk add --no-cache --update python3 python3 python-dev py-setuptools py-yaml make vim && \
     python3 -m ensurepip && \
