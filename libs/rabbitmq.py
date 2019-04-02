@@ -137,6 +137,7 @@ def FACE_API_CALLBACK(ch, method, properties, body):
         # transforms body into dict
         body_dict = ujson.loads(body)
         logger.info(body_dict)
+        
         logger.info(" [x] Received id=%r" % (body_dict['id']))
         # gets the id of the image to retrieve in Redis
         image_id = body_dict['id']
@@ -271,9 +272,9 @@ def receiveMessage(queue):
     global channel
     __checkQueue()
     # set up subscription on the queue
-    channel.basic_consume(FACE_API_CALLBACK,
-        queue=queue,
-        no_ack=True)
+    channel.basic_consume(
+        queue,FACE_API_CALLBACK,
+        auto_ack=False)
 
     channel.start_consuming() # start consuming (blocks)
 
