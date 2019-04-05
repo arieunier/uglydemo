@@ -82,8 +82,10 @@ def sendMessage(data, queue):
                                          body=data,
                       properties=pika.BasicProperties(
                          delivery_mode = 2 # make message persistent
-                      ))
+                      ), mandatory=False )
         logger.debug("[x] sent")
+
+
     except pika.exceptions.ConnectionClosed as e:
         try:
             logger.error("Error with Rabbit MQ Connection. Trying to reinit it")
@@ -93,7 +95,7 @@ def sendMessage(data, queue):
                                          body=data,
                       properties=pika.BasicProperties(
                          delivery_mode = 2 # make message persistent
-                      ))
+                      ), mandatory=False )
         except Exception as e:
             init()
             _retrySendData(data, queue)
