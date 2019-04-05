@@ -16,7 +16,7 @@ UPLOAD_IN_REDIS=utils.str2bool(os.getenv("UPLOAD_IN_REDIS", "false"))
 
 connection = None
 channel = None
-
+params = None
 logger = logs.logger_init(loggername='app',
             filename="log.log",
             debugvalue=logs.LOG_LEVEL,
@@ -24,7 +24,7 @@ logger = logs.logger_init(loggername='app',
 
 
 def init():
-    global connection, channel, CLOUDAMQP_QUEUE
+    global connection, channel, CLOUDAMQP_QUEUE, params
     if (connection == None or channel == None ):
         if (CLOUDAMQP_URL != ''):
             connection = pika.BlockingConnection(params) # Connect to CloudAMQP
