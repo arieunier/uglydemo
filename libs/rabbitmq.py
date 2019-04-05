@@ -81,7 +81,7 @@ def sendMessage(data, queue):
                                      routing_key=queue,
                                          body=data,
                       properties=pika.BasicProperties(
-                         delivery_mode = 2, # make message persistent
+                         delivery_mode = 2 # make message persistent
                       ))
         logger.debug("[x] sent")
     except pika.exceptions.ConnectionClosed as e:
@@ -92,7 +92,7 @@ def sendMessage(data, queue):
                                      routing_key=queue,
                                          body=data,
                       properties=pika.BasicProperties(
-                         delivery_mode = 2, # make message persistent
+                         delivery_mode = 2 # make message persistent
                       ))
         except Exception as e:
             init()

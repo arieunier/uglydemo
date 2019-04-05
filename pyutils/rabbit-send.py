@@ -7,4 +7,4 @@ for i in range(30):
         "Data" : "Content " + currentDate.__str__() + " - " + str(i),
         "UPLOAD_IN_REDIS" : False}
         dataJson = ujson.dumps(dataStr)
-        rabbitmq.sendMessage(dataJson,  rabbitmq.CLOUDAMQP_QUEUE)
+        rabbitmq.sendMessage(dataJson,  "WTF")
