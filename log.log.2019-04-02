@@ -1,0 +1,451 @@
+{'2019-04-02 12:30:25.092','INFO',1927,postgres.py:27-<module>:-->2019-04-02 12:30:25.092812 - Initialization done Postgresql }
+{'2019-04-02 12:30:49.957','INFO',1933,postgres.py:27-<module>:-->2019-04-02 12:30:49.957876 - Initialization done Postgresql }
+{'2019-04-02 12:31:19.746','INFO',1938,postgres.py:27-<module>:-->2019-04-02 12:31:19.746454 - Initialization done Postgresql }
+{'2019-04-02 12:31:51.577','INFO',1971,postgres.py:27-<module>:-->2019-04-02 12:31:51.577843 - Initialization done Postgresql }
+{'2019-04-02 12:37:08.916','INFO',3311,postgres.py:27-<module>:-->2019-04-02 12:37:08.916392 - Initialization done Postgresql }
+{'2019-04-02 12:46:51.118','INFO',4888,postgres.py:27-<module>:-->2019-04-02 12:46:51.118917 - Initialization done Postgresql }
+{'2019-04-02 12:46:51.199','DEBUG',4888,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:46:51.199','DEBUG',4888,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:46:51.199','DEBUG',4888,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:46:51.199','DEBUG',4888,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:46:51.233','INFO',4888,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:46:51.907','DEBUG',4888,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:46:51.908','INFO',4888,rabbitmq.py:43-<module>:-->2019-04-02 12:46:51.908148  - Initialization done RabbitMq}
+{'2019-04-02 12:49:09.058','INFO',4946,postgres.py:27-<module>:-->2019-04-02 12:49:09.058809 - Initialization done Postgresql }
+{'2019-04-02 12:49:09.288','DEBUG',4946,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:49:09.288','DEBUG',4946,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:49:09.288','DEBUG',4946,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:49:09.288','DEBUG',4946,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:49:09.933','DEBUG',4946,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:49:09.934','INFO',4946,rabbitmq.py:43-<module>:-->2019-04-02 12:49:09.934592  - Initialization done RabbitMq}
+{'2019-04-02 12:49:09.966','INFO',4946,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:49:10.397','INFO',4950,postgres.py:27-<module>:-->2019-04-02 12:49:10.397128 - Initialization done Postgresql }
+{'2019-04-02 12:49:10.568','DEBUG',4950,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:49:10.568','DEBUG',4950,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:49:10.568','DEBUG',4950,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:49:10.568','DEBUG',4950,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:49:11.067','DEBUG',4950,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:49:11.068','INFO',4950,rabbitmq.py:43-<module>:-->2019-04-02 12:49:11.067972  - Initialization done RabbitMq}
+{'2019-04-02 12:49:11.087','INFO',4950,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:49:27.439','INFO',4995,postgres.py:27-<module>:-->2019-04-02 12:49:27.439239 - Initialization done Postgresql }
+{'2019-04-02 12:49:27.514','DEBUG',4995,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:49:27.514','DEBUG',4995,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:49:27.514','DEBUG',4995,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:49:27.514','DEBUG',4995,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:49:27.533','INFO',4995,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:49:27.972','DEBUG',4995,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:49:27.972','INFO',4995,rabbitmq.py:43-<module>:-->2019-04-02 12:49:27.972751  - Initialization done RabbitMq}
+{'2019-04-02 12:51:58.762','INFO',5202,postgres.py:27-<module>:-->2019-04-02 12:51:58.762178 - Initialization done Postgresql }
+{'2019-04-02 12:51:58.879','DEBUG',5202,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:51:58.879','DEBUG',5202,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:51:58.879','DEBUG',5202,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:51:58.879','DEBUG',5202,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:51:58.911','INFO',5202,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:51:59.413','DEBUG',5202,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:51:59.413','INFO',5202,rabbitmq.py:43-<module>:-->2019-04-02 12:51:59.413706  - Initialization done RabbitMq}
+{'2019-04-02 12:52:55.467','INFO',5472,postgres.py:27-<module>:-->2019-04-02 12:52:55.467708 - Initialization done Postgresql }
+{'2019-04-02 12:52:55.575','DEBUG',5472,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:52:55.575','DEBUG',5472,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:52:55.575','DEBUG',5472,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:52:55.575','DEBUG',5472,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:52:55.606','INFO',5472,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:52:56.215','DEBUG',5472,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:52:56.216','INFO',5472,rabbitmq.py:43-<module>:-->2019-04-02 12:52:56.216335  - Initialization done RabbitMq}
+{'2019-04-02 12:57:09.101','INFO',5585,postgres.py:27-<module>:-->2019-04-02 12:57:09.101835 - Initialization done Postgresql }
+{'2019-04-02 12:57:09.204','DEBUG',5585,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:57:09.205','DEBUG',5585,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:57:09.205','DEBUG',5585,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:57:09.205','DEBUG',5585,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:57:09.234','INFO',5585,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:57:09.809','DEBUG',5585,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:57:09.810','INFO',5585,rabbitmq.py:43-<module>:-->2019-04-02 12:57:09.810045  - Initialization done RabbitMq}
+{'2019-04-02 12:57:26.285','INFO',5591,postgres.py:27-<module>:-->2019-04-02 12:57:26.285713 - Initialization done Postgresql }
+{'2019-04-02 12:57:26.359','DEBUG',5591,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:57:26.359','DEBUG',5591,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:57:26.359','DEBUG',5591,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:57:26.359','DEBUG',5591,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:57:26.378','INFO',5591,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:57:26.790','DEBUG',5591,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:57:26.790','INFO',5591,rabbitmq.py:43-<module>:-->2019-04-02 12:57:26.790783  - Initialization done RabbitMq}
+{'2019-04-02 12:57:26.793','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.794','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.794','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.795','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.796','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.796','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.797','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.797','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.797','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.798','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.798','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.799','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.799','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.799','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.800','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.800','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.800','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.801','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.801','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.802','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.802','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.802','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.803','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.803','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.803','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.804','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.804','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.804','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.805','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:26.805','DEBUG',5591,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 12:57:33.244','INFO',5594,postgres.py:27-<module>:-->2019-04-02 12:57:33.244317 - Initialization done Postgresql }
+{'2019-04-02 12:57:33.318','DEBUG',5594,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:57:33.319','DEBUG',5594,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:57:33.319','DEBUG',5594,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:57:33.319','DEBUG',5594,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:57:33.337','INFO',5594,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:57:33.800','DEBUG',5594,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:57:33.800','INFO',5594,rabbitmq.py:43-<module>:-->2019-04-02 12:57:33.800401  - Initialization done RabbitMq}
+{'2019-04-02 12:58:36.940','INFO',5630,postgres.py:27-<module>:-->2019-04-02 12:58:36.940526 - Initialization done Postgresql }
+{'2019-04-02 12:58:37.017','DEBUG',5630,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 12:58:37.017','DEBUG',5630,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 12:58:37.017','DEBUG',5630,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 12:58:37.017','DEBUG',5630,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 12:58:37.035','INFO',5630,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 12:58:37.491','DEBUG',5630,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 12:58:37.491','INFO',5630,rabbitmq.py:43-<module>:-->2019-04-02 12:58:37.491828  - Initialization done RabbitMq}
+{'2019-04-02 13:04:05.640','INFO',6990,postgres.py:27-<module>:-->2019-04-02 13:04:05.640519 - Initialization done Postgresql }
+{'2019-04-02 13:04:05.714','DEBUG',6990,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:04:05.714','DEBUG',6990,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:04:05.714','DEBUG',6990,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:04:05.714','DEBUG',6990,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:04:05.732','INFO',6990,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:04:06.251','DEBUG',6990,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:04:06.251','INFO',6990,rabbitmq.py:43-<module>:-->2019-04-02 13:04:06.251613  - Initialization done RabbitMq}
+{'2019-04-02 13:04:22.374','INFO',7008,postgres.py:27-<module>:-->2019-04-02 13:04:22.374672 - Initialization done Postgresql }
+{'2019-04-02 13:04:22.448','DEBUG',7008,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:04:22.449','DEBUG',7008,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:04:22.449','DEBUG',7008,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:04:22.449','DEBUG',7008,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:04:22.467','INFO',7008,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:04:22.932','DEBUG',7008,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:04:22.932','INFO',7008,rabbitmq.py:43-<module>:-->2019-04-02 13:04:22.932548  - Initialization done RabbitMq}
+{'2019-04-02 13:04:47.314','INFO',7025,postgres.py:27-<module>:-->2019-04-02 13:04:47.314189 - Initialization done Postgresql }
+{'2019-04-02 13:04:47.387','DEBUG',7025,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:04:47.387','DEBUG',7025,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:04:47.387','DEBUG',7025,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:04:47.387','DEBUG',7025,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:04:47.406','INFO',7025,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:04:47.880','DEBUG',7025,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:04:47.880','INFO',7025,rabbitmq.py:43-<module>:-->2019-04-02 13:04:47.880862  - Initialization done RabbitMq}
+{'2019-04-02 13:05:40.826','INFO',7042,postgres.py:27-<module>:-->2019-04-02 13:05:40.825990 - Initialization done Postgresql }
+{'2019-04-02 13:05:40.901','DEBUG',7042,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:05:40.901','DEBUG',7042,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:05:40.901','DEBUG',7042,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:05:40.901','DEBUG',7042,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:05:40.919','INFO',7042,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:05:41.613','DEBUG',7042,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:05:41.613','INFO',7042,rabbitmq.py:43-<module>:-->2019-04-02 13:05:41.613437  - Initialization done RabbitMq}
+{'2019-04-02 13:21:33.971','INFO',10342,postgres.py:27-<module>:-->2019-04-02 13:21:33.971745 - Initialization done Postgresql }
+{'2019-04-02 13:21:34.088','DEBUG',10342,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:21:34.088','DEBUG',10342,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:21:34.088','DEBUG',10342,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:21:34.088','DEBUG',10342,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:21:34.129','INFO',10342,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:21:34.640','DEBUG',10342,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:21:34.641','INFO',10342,rabbitmq.py:43-<module>:-->2019-04-02 13:21:34.641118  - Initialization done RabbitMq}
+{'2019-04-02 13:21:49.513','INFO',10368,postgres.py:27-<module>:-->2019-04-02 13:21:49.513601 - Initialization done Postgresql }
+{'2019-04-02 13:21:49.588','DEBUG',10368,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:21:49.589','DEBUG',10368,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:21:49.589','DEBUG',10368,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:21:49.589','DEBUG',10368,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:21:49.606','INFO',10368,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:21:50.038','DEBUG',10368,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:21:50.040','INFO',10368,rabbitmq.py:43-<module>:-->2019-04-02 13:21:50.039949  - Initialization done RabbitMq}
+{'2019-04-02 13:21:50.041','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.042','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.043','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.044','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.044','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.045','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.045','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.046','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.046','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.046','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.047','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.047','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.048','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.048','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.048','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.049','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.049','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.049','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.050','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.050','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.050','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.050','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.051','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.051','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.051','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.052','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.052','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.052','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.053','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:50.053','DEBUG',10368,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 13:21:52.130','INFO',10371,postgres.py:27-<module>:-->2019-04-02 13:21:52.130520 - Initialization done Postgresql }
+{'2019-04-02 13:21:52.209','DEBUG',10371,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:21:52.209','DEBUG',10371,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:21:52.209','DEBUG',10371,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:21:52.209','DEBUG',10371,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:21:52.227','INFO',10371,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:21:52.620','DEBUG',10371,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:21:52.621','INFO',10371,rabbitmq.py:43-<module>:-->2019-04-02 13:21:52.621024  - Initialization done RabbitMq}
+{'2019-04-02 13:23:28.549','INFO',10431,postgres.py:27-<module>:-->2019-04-02 13:23:28.549738 - Initialization done Postgresql }
+{'2019-04-02 13:23:28.656','DEBUG',10431,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 13:23:28.656','DEBUG',10431,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 13:23:28.657','DEBUG',10431,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 13:23:28.657','DEBUG',10431,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 13:23:28.690','INFO',10431,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 13:23:29.191','DEBUG',10431,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 13:23:29.192','INFO',10431,rabbitmq.py:43-<module>:-->2019-04-02 13:23:29.192277  - Initialization done RabbitMq}
+{'2019-04-02 14:02:58.347','INFO',15224,postgres.py:27-<module>:-->2019-04-02 14:02:58.347676 - Initialization done Postgresql }
+{'2019-04-02 14:02:58.471','DEBUG',15224,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:02:58.472','DEBUG',15224,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:02:58.472','DEBUG',15224,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:02:58.472','DEBUG',15224,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:02:58.506','INFO',15224,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:02:59.151','DEBUG',15224,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:02:59.151','INFO',15224,rabbitmq.py:43-<module>:-->2019-04-02 14:02:59.151333  - Initialization done RabbitMq}
+{'2019-04-02 14:04:11.061','INFO',15242,postgres.py:27-<module>:-->2019-04-02 14:04:11.060988 - Initialization done Postgresql }
+{'2019-04-02 14:04:11.143','DEBUG',15242,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:04:11.143','DEBUG',15242,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:04:11.143','DEBUG',15242,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:04:11.143','DEBUG',15242,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:04:11.163','INFO',15242,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:04:11.748','DEBUG',15242,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:04:11.748','INFO',15242,rabbitmq.py:43-<module>:-->2019-04-02 14:04:11.748615  - Initialization done RabbitMq}
+{'2019-04-02 14:04:11.825','INFO',15242,rabbitmq.py:139-FACE_API_CALLBACK:-->{'Data': 'Content 2019-04-02 13:21:50.040444 - 0'}}
+{'2019-04-02 14:04:29.675','INFO',15254,postgres.py:27-<module>:-->2019-04-02 14:04:29.675361 - Initialization done Postgresql }
+{'2019-04-02 14:04:29.756','DEBUG',15254,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:04:29.756','DEBUG',15254,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:04:29.756','DEBUG',15254,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:04:29.756','DEBUG',15254,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:04:29.776','INFO',15254,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:04:30.406','DEBUG',15254,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:04:30.406','INFO',15254,rabbitmq.py:43-<module>:-->2019-04-02 14:04:30.406622  - Initialization done RabbitMq}
+{'2019-04-02 14:04:30.466','INFO',15254,rabbitmq.py:139-FACE_API_CALLBACK:-->{'Data': 'Content 2019-04-02 12:57:26.791179 - 0'}}
+{'2019-04-02 14:05:28.855','INFO',15281,postgres.py:27-<module>:-->2019-04-02 14:05:28.855458 - Initialization done Postgresql }
+{'2019-04-02 14:05:28.940','DEBUG',15281,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:05:28.940','DEBUG',15281,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:05:28.940','DEBUG',15281,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:05:28.940','DEBUG',15281,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:05:28.960','INFO',15281,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:05:29.994','DEBUG',15281,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:05:29.994','INFO',15281,rabbitmq.py:43-<module>:-->2019-04-02 14:05:29.994814  - Initialization done RabbitMq}
+{'2019-04-02 14:05:57.190','INFO',15313,postgres.py:27-<module>:-->2019-04-02 14:05:57.190565 - Initialization done Postgresql }
+{'2019-04-02 14:05:57.273','DEBUG',15313,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:05:57.273','DEBUG',15313,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:05:57.274','DEBUG',15313,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:05:57.274','DEBUG',15313,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:05:57.292','INFO',15313,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:05:57.786','DEBUG',15313,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:05:57.786','INFO',15313,rabbitmq.py:43-<module>:-->2019-04-02 14:05:57.786759  - Initialization done RabbitMq}
+{'2019-04-02 14:05:57.787','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.787','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.788','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.788','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.788','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.789','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.789','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.790','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.790','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.790','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.790','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.791','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.791','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.791','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.792','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.792','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.792','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.793','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.793','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.793','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.794','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.794','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.794','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.795','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.795','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.795','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.795','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.796','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.796','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:05:57.796','DEBUG',15313,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:06:00.952','INFO',15316,postgres.py:27-<module>:-->2019-04-02 14:06:00.952499 - Initialization done Postgresql }
+{'2019-04-02 14:06:01.032','DEBUG',15316,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:06:01.032','DEBUG',15316,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:06:01.032','DEBUG',15316,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:06:01.032','DEBUG',15316,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:06:01.051','INFO',15316,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:06:01.531','DEBUG',15316,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:06:01.531','INFO',15316,rabbitmq.py:43-<module>:-->2019-04-02 14:06:01.531279  - Initialization done RabbitMq}
+{'2019-04-02 14:06:01.582','INFO',15316,rabbitmq.py:139-FACE_API_CALLBACK:-->{'Data': 'Content 2019-04-02 12:57:26.791179 - 0'}}
+{'2019-04-02 14:07:16.778','INFO',15398,postgres.py:27-<module>:-->2019-04-02 14:07:16.778946 - Initialization done Postgresql }
+{'2019-04-02 14:07:16.871','DEBUG',15398,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:07:16.871','DEBUG',15398,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:07:16.871','DEBUG',15398,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:07:16.871','DEBUG',15398,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:07:16.892','INFO',15398,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:07:17.334','DEBUG',15398,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:07:17.335','INFO',15398,rabbitmq.py:43-<module>:-->2019-04-02 14:07:17.335213  - Initialization done RabbitMq}
+{'2019-04-02 14:07:17.381','INFO',15398,rabbitmq.py:139-FACE_API_CALLBACK:-->{'Data': 'Content 2019-04-02 12:57:26.791179 - 0'}}
+{'2019-04-02 14:07:26.985','INFO',15433,postgres.py:27-<module>:-->2019-04-02 14:07:26.985135 - Initialization done Postgresql }
+{'2019-04-02 14:07:27.070','DEBUG',15433,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:07:27.070','DEBUG',15433,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:07:27.070','DEBUG',15433,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:07:27.071','DEBUG',15433,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:07:27.090','INFO',15433,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:07:27.867','DEBUG',15433,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:07:27.867','INFO',15433,rabbitmq.py:43-<module>:-->2019-04-02 14:07:27.867560  - Initialization done RabbitMq}
+{'2019-04-02 14:07:27.868','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.868','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.868','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.869','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.869','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.869','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.870','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.870','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.871','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.871','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.871','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.872','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.872','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.872','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.873','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.873','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.874','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.874','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.874','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.875','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.875','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.875','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.876','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.876','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.876','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.877','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.877','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.877','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.878','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:27.878','DEBUG',15433,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:07:30.038','INFO',15436,postgres.py:27-<module>:-->2019-04-02 14:07:30.038714 - Initialization done Postgresql }
+{'2019-04-02 14:07:30.131','DEBUG',15436,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:07:30.131','DEBUG',15436,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:07:30.131','DEBUG',15436,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:07:30.132','DEBUG',15436,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:07:30.150','INFO',15436,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:07:30.528','DEBUG',15436,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:07:30.529','INFO',15436,rabbitmq.py:43-<module>:-->2019-04-02 14:07:30.529174  - Initialization done RabbitMq}
+{'2019-04-02 14:07:30.574','INFO',15436,rabbitmq.py:139-FACE_API_CALLBACK:-->{'Data': 'Content 2019-04-02 12:57:26.791179 - 0'}}
+{'2019-04-02 14:08:27.312','INFO',15453,postgres.py:27-<module>:-->2019-04-02 14:08:27.312345 - Initialization done Postgresql }
+{'2019-04-02 14:08:27.396','DEBUG',15453,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:08:27.396','DEBUG',15453,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:08:27.396','DEBUG',15453,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:08:27.396','DEBUG',15453,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:08:27.416','INFO',15453,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:08:27.996','DEBUG',15453,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:08:27.996','INFO',15453,rabbitmq.py:43-<module>:-->2019-04-02 14:08:27.996512  - Initialization done RabbitMq}
+{'2019-04-02 14:08:28.042','INFO',15453,rabbitmq.py:139-FACE_API_CALLBACK:-->{'Data': 'Content 2019-04-02 12:57:26.791179 - 0'}}
+{'2019-04-02 14:09:19.437','INFO',16244,postgres.py:27-<module>:-->2019-04-02 14:09:19.437912 - Initialization done Postgresql }
+{'2019-04-02 14:09:19.568','DEBUG',16244,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:09:19.568','DEBUG',16244,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:09:19.568','DEBUG',16244,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:09:19.569','DEBUG',16244,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:09:19.602','INFO',16244,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:09:20.078','DEBUG',16244,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:09:20.078','INFO',16244,rabbitmq.py:43-<module>:-->2019-04-02 14:09:20.078532  - Initialization done RabbitMq}
+{'2019-04-02 14:09:20.079','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.079','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.080','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.080','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.080','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.081','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.081','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.081','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.082','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.082','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.083','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.083','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.083','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.084','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.084','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.084','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.085','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.085','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.085','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.086','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.086','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.087','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.087','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.087','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.087','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.088','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.088','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.089','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.089','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:20.089','DEBUG',16244,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:09:23.638','INFO',16686,postgres.py:27-<module>:-->2019-04-02 14:09:23.638451 - Initialization done Postgresql }
+{'2019-04-02 14:09:23.727','DEBUG',16686,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:09:23.727','DEBUG',16686,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:09:23.727','DEBUG',16686,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:09:23.727','DEBUG',16686,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:09:23.753','INFO',16686,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:09:24.146','DEBUG',16686,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:09:24.146','INFO',16686,rabbitmq.py:43-<module>:-->2019-04-02 14:09:24.146369  - Initialization done RabbitMq}
+{'2019-04-02 14:09:24.193','INFO',16686,rabbitmq.py:139-FACE_API_CALLBACK:-->{'id': 'b2a009f0-48ad-4731-a754-c4397779725a', 'Data': 'Content 2019-04-02 14:09:20.078679 - 0'}}
+{'2019-04-02 14:09:24.194','INFO',16686,rabbitmq.py:141-FACE_API_CALLBACK:--> [x] Received id='b2a009f0-48ad-4731-a754-c4397779725a'}
+{'2019-04-02 14:10:04.123','INFO',16740,postgres.py:27-<module>:-->2019-04-02 14:10:04.123653 - Initialization done Postgresql }
+{'2019-04-02 14:10:04.230','DEBUG',16740,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:10:04.231','DEBUG',16740,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:10:04.231','DEBUG',16740,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:10:04.231','DEBUG',16740,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:10:04.256','INFO',16740,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:10:04.699','DEBUG',16740,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:10:04.699','INFO',16740,rabbitmq.py:43-<module>:-->2019-04-02 14:10:04.699265  - Initialization done RabbitMq}
+{'2019-04-02 14:10:04.699','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.700','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.700','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.700','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.701','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.701','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.702','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.702','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.702','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.703','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.703','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.703','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.704','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.704','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.704','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.705','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.705','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.705','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.705','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.706','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.706','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.706','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.707','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.707','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.707','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.708','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.708','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.708','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.708','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:04.709','DEBUG',16740,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-02 14:10:06.601','INFO',16745,postgres.py:27-<module>:-->2019-04-02 14:10:06.600997 - Initialization done Postgresql }
+{'2019-04-02 14:10:06.680','DEBUG',16745,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-02 14:10:06.680','DEBUG',16745,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-02 14:10:06.680','DEBUG',16745,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-02 14:10:06.680','DEBUG',16745,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-02 14:10:06.698','INFO',16745,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-02 14:10:07.083','DEBUG',16745,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-02 14:10:07.083','INFO',16745,rabbitmq.py:43-<module>:-->2019-04-02 14:10:07.083328  - Initialization done RabbitMq}
+{'2019-04-02 14:10:07.130','INFO',16745,rabbitmq.py:139-FACE_API_CALLBACK:-->{'id': 'abf62d0d-f115-4485-8354-387e29983034', 'Data': 'Content 2019-04-02 14:10:04.699472 - 0', 'UPLOAD_IN_REDIS': False}}
+{'2019-04-02 14:10:07.132','INFO',16745,rabbitmq.py:141-FACE_API_CALLBACK:--> [x] Received id='abf62d0d-f115-4485-8354-387e29983034'}

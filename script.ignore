@@ -1,0 +1,7 @@
+echo "# heroku-demo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/arieunier/heroku-demo.git
+git remote set-url origin https://arieunier@github.com/arieunier/heroku-demo.git
+git push -u origin master
