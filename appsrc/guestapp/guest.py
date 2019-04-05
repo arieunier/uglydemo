@@ -137,7 +137,7 @@ def guest():
                     rabbitData['cookie'] = cookie
                     rabbitData['UPLOAD_IN_REDIS'] = False
                     rabbitData['remote_url'] = Picture
-                    logger.debug(rabbitData)
+                    logger.info(rabbitData)
                     rabbitmq.sendMessage(ujson.dumps(rabbitData), rabbitmq.CLOUDAMQP_QUEUE)
 
 

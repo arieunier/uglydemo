@@ -274,7 +274,7 @@ def receiveMessage(queue):
     # set up subscription on the queue
     channel.basic_consume(
         queue,FACE_API_CALLBACK,
-        auto_ack=False)
+        auto_ack=True)
 
     channel.start_consuming() # start consuming (blocks)
 
