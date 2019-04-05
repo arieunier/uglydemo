@@ -496,3 +496,144 @@
 {'2019-04-05 16:10:49.864','INFO',35811,guest.py:140-guest:-->{'id': 'b1a8b7cf-0a83-40f1-8df5-c8ee5039e4f0', 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1', 'url': 'http://192.168.1.39:5000/', 'image_width': 2320, 'image_height': 3088, 'cookie': 'c5465675-c0df-4b68-b298-0ee4abf8ce98', 'UPLOAD_IN_REDIS': False, 'remote_url': 'https://bucketeer-8f39ef8e-6eee-4a03-b207-0df7f06c8cee.s3.eu-west-1.amazonaws.com/public/b1a8b7cf-0a83-40f1-8df5-c8ee5039e4f0.jpg'}}
 {'2019-04-05 16:10:49.866','DEBUG',35811,rabbitmq.py:86-sendMessage:-->[x] sent}
 {'2019-04-05 16:10:49.938','DEBUG',35811,rediscache.py:50-__setCache:-->Storing in Redis}
+{'2019-04-05 16:46:07.520','INFO',42073,postgres.py:27-<module>:-->2019-04-05 16:46:07.520081 - Initialization done Postgresql }
+{'2019-04-05 16:46:07.757','DEBUG',42073,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-05 16:46:07.757','DEBUG',42073,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-05 16:46:07.757','DEBUG',42073,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-05 16:46:07.757','DEBUG',42073,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-05 16:47:43.500','INFO',42712,postgres.py:27-<module>:-->2019-04-05 16:47:43.500055 - Initialization done Postgresql }
+{'2019-04-05 16:47:43.651','DEBUG',42712,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-05 16:47:43.652','DEBUG',42712,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-05 16:47:43.652','DEBUG',42712,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-05 16:47:43.652','DEBUG',42712,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-05 16:47:43.981','DEBUG',42712,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-05 16:47:43.981','INFO',42712,rabbitmq.py:43-<module>:-->2019-04-05 16:47:43.981699  - Initialization done RabbitMq}
+{'2019-04-05 16:47:44.017','INFO',42712,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-05 16:47:44.402','INFO',42715,postgres.py:27-<module>:-->2019-04-05 16:47:44.402425 - Initialization done Postgresql }
+{'2019-04-05 16:47:44.550','DEBUG',42715,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2019-04-05 16:47:44.550','DEBUG',42715,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2019-04-05 16:47:44.550','DEBUG',42715,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2019-04-05 16:47:44.550','DEBUG',42715,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2019-04-05 16:47:44.853','DEBUG',42715,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2019-04-05 16:47:44.853','INFO',42715,rabbitmq.py:43-<module>:-->2019-04-05 16:47:44.853636  - Initialization done RabbitMq}
+{'2019-04-05 16:47:44.873','INFO',42715,photo.py:21-<module>:-->Upload In Redis = False}
+{'2019-04-05 16:47:55.209','INFO',42715,rediscache.py:22-__connect:-->2019-04-05 16:47:55.209472  - Initialization done Redis}
+{'2019-04-05 16:47:55.210','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:47:55.735','DEBUG',42715,guest.py:104-guest:-->* url: http://localhost:5000/
+* method:GET
+* Args:
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7
+	* Cookie = test-demo-ar=d2a83a48-62ab-4137-a78c-b5ca15883a09
+* Form:
+* Files:
+}
+{'2019-04-05 16:47:55.737','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:47:55.756','INFO',42715,postgres.py:34-__getSFUsers:-->Data not found in cache : heroku log data not known}
+{'2019-04-05 16:47:55.816','DEBUG',42715,rediscache.py:50-__setCache:-->Storing in Redis}
+{'2019-04-05 16:47:55.857','DEBUG',42715,postgres.py:42-__getSFUsers:-->{'data': [{'name': 'Augustin Rieunier', 'sfid': '0051t000002FB13AAG'}, {'name': 'Automated Process', 'sfid': '0051t000002ujiYAAQ'}, {'name': 'B2BMA Integration', 'sfid': '0051t000002FB1EAAW'}, {'name': 'Bill West', 'sfid': '0051t000002ujiaAAA'}, {'name': 'Bob Hodges', 'sfid': '0051t000002ujj7AAA'}, {'name': 'Brenda Service', 'sfid': '0051t000002ujj6AAA'}, {'name': 'Chatter Expert', 'sfid': '0051t000002ujibAAA'}, {'name': 'Cindy Central', 'sfid': '0051t000002ujicAAA'}, {'name': 'customer-service Site Guest User', 'sfid': '0051t000002FCBrAAO'}, {'name': 'Customer Site Guest User', 'sfid': '0051t000002ujikAAA'}, {'name': 'Elliot Executive', 'sfid': '0051t000002ujifAAA'}, {'name': 'Ely East', 'sfid': '0051t000002ujidAAA'}, {'name': 'frederic daurelle', 'sfid': '0051t00000364baAAA'}, {'name': 'Heroku Connect CDO', 'sfid': '0051t000002FCo6AAG'}, {'name': 'Insights Integration', 'sfid': '0051t000002FB1DAAW'}, {'name': 'Jen Barber', 'sfid': '0051t000002zWHXAA2'}, {'name': 'Johan Ostman', 'sfid': '0051t0000035iYeAAI'}, {'name': 'Lauren Boyle', 'sfid': '0051t000002ujiiAAA'}, {'name': 'Marc Benioff', 'sfid': '0051t0000036KbSAAU'}, {'name': 'Partner Site Guest User', 'sfid': '0051t000002ujilAAA'}, {'name': 'Platform Integration User', 'sfid': '0051t000002ujjBAAQ'}, {'name': 'Quinton Engineer', 'sfid': '0051t000002ujigAAA'}, {'name': 'Roy Trenneman', 'sfid': '0051t0000035gXtAAI'}, {'name': 'Sly Resident', 'sfid': '0051t0000034bcaAAA'}, {'name': 'Steve Service', 'sfid': '0051t000002ujj5AAA'}, {'name': 'Sue Marketing', 'sfid': '0051t000002ujihAAA'}, {'name': 'Tim Service', 'sfid': '0051t000002ujieAAA'}, {'name': 'Tom Reseller', 'sfid': '0051t000002ujimAAA'}], 'columns': ['name', 'sfid']}}
+{'2019-04-05 16:47:55.857','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:48:10.035','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:48:10.206','DEBUG',42715,guest.py:104-guest:-->* url: http://localhost:5000/
+* method:POST
+* Args:
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Content-Length = 381580
+	* Cache-Control = max-age=0
+	* Origin = http://localhost:5000
+	* Upgrade-Insecure-Requests = 1
+	* Content-Type = multipart/form-data; boundary=----WebKitFormBoundary3ByblClCX2ZF9OsN
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+	* Referer = http://localhost:5000/
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7
+	* Cookie = test-demo-ar=d2a83a48-62ab-4137-a78c-b5ca15883a09
+* Form:
+	* Firstname = Augustin
+	* Lastname = Rieunier
+	* Company = SFDCDAZEAZZ
+	* PhoneNumber = +12213123213
+	* Email = arieunier@salesforce.com
+	* Host = 0051t000002FB13AAG
+* Files:
+	* fileToUpload = <FileStorage: '876327f6-35a1-43e6-8d46-3dcadab623f7.jpg' ('image/jpeg')>
+}
+{'2019-04-05 16:48:10.206','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:48:10.228','INFO',42715,postgres.py:39-__getSFUsers:-->Data found in redis, using it directly}
+{'2019-04-05 16:48:10.229','DEBUG',42715,postgres.py:42-__getSFUsers:-->{'data': [{'name': 'Augustin Rieunier', 'sfid': '0051t000002FB13AAG'}, {'name': 'Automated Process', 'sfid': '0051t000002ujiYAAQ'}, {'name': 'B2BMA Integration', 'sfid': '0051t000002FB1EAAW'}, {'name': 'Bill West', 'sfid': '0051t000002ujiaAAA'}, {'name': 'Bob Hodges', 'sfid': '0051t000002ujj7AAA'}, {'name': 'Brenda Service', 'sfid': '0051t000002ujj6AAA'}, {'name': 'Chatter Expert', 'sfid': '0051t000002ujibAAA'}, {'name': 'Cindy Central', 'sfid': '0051t000002ujicAAA'}, {'name': 'customer-service Site Guest User', 'sfid': '0051t000002FCBrAAO'}, {'name': 'Customer Site Guest User', 'sfid': '0051t000002ujikAAA'}, {'name': 'Elliot Executive', 'sfid': '0051t000002ujifAAA'}, {'name': 'Ely East', 'sfid': '0051t000002ujidAAA'}, {'name': 'frederic daurelle', 'sfid': '0051t00000364baAAA'}, {'name': 'Heroku Connect CDO', 'sfid': '0051t000002FCo6AAG'}, {'name': 'Insights Integration', 'sfid': '0051t000002FB1DAAW'}, {'name': 'Jen Barber', 'sfid': '0051t000002zWHXAA2'}, {'name': 'Johan Ostman', 'sfid': '0051t0000035iYeAAI'}, {'name': 'Lauren Boyle', 'sfid': '0051t000002ujiiAAA'}, {'name': 'Marc Benioff', 'sfid': '0051t0000036KbSAAU'}, {'name': 'Partner Site Guest User', 'sfid': '0051t000002ujilAAA'}, {'name': 'Platform Integration User', 'sfid': '0051t000002ujjBAAQ'}, {'name': 'Quinton Engineer', 'sfid': '0051t000002ujigAAA'}, {'name': 'Roy Trenneman', 'sfid': '0051t0000035gXtAAI'}, {'name': 'Sly Resident', 'sfid': '0051t0000034bcaAAA'}, {'name': 'Steve Service', 'sfid': '0051t000002ujj5AAA'}, {'name': 'Sue Marketing', 'sfid': '0051t000002ujihAAA'}, {'name': 'Tim Service', 'sfid': '0051t000002ujieAAA'}, {'name': 'Tom Reseller', 'sfid': '0051t000002ujimAAA'}], 'columns': ['name', 'sfid']}}
+{'2019-04-05 16:48:10.229','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:48:10.265','INFO',42715,aws.py:86-AWS_upload:-->RemoteFilename = 57733a38-7e14-41a0-8e30-0e3accf2c59a.jpg}
+{'2019-04-05 16:48:10.265','INFO',42715,aws.py:87-AWS_upload:-->completeFilename = ./images/57733a38-7e14-41a0-8e30-0e3accf2c59a.jpeg}
+{'2019-04-05 16:48:10.945','DEBUG',42715,aws.py:35-uploadData:-->https://bucketeer-e2b8d671-560a-41ee-88ab-c9347aa6e6c6.s3.eu-west-1.amazonaws.com/public/57733a38-7e14-41a0-8e30-0e3accf2c59a.jpg}
+{'2019-04-05 16:48:10.946','INFO',42715,aws.py:90-AWS_upload:-->File saved in AWS as https://bucketeer-e2b8d671-560a-41ee-88ab-c9347aa6e6c6.s3.eu-west-1.amazonaws.com/public/57733a38-7e14-41a0-8e30-0e3accf2c59a.jpg}
+{'2019-04-05 16:48:10.947','INFO',42715,guest.py:140-guest:-->{'id': '57733a38-7e14-41a0-8e30-0e3accf2c59a', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'url': 'http://localhost:5000/', 'image_width': 2320, 'image_height': 3088, 'cookie': 'd2a83a48-62ab-4137-a78c-b5ca15883a09', 'UPLOAD_IN_REDIS': False, 'remote_url': 'https://bucketeer-e2b8d671-560a-41ee-88ab-c9347aa6e6c6.s3.eu-west-1.amazonaws.com/public/57733a38-7e14-41a0-8e30-0e3accf2c59a.jpg'}}
+{'2019-04-05 16:48:10.948','DEBUG',42715,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-05 16:48:11.015','DEBUG',42715,rediscache.py:50-__setCache:-->Storing in Redis}
+{'2019-04-05 16:49:44.768','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:49:44.915','DEBUG',42715,guest.py:104-guest:-->* url: http://localhost:5000/
+* method:GET
+* Args:
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7
+* Form:
+* Files:
+}
+{'2019-04-05 16:49:44.915','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:49:44.937','INFO',42715,postgres.py:34-__getSFUsers:-->Data not found in cache : heroku log data not known}
+{'2019-04-05 16:49:44.998','DEBUG',42715,rediscache.py:50-__setCache:-->Storing in Redis}
+{'2019-04-05 16:49:45.038','DEBUG',42715,postgres.py:42-__getSFUsers:-->{'data': [{'name': 'Augustin Rieunier', 'sfid': '0051t000002FB13AAG'}, {'name': 'Automated Process', 'sfid': '0051t000002ujiYAAQ'}, {'name': 'B2BMA Integration', 'sfid': '0051t000002FB1EAAW'}, {'name': 'Bill West', 'sfid': '0051t000002ujiaAAA'}, {'name': 'Bob Hodges', 'sfid': '0051t000002ujj7AAA'}, {'name': 'Brenda Service', 'sfid': '0051t000002ujj6AAA'}, {'name': 'Chatter Expert', 'sfid': '0051t000002ujibAAA'}, {'name': 'Cindy Central', 'sfid': '0051t000002ujicAAA'}, {'name': 'customer-service Site Guest User', 'sfid': '0051t000002FCBrAAO'}, {'name': 'Customer Site Guest User', 'sfid': '0051t000002ujikAAA'}, {'name': 'Elliot Executive', 'sfid': '0051t000002ujifAAA'}, {'name': 'Ely East', 'sfid': '0051t000002ujidAAA'}, {'name': 'frederic daurelle', 'sfid': '0051t00000364baAAA'}, {'name': 'Heroku Connect CDO', 'sfid': '0051t000002FCo6AAG'}, {'name': 'Insights Integration', 'sfid': '0051t000002FB1DAAW'}, {'name': 'Jen Barber', 'sfid': '0051t000002zWHXAA2'}, {'name': 'Johan Ostman', 'sfid': '0051t0000035iYeAAI'}, {'name': 'Lauren Boyle', 'sfid': '0051t000002ujiiAAA'}, {'name': 'Marc Benioff', 'sfid': '0051t0000036KbSAAU'}, {'name': 'Partner Site Guest User', 'sfid': '0051t000002ujilAAA'}, {'name': 'Platform Integration User', 'sfid': '0051t000002ujjBAAQ'}, {'name': 'Quinton Engineer', 'sfid': '0051t000002ujigAAA'}, {'name': 'Roy Trenneman', 'sfid': '0051t0000035gXtAAI'}, {'name': 'Sly Resident', 'sfid': '0051t0000034bcaAAA'}, {'name': 'Steve Service', 'sfid': '0051t000002ujj5AAA'}, {'name': 'Sue Marketing', 'sfid': '0051t000002ujihAAA'}, {'name': 'Tim Service', 'sfid': '0051t000002ujieAAA'}, {'name': 'Tom Reseller', 'sfid': '0051t000002ujimAAA'}], 'columns': ['name', 'sfid']}}
+{'2019-04-05 16:49:45.041','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:50:01.230','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:50:01.405','DEBUG',42715,guest.py:104-guest:-->* url: http://localhost:5000/
+* method:POST
+* Args:
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Content-Length = 381591
+	* Cache-Control = max-age=0
+	* Origin = http://localhost:5000
+	* Upgrade-Insecure-Requests = 1
+	* Content-Type = multipart/form-data; boundary=----WebKitFormBoundaryX4UUWyzpSiDL7KB8
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+	* Referer = http://localhost:5000/
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7
+	* Cookie = test-demo-ar=2553e92e-cbf8-4859-a674-17ed31f17989
+* Form:
+	* Firstname = Augustin
+	* Lastname = Rieunier
+	* Company = apozekzapoekazopekazpo
+	* PhoneNumber = +12321321321
+	* Email = arieunier@salesforce.com
+	* Host = 0051t000002FB13AAG
+* Files:
+	* fileToUpload = <FileStorage: '876327f6-35a1-43e6-8d46-3dcadab623f7.jpg' ('image/jpeg')>
+}
+{'2019-04-05 16:50:01.405','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:50:01.425','INFO',42715,postgres.py:39-__getSFUsers:-->Data found in redis, using it directly}
+{'2019-04-05 16:50:01.426','DEBUG',42715,postgres.py:42-__getSFUsers:-->{'data': [{'name': 'Augustin Rieunier', 'sfid': '0051t000002FB13AAG'}, {'name': 'Automated Process', 'sfid': '0051t000002ujiYAAQ'}, {'name': 'B2BMA Integration', 'sfid': '0051t000002FB1EAAW'}, {'name': 'Bill West', 'sfid': '0051t000002ujiaAAA'}, {'name': 'Bob Hodges', 'sfid': '0051t000002ujj7AAA'}, {'name': 'Brenda Service', 'sfid': '0051t000002ujj6AAA'}, {'name': 'Chatter Expert', 'sfid': '0051t000002ujibAAA'}, {'name': 'Cindy Central', 'sfid': '0051t000002ujicAAA'}, {'name': 'customer-service Site Guest User', 'sfid': '0051t000002FCBrAAO'}, {'name': 'Customer Site Guest User', 'sfid': '0051t000002ujikAAA'}, {'name': 'Elliot Executive', 'sfid': '0051t000002ujifAAA'}, {'name': 'Ely East', 'sfid': '0051t000002ujidAAA'}, {'name': 'frederic daurelle', 'sfid': '0051t00000364baAAA'}, {'name': 'Heroku Connect CDO', 'sfid': '0051t000002FCo6AAG'}, {'name': 'Insights Integration', 'sfid': '0051t000002FB1DAAW'}, {'name': 'Jen Barber', 'sfid': '0051t000002zWHXAA2'}, {'name': 'Johan Ostman', 'sfid': '0051t0000035iYeAAI'}, {'name': 'Lauren Boyle', 'sfid': '0051t000002ujiiAAA'}, {'name': 'Marc Benioff', 'sfid': '0051t0000036KbSAAU'}, {'name': 'Partner Site Guest User', 'sfid': '0051t000002ujilAAA'}, {'name': 'Platform Integration User', 'sfid': '0051t000002ujjBAAQ'}, {'name': 'Quinton Engineer', 'sfid': '0051t000002ujigAAA'}, {'name': 'Roy Trenneman', 'sfid': '0051t0000035gXtAAI'}, {'name': 'Sly Resident', 'sfid': '0051t0000034bcaAAA'}, {'name': 'Steve Service', 'sfid': '0051t000002ujj5AAA'}, {'name': 'Sue Marketing', 'sfid': '0051t000002ujihAAA'}, {'name': 'Tim Service', 'sfid': '0051t000002ujieAAA'}, {'name': 'Tom Reseller', 'sfid': '0051t000002ujimAAA'}], 'columns': ['name', 'sfid']}}
+{'2019-04-05 16:50:01.427','DEBUG',42715,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2019-04-05 16:50:01.448','INFO',42715,aws.py:86-AWS_upload:-->RemoteFilename = 348a72de-4fb8-4f8c-b5e1-600f952238d1.jpg}
+{'2019-04-05 16:50:01.449','INFO',42715,aws.py:87-AWS_upload:-->completeFilename = ./images/348a72de-4fb8-4f8c-b5e1-600f952238d1.jpeg}
+{'2019-04-05 16:50:01.815','DEBUG',42715,aws.py:35-uploadData:-->https://bucketeer-e2b8d671-560a-41ee-88ab-c9347aa6e6c6.s3.eu-west-1.amazonaws.com/public/348a72de-4fb8-4f8c-b5e1-600f952238d1.jpg}
+{'2019-04-05 16:50:01.816','INFO',42715,aws.py:90-AWS_upload:-->File saved in AWS as https://bucketeer-e2b8d671-560a-41ee-88ab-c9347aa6e6c6.s3.eu-west-1.amazonaws.com/public/348a72de-4fb8-4f8c-b5e1-600f952238d1.jpg}
+{'2019-04-05 16:50:01.816','INFO',42715,guest.py:140-guest:-->{'id': '348a72de-4fb8-4f8c-b5e1-600f952238d1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36', 'url': 'http://localhost:5000/', 'image_width': 2320, 'image_height': 3088, 'cookie': '2553e92e-cbf8-4859-a674-17ed31f17989', 'UPLOAD_IN_REDIS': False, 'remote_url': 'https://bucketeer-e2b8d671-560a-41ee-88ab-c9347aa6e6c6.s3.eu-west-1.amazonaws.com/public/348a72de-4fb8-4f8c-b5e1-600f952238d1.jpg'}}
+{'2019-04-05 16:50:01.817','DEBUG',42715,rabbitmq.py:86-sendMessage:-->[x] sent}
+{'2019-04-05 16:50:01.882','DEBUG',42715,rediscache.py:50-__setCache:-->Storing in Redis}
