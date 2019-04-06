@@ -60,7 +60,7 @@ def _retrySendData(data, queue):
                                      routing_key=queue,
                                          body=data,
                       properties=pika.BasicProperties(
-                         delivery_mode = 2, # make message persistent
+                         delivery_mode = 2 # make message persistent
                       ))
         #logger.debug("[x] sent")
     except Exception as e:
