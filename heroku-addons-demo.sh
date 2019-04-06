@@ -69,7 +69,8 @@ heroku config:set SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/
 echo "Configuring Kafka"
 heroku addons:attach kafka-polished-22221
 heroku config:set APPNAME=$APPLICATION_NAME
-heroku config:set CF_KEY='FILL ME'
-heroku config:set APP_CLIENT_ID='FILL ME'
-heroku config:set APP_CLIENT_SECRET='FILL ME'
 heroku config:set SECURITY_USER='Sly Resident'
+heroku config:set CF_KEY='dfe1fc69d77842a9af25bfa7ac45caee,ba2c1b8f0a4845e080eb87268fae177d'
+heroku config:set APP_CLIENT_ID='3MVG9fTLmJ60pJ5Ly8BJZfP0UwVJGodBblEuztZjVetqEGo6aPEeaB.jAf8VmHs_jQnAgvi7iYm4mxcoY72pn'
+heroku config:set APP_CLIENT_SECRET='D6BDACE02D28D91D649958806AE16E06F8E71F8F8A93FE0AFA3904B604945554'
+
