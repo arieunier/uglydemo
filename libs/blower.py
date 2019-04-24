@@ -2,7 +2,10 @@ import os
 import requests
 
 def sendMessage(Message, Phone):
-    requests.post(os.environ['BLOWERIO_URL'] + '/messages', data={'to': Phone, 'message': Message})
+    resp  = requests.post(os.environ['BLOWERIO_URL'] + '/messages', data={'to': Phone, 'message': Message})
+    print(resp.status_code)
+    response = resp.json()
+    print(response)
 
 
 #sendMessage("This is a test", "+33643395652")
