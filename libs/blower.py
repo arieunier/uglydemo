@@ -13,4 +13,4 @@ def sendMessage(Message, Phone):
     print(response)
     
 
-sendMessage("This is a test", "+33643395652")
+#sendMessage("This is a test", "+33643395652")
