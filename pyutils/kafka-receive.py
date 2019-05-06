@@ -7,12 +7,20 @@ from kafka.errors import KafkaError
 #Consumer, KafkaError, Producer
 from libs import kafka_utils
 import ujson 
-import datetime
+import datetime, os
 
 print(kafka_utils.KAFKA_URL)
 
+KAFKA_PREFIX=  os.getenv('KAFKA_PREFIX', '')
+KAFKA_TOPIC_READ= os.getenv('KAFKA_TOPIC_READ', "topicRead") #"salesforce.syncaccount__e"
+KAFKA_TOPIC_WRITE= os.getenv('KAFKA_TOPIC_WRITE', "topicWrite") #"ple2"
+
+
+#KAFKA_TOPIC = "kanawha-42002.topicRead"
+KAFKA_TOPIC =  KAFKA_PREFIX + KAFKA_TOPIC_READ
+print(KAFKA_TOPIC)
 def consumer():
-    consumer = KafkaConsumer(kafka_utils.KAFKA_COMPLETE_TOPIC,
+    consumer = KafkaConsumer(KAFKA_TOPIC,
                 #group_id=kafka_utils.KAFKA_GROUP_ID,
                 bootstrap_servers =kafka_utils.KAFKA_URL.replace('kafka+ssl://','').split(','),
                 security_protocol ='SSL',
@@ -28,7 +36,7 @@ def consumer():
                 #api_version = (0,9)
                 )
 
-    consumer.subscribe(kafka_utils.KAFKA_COMPLETE_TOPIC)
+    consumer.subscribe(KAFKA_TOPIC)
 
     for message in consumer:
         # message value and key are raw bytes -- decode if necessary!

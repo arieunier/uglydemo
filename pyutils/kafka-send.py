@@ -4,6 +4,6 @@ import ujson
 kafka_utils.KAFKA_TOPIC_WRITE='topicRead'
 
 for i in range(30):
-    data = {'key' : i, 'value' : 'value of ' + str(i)}
+    data = {'message' : 'value of ' + str(i)}
     print(data)
     kafka_utils.sendToKafka(ujson.dumps(data))
