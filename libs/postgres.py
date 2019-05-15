@@ -32,7 +32,7 @@ def __getSFUsers():
     if ((tmp_dict == None) or (tmp_dict == '')):
 
         logger.info("Data not found in cache : heroku log data not known")
-        sql ="select name, sfid from salesforce.user order by name ASC"
+        sql ="select name, sfid from salesforce.user where CanAcceptGuest__c = 'True' order by name ASC"
         data = __execRequest(sql, {})  
         rediscache.__setCache(key, ujson.dumps(data), 60)
     else:
