@@ -342,7 +342,8 @@
           "SystemModstamp": {},
           "ContactId": {},
           "FirstName": {},
-          "LastName": {}
+          "LastName": {},
+          "CanAcceptGuest__c": {}
         },
         "indexes": {
           "Id": {
@@ -351,7 +352,8 @@
           "SystemModstamp": {
             "unique": false
           }
-        }
+        },
+        "applied_at": "2019-04-05T14:44:43.125328Z"
       }
     },
     {
@@ -428,15 +430,15 @@
     }
   ],
   "connection": {
-    "app_name": "yourdemo-scratchorgs",
-    "organization_id": "00D4E000000DTVtUAO",
-    "exported_at": "2019-02-19T12:29:31.054163+00:00",
+    "app_name": "yourdemo-cdo",
+    "organization_id": "00D1t000000xYX9EAM",
+    "exported_at": "2019-05-16T08:46:45.500787+00:00",
     "features": {
       "poll_db_no_merge": true,
       "poll_external_ids": false,
       "rest_count_only": false
     },
-    "api_version": "44.0",
+    "api_version": "45.0",
     "name": "",
     "logplex_log_enabled": false
   },

@@ -12,9 +12,10 @@ from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField, FileField
  
 #GUESTFILE = "guest_v2.html"
-GUESTFILE = "GuestApp/GuestAppWall.html"
-GUESTTHANKS = "GuestApp/GuestThanksWall.html"
-CREATETICKETS="GuestApp/CreateTicketWall.html"
+DEMOSCENARIO = os.getenv("DEMOSCENARIO", "")
+GUESTFILE = "GuestApp/GuestApp" + DEMOSCENARIO + ".html"
+GUESTTHANKS = "GuestApp/GuestThanks" + DEMOSCENARIO + ".html"
+CREATETICKETS="GuestApp/CreateTicket" + DEMOSCENARIO + ".html"
 
 MAIN_URL="/"
 
