@@ -4,7 +4,7 @@
   "repository":"https://github.com/arieunier/heroku-demo",
   "keywords": ["python", "postgres", "redis", "connect"], 
   "scripts": {
-      "postdeploy": "echo Dumping database ; echo Staging DB is $STAGING_DATABASE_URL; echo Local Db is $DATABASE_URL; pg_dump $STAGING_DATABASE_URL | psql $DATABASE_URL; echo Finished dumping Database; cp newrelic.ini.template newrelic.ini; newrelic-admin generate-config $NEW_RELIC_LICENSE_KEY newrelic.ini"
+      "postdeploy": "heroku addons:attach  postgresql-crystalline-13908"
     },
   "formation": {
     "web": {
@@ -34,19 +34,14 @@
   },
   "addons": [
     {"plan": "heroku-postgresql:hobby-dev"},
-    {"plan": "heroku-redis:hobby-dev"},
-    {"plan": "newrelic:hawke"},
-    {"plan": "bucketeer:hobbyist"},
-    {"plan": "cloudinary:starter"},
-    {"plan": "cloudamqp:lemur"},
-    {"plan": "pusher:sandbox"},
-    {"plan": "logdna:zepto"},
-    {"plan": "blowerio:starter"}
+    {"plan": "heroku-redis:hobby-dev"}
   ],
   "buildpacks": [
     {
-      "url": "heroku/python",
-      "url" :"https://github.com/harvard-vpal/heroku-buildpack-r"
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-cli.git"
     }
   ],
   "env":
