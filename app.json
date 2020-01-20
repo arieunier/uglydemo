@@ -45,9 +45,7 @@
   "buildpacks": [
     {
       "url": "heroku/python",
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-cli.git"
+      "url" :"https://github.com/harvard-vpal/heroku-buildpack-r"
     }
   ],
   "env":
