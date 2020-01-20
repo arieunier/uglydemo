@@ -215,7 +215,6 @@ def __insertCase(cookieid, subject, description, typeCase, reason):
         (%(ownerid)s, 'High', 'Web', %(contactid)s, %(subject)s, %(description)s, %(reason)s, %(type)s, %(externalid)s, %(businesshourid)s )
         """
         CaseAttributes['ownerid']= security['data'][0]['sfid']
-    
     __execRequestWithNoResult(insertCase,CaseAttributes)    
     return ""
 
