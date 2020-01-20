@@ -40,15 +40,11 @@
     {"plan": "cloudinary:starter"},
     {"plan": "cloudamqp:lemur"},
     {"plan": "pusher:sandbox"},
-    {"plan": "logdna:zepto"},
-    {"plan": "blowerio:starter"}
+    {"plan": "logdna:zepto"}
   ],
   "buildpacks": [
     {
       "url": "heroku/python",
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-cli.git"
     }
   ],
   "env":
