@@ -11,31 +11,23 @@ fi
 
 APPLICATION_NAME=$1
 
-#echo "######### Creating the app"
-#heroku apps:create $APPLICATION_NAME --region eu 
-
-#echo "######### Adding Heroku Postgres addon"
-#heroku addons:create heroku-postgresql --app $APPLICATION_NAME
-
-
-
 
 echo "######### Adding Heroku Connect addon"
-heroku addons:create herokuconnect --app $APPLICATION_NAME
+heroku addons:create herokuconnect --app $APPLICATION_NAME --team arieunier-cdo
 
 echo "######### Adding Redis addon"
-heroku addons:create heroku-redis:premium-0 --app $APPLICATION_NAME
+heroku addons:create heroku-redis:premium-0 --app $APPLICATION_NAME --team arieunier-cdo
 
 echo "######### Updating environment variables"
-heroku config:add STAGING_DATABASE_URL=`heroku config:get DATABASE_URL --app $APPLICATION_NAME` --app $APPLICATION_NAME
+heroku config:add STAGING_DATABASE_URL=`heroku config:get DATABASE_URL --app $APPLICATION_NAME` --app $APPLICATION_NAME --team arieunier-cdo
 
 echo "######### Adding New relic"
 heroku addons:create newrelic:hawke --app $APPLICATION_NAME
-NEW_RELIC_LICENSE_KEY=`heroku config:get NEW_RELIC_LICENSE_KEY --app $APPLICATION_NAME`
+NEW_RELIC_LICENSE_KEY=`heroku config:get NEW_RELIC_LICENSE_KEY --app $APPLICATION_NAME --team arieunier-cdo`
 newrelic-admin generate-config $NEW_RELIC_LICENSE_KEY newrelic.ini
-heroku config:add NEW_RELIC_CONFIG_FILE='/app/newrelic.ini'  --app $APPLICATION_NAME
+heroku config:add NEW_RELIC_CONFIG_FILE='/app/newrelic.ini'  --app $APPLICATION_NAME --team arieunier-cdo
 heroku config:add NEW_RELIC_LOG_LEVEL=debug --app $APPLICATION_NAME
-heroku config:set NEW_RELIC_APP_NAME="$APPLICATION_NAME" --app $APPLICATION_NAME
+heroku config:set NEW_RELIC_APP_NAME="$APPLICATION_NAME" --app $APPLICATION_NAME --team arieunier-cdo
 
 echo "Adding Cloudinary"
 heroku addons:create cloudinary:starter
@@ -53,7 +45,6 @@ heroku addons:create pusher:sandbox
 
 echo "adding blowerio"
 heroku addons:create blowerio:starter
-
 
 echo "Creates the badge db "
 heroku pg:psql -f createTables.sql
@@ -75,10 +66,18 @@ heroku config:set SF_REQUEST_TOKEN_URL='https://login.salesforce.com/services/oa
 heroku config:set SF_AUTHORIZE_TOKEN_URL='https://login.salesforce.com/services/oauth2/authorize?'
 
 echo "Configuring Kafka"
-heroku addons:attach kafka-polished-22221
-heroku config:set APPNAME=$APPLICATION_NAME
-heroku config:set SECURITY_USER='Sly Resident'
-heroku config:set CF_KEY='ChangeMe'
-heroku config:set APP_CLIENT_ID='ChangeMe'
-heroku config:set APP_CLIENT_SECRET='ChangeMe'
+#echo "######### Adding Heroku Kafka "
+#heroku addons:create heroku-kafka:basic-2 --app connect-events-arieunier
+#heroku kafka:wait  --app connect-events-arieunier
+#heroku kafka:consumer-groups:create my-consumer-group --app connect-events-arieunier
+#heroku kafka:topics:create topicRead --app connect-events-arieunier
+#heroku kafka:topics:create topicWrite --app connect-events-arieunier
 
+heroku addons:attach kafka-cylindrical-19303
+heroku config:set APPNAME=$APPLICATION_NAME
+heroku config:set CF_KEY='dfe1fc69d77842a9af25bfa7ac45caee,ba2c1b8f0a4845e080eb87268fae177d'
+heroku config:set APP_CLIENT_ID='3MVG9fTLmJ60pJ5Ly8BJZfP0UwVJGodBblEuztZjVetqEGo6aPEeaB.jAf8VmHs_jQnAgvi7iYm4mxcoY72pn'
+heroku config:set APP_CLIENT_SECRET='D6BDACE02D28D91D649958806AE16E06F8E71F8F8A93FE0AFA3904B604945554'
+heroku config:set SECURITY_USER='Sly Resident'
+
+heroku config:set DEMOSCENARIO='Wall'
