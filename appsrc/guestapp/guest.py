@@ -56,7 +56,7 @@ def createTicket():
         if (request.method=="GET"):
             if ((tmp_dict != None) and (tmp_dict != '')):    
                 #means user has already registered, forwarding him to the guest thanks
-                data = render_template(CREATETICKETS, registered=True, form=form, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(CREATETICKETS, registered=True, form=form, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
             else:
                 # means it has to register
@@ -69,7 +69,7 @@ def createTicket():
                 Description=request.form['Description']
                 postgres.__insertCase(cookie, Subject, Description, "Self Service", Reason)
                 #postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie, Picture)
-                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
                 #rediscache.__setCache(key, data.encode('utf-8'), 3600)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
             else:
@@ -81,7 +81,7 @@ def createTicket():
             return redirect("/",code=302)
 
         
-        data = render_template(CREATETICKETS, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY)
+        data = render_template(CREATETICKETS, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
 
         return utils.returnResponse(data, 200, cookie, cookie_exists)
     except Exception as e:
@@ -113,16 +113,16 @@ def guest():
         if request.method == 'GET':
             if ((tmp_dict != None) and (tmp_dict != '')):    
                 #means user has already registered, forwarding him to the guest thanks
-                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
             else:
                 # needs to register
-                data = render_template(GUESTFILE, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(GUESTFILE, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
         elif request.method == 'POST':
             if ((tmp_dict != None) and (tmp_dict != '')):  
                 #user has gone through the registration process already, need to redirect him to the guest thanks page
-                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(GUESTTHANKS, registered=True, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
             else:
                 #user has not registerd yet, it's the case now 
@@ -143,7 +143,7 @@ def guest():
 
 
                 postgres.__saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie, Picture)
-                data = render_template(GUESTTHANKS, registered=False, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+                data = render_template(GUESTTHANKS, registered=False, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
                 rediscache.__setCache(key, ujson.dumps({"Status":"Logged In"}), 3600)
                 return utils.returnResponse(data, 200, cookie, cookie_exists)
                     
@@ -157,7 +157,7 @@ def guest():
         else:
             flash('All the form fields are required. ')
         
-        data = render_template(GUESTFILE, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY)
+        data = render_template(GUESTFILE, form=form, hosts=hosts['data'],userid=cookie,PUSHER_KEY=notification.PUSHER_KEY, PUSHER_CLUSTER=notification.CLUSTER)
 
         return utils.returnResponse(data, 200, cookie, cookie_exists)
     except Exception as e:

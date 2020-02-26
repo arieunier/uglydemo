@@ -7,27 +7,26 @@ import os
 PUSHER_SOCKET_URL = os.getenv('PUSHER_SOCKET_URL', '')
 PUSHER_URL = os.getenv('PUSHER_URL', '')
 PUSHER_KEY=None
+CLUSTER = ""
+APP_ID=""
+SECRET = ""
 
 if (PUSHER_URL != ''):
       PUSHER_KEY=PUSHER_URL.replace('http://', '').split('@')[0].split(':')[0]
-      secret = PUSHER_URL.replace('http://', '').split('@')[0].split(':')[1]
-      app_id = PUSHER_URL.split('/apps/')[1]
-   
+      SECRET = PUSHER_URL.replace('http://', '').split('@')[0].split(':')[1]
+      APP_ID = PUSHER_URL.split('/apps/')[1]
+      CLUSTER= PUSHER_URL.split('@api-')[1].split('.')[0]
 
+print("key={} | secret={} | app_id={} | cluster={}".format(PUSHER_KEY, SECRET, APP_ID, CLUSTER))
 
 def sendNotification(channel, message):
   if (PUSHER_URL != ''):
-      cluster ='eu'
-      cluster= PUSHER_URL.split('@api-')[1].split('.')[0]
-      secret = PUSHER_URL.replace('http://', '').split('@')[0].split(':')[1]
-      app_id = PUSHER_URL.split('/apps/')[1]
-      print("key={} | secret={} | app_id={} | cluster={}".format(PUSHER_KEY, secret, app_id, cluster))
-
+  
       pusher = Pusher(
-      app_id=app_id, 
+      app_id=APP_ID, 
       key=PUSHER_KEY,
-      secret=secret,
-      cluster=cluster,
+      secret=SECRET,
+      cluster=CLUSTER,
       )
 
       pusher.trigger(channel, u'my-event', {u'message': message})

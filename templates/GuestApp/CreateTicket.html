@@ -11,7 +11,7 @@
     <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
     <script>
       var pusher = new Pusher( '{{ PUSHER_KEY }}' , {
-      cluster: 'eu'
+        cluster: '{{ PUSHER_CLUSTER }}'
       });
       var channel = pusher.subscribe( '{{ userid }}' );
       channel.bind('my-event', function(data) {
