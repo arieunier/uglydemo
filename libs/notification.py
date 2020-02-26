@@ -10,7 +10,6 @@ PUSHER_KEY=None
 
 if (PUSHER_URL != ''):
       PUSHER_KEY=PUSHER_URL.replace('http://', '').split('@')[0].split(':')[0]
-
       secret = PUSHER_URL.replace('http://', '').split('@')[0].split(':')[1]
       app_id = PUSHER_URL.split('/apps/')[1]
    
@@ -19,10 +18,10 @@ if (PUSHER_URL != ''):
 def sendNotification(channel, message):
   if (PUSHER_URL != ''):
       cluster ='eu'
-    
+      cluster= PUSHER_URL.split('@api-')[1].split('.')[0]
       secret = PUSHER_URL.replace('http://', '').split('@')[0].split(':')[1]
       app_id = PUSHER_URL.split('/apps/')[1]
-      #print("key={} | secret={} | app_id={}".format(key, secret, app_id))
+      print("key={} | secret={} | app_id={} | cluster={}".format(PUSHER_KEY, secret, app_id, cluster))
 
       pusher = Pusher(
       app_id=app_id, 
