@@ -76,14 +76,6 @@ echo "Configuring Kafka"
 #heroku addons:attach kafka-cylindrical-19303
 heroku addons:attach kafka-trapezoidal-94989 --app $APPLICATION_NAME
 heroku config:set APPNAME=$APPLICATION_NAME --app $APPLICATION_NAME
-heroku config:set CF_KEY='dfe1fc69d77842a9af25bfa7ac45caee,ba2c1b8f0a4845e080eb87268fae177d' --app $APPLICATION_NAME
-
-
-#heroku config:set APP_CLIENT_SECRET='D6BDACE02D28D91D649958806AE16E06F8E71F8F8A93FE0AFA3904B604945554' --app $APPLICATION_NAME
-#heroku config:set APP_CLIENT_ID='3MVG9fTLmJ60pJ5Ly8BJZfP0UwVJGodBblEuztZjVetqEGo6aPEeaB.jAf8VmHs_jQnAgvi7iYm4mxcoY72pn' --app $APPLICATION_NAME
-# For schneider
-heroku config:set APP_CLIENT_ID='3MVG91BJr_0ZDQ4tlpqUmI7PTwD1uhuHlY3oLCCi6vZMxjoovmfJCwghkTrR0c5zwNL329kcfB1HFj2lYrsXh' --app $APPLICATION_NAME
-heroku config:set APP_CLIENT_SECRET='FA97AC7D521EA087E61208BC575B2D619EAE53468E272C3324C1B877197661D7' --app $APPLICATION_NAME
 
 heroku config:set SECURITY_USER='Sly Resident' --app $APPLICATION_NAME
 
