@@ -49,9 +49,13 @@ def getObjects():
             postgres.__saveLogEntry(request, cookie)
         # output type
         output='html'
+        describe = False
         if 'output' in request.args:
             output = request.args['output'].lower()
-        
+        if 'describe' in request.args:     
+            describe = True
+
+
         # logs all attributes received
         logger.debug(utils.get_debug_all(request))
         # gets object name
@@ -85,7 +89,11 @@ def getObjects():
 
             else:
                 logger.info("Treating request as an API request, output to Json only")
-                data = ujson.dumps(data_dict)
+                # check if describe is jere
+                if describe == False:
+                    data = ujson.dumps(data_dict)
+                else:
+                    data = ujson.dumps({'columns':data_dict['columns']})
 
             #if (postgres.HEROKU_LOGS_TABLE not in request.url): # we don't want to cache these logs
             #    rediscache.__setCache(key, data.encode('utf-8'), 60)
