@@ -23,9 +23,15 @@ def tables():
         logger.debug(utils.get_debug_all(request))
         #rediscache.__display_RedisContent()
         data_dict  = postgres.__getTables()
-        
-        data = render_template(RENDER_TABLES,
+        output='html'
+        if 'output' in request.args:
+            output = request.args['output'].lower()
+        if (output == 'html'):
+            data = render_template(RENDER_TABLES,
                             entries=data_dict['data'], FA_APIKEY=utils.FOLLOWANALYTICS_API_KEY, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
+        else:
+            logger.info("Treating request as an API request, output to Json only")
+            data = ujson.dumps(data_dict)
         return utils.returnResponse(data, 200, cookie, cookie_exists)
         
     except Exception as e:
