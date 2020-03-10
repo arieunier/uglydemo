@@ -254,7 +254,8 @@ def __getObjects(tableName):
         logger.info("Data not found in cache : heroku log data not known")
         concat = SALESFORCE_SCHEMA + "." + tableName
         data = __execRequest("select * from {}".format(concat), {})
-        
+        logger.info("Data Returned")
+        logger.info(data)
         rediscache.__setCache(key, ujson.dumps(data), 30)
     else:
         logger.info("Data found in redis, using it directly")

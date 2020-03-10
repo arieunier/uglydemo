@@ -13,6 +13,7 @@ RENDER_TABLE_DATA="Ugly/table_data.html"
 RENDER_TABLE_DATA_IMG="Ugly/table_data_img.html"
 
 
+
 @app.route('/tables', methods=['GET'])
 def tables():
     try :
@@ -26,6 +27,7 @@ def tables():
         output='html'
         if 'output' in request.args:
             output = request.args['output'].lower()
+        
         if (output == 'html'):
             data = render_template(RENDER_TABLES,
                             entries=data_dict['data'], FA_APIKEY=utils.FOLLOWANALYTICS_API_KEY, userid=cookie, PUSHER_KEY=notification.PUSHER_KEY)
