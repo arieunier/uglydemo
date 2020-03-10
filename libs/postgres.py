@@ -249,14 +249,12 @@ def __getImageAnalysis(tableName, objectName):
 
 def __getObjectsDescribe(tableName):
     key = {"sqlRequest" : "__getObjectsDescribe", "tableName" : tableName}
-    tmp_dict = rediscache.__getCache(key)
     if ((tmp_dict == None) or (tmp_dict == '')):
         logger.info("Data not found in cache : data not known")
         concat = SALESFORCE_SCHEMA + "." + tableName
         data = __execRequest("select * from {} limit 1".format(concat), {})
         logger.info("Data Returned")
         logger.info(data)
-        rediscache.__setCache(key, ujson.dumps(data), 30)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
