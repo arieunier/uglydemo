@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import uuid
 from flask import request
 import os , json
@@ -15,6 +15,7 @@ def myconverter(o):
 
 def jsonencode(data):
     return json.dumps(data, default = myconverter)
+
 def str2bool(v):
       return v.lower() in ("yes", "true", "t", "1")
 
