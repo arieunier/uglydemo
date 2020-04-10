@@ -1,6 +1,7 @@
 import redis 
 import os
 import ujson
+import json
 from datetime import datetime 
 from libs import logs   
 import traceback
@@ -11,6 +12,8 @@ logger = logs.logger_init(loggername='app',
             filename="log.log",
             debugvalue=logs.LOG_LEVEL,
             flaskapp=None)
+
+
 
 def __connect():
     global REDIS_CONN
@@ -44,12 +47,14 @@ def __setCache(key, data, ttl):
         global REDIS_CONN
         if (REDIS_CONN == None):
             __connect()
-
         key_str = ujson.dumps(key)
+        logger.info('Key->{}'.format(key))
+        logger.info('Data->{}'.format(data))
         if (REDIS_CONN != None):
-            logger.debug('Storing in Redis')
+            logger.debug('Storing in Redis')    
             REDIS_CONN.set(key_str, data)
             REDIS_CONN.expire(key_str, ttl)
+            
     except Exception as e:
         REDIS_CONN = None
         traceback.print_exc()
@@ -59,7 +64,7 @@ def __getCache(key):
         global REDIS_CONN
         if (REDIS_CONN == None):
             __connect()
-
+        
         key_str = ujson.dumps(key)
         if (REDIS_CONN != None):
             logger.debug('Reading in Redis')
