@@ -13,10 +13,6 @@ SALESFORCE_SCHEMA = os.getenv("POSTGRES_SCHEMA", "salesforce")
 HEROKU_LOGS_TABLE = os.getenv("HEROKU_LOGS_TABLE", "heroku_logs__c") 
 SECURITY_USER= os.getenv("SECURITY_USER")
 
-def myconverter(o):
-    if isinstance(o, datetime):
-        return o.__str__()
-
 logger = logs.logger_init(loggername='app',
             filename="log.log",
             debugvalue=logs.LOG_LEVEL,
@@ -39,7 +35,7 @@ def __getSFUsers():
         sql ="select name, sfid from salesforce.user where CanAcceptGuest__c = 'True' order by name ASC"
         data = __execRequest(sql, {})  
         
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 60)
+        rediscache.__setCache(key, utils.jsonencode(data), 60)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -65,7 +61,7 @@ def __getGameActivityById(gameactivity__c):
                  gameactivity__c.sfid = %(gameactivity__c)s """
 
         data = __execRequest(sqlRequestActivityName, {'gameactivity__c':gameactivity__c}) 
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 60)
+        rediscache.__setCache(key, utils.jsonencode(data), 60)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -97,7 +93,7 @@ def __getMatchsByGameActivityId(gameactivity__c):
     if ((tmp_dict == None) or (tmp_dict == '')):
         logger.info("Data not found in cache : heroku log data not known")
         data = __execRequest(sqlRequest, {'gameactivity__c':gameactivity__c})
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 60)
+        rediscache.__setCache(key, utils.jsonencode(data), 60)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -118,7 +114,7 @@ def __getMatchs():
     if ((tmp_dict == None) or (tmp_dict == '')):
         logger.info("Data not found in cache : heroku log data not known")
         data = __execRequest(sqlRequest, None)
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 60)
+        rediscache.__setCache(key, utils.jsonencode(data), 60)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -152,7 +148,7 @@ def __getMatchById(match_id):
     if ((tmp_dict == None) or (tmp_dict == '')):
         logger.info("Data not found in cache : heroku log data not known")
         data = __execRequest(sqlRequest, {'match_id':match_id})
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 60)
+        rediscache.__setCache(key, utils.jsonencode(data), 60)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -244,7 +240,7 @@ def __getImageAnalysis(tableName, objectName):
         logger.info("Data not found in cache : heroku log data not known")
         concat = SALESFORCE_SCHEMA + "." + tableName
         data = __execRequest("select * from {} where name='{}' ".format(concat, objectName), {})
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 120)
+        rediscache.__setCache(key, utils.jsonencode(data), 120)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -261,7 +257,7 @@ def __getObjectsDescribe(tableName):
         data = __execRequest("select * from {} limit 1".format(concat), {})
         logger.info("Data Returned")
         logger.info(data)
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 30)
+        rediscache.__setCache(key, utils.jsonencode(data), 30)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -278,7 +274,7 @@ def __getObjects(tableName):
         data = __execRequest("select * from {}".format(concat), {})
         logger.info("Data Returned")
         logger.info(data)
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 30)
+        rediscache.__setCache(key, utils.jsonencode(data), 30)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)
@@ -295,7 +291,7 @@ def __getTables():
         sqlRequest = "SELECT table_schema, table_name FROM information_schema.tables where table_schema like '%%alesforce' ORDER BY table_schema,table_name"
         data = __execRequest(sqlRequest, {})
         
-        rediscache.__setCache(key, json.dumps(data, default = myconverter), 30)
+        rediscache.__setCache(key, utils.jsonencode(data), 30)
     else:
         logger.info("Data found in redis, using it directly")
         data = ujson.loads(tmp_dict)

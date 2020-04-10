@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import uuid
 from flask import request
 import os 
@@ -7,6 +7,13 @@ FOLLOWANALYTICS_API_KEY = os.getenv("FOLLOWANALYTICS_APPLICATION_KEY", None)
 FOLLOWANALYTICS_API_TOKEN = os.getenv("FOLLOWANALYTICS_API_TOKEN", None)
 FOLLOWANALYTICS_SOR_IDENTIFIER = os.getenv("FOLLOWANALYTICS_SOR_IDENTIFIER", None)
 APPNAME = os.getenv("APPNAME", "test-demo-ar")
+
+def myconverter(o):
+    if isinstance(o, datetime):
+        return o.__str__()
+
+def jsonencode(data):
+    return json.dumps(data, default = myconverter)
 
 def str2bool(v):
       return v.lower() in ("yes", "true", "t", "1")
