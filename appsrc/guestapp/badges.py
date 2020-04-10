@@ -47,7 +47,7 @@ def badgeById(badge_id):
             logger.info(badge_content)
             if ('output' in request.args):
                 if (request.args['output'] == 'json'):
-                    return utils.returnResponse(ujson.dumps(badge_content), 200, cookie, cookie_exists) 
+                    return utils.returnResponse(utils.jsonecode(data), 200, cookie, cookie_exists) 
             QRCODE_COMPLETE_URL = QRCODE_URL + "'" + APPURL +  badge_content['data'][0]['id'] + "?output=json'"
             logger.info(QRCODE_COMPLETE_URL)
             data = render_template(BADGE_DATA, 
