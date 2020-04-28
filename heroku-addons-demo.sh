@@ -80,4 +80,4 @@ heroku config:set APP_CLIENT_ID='3MVG9fTLmJ60pJ5Ly8BJZfP0UwVJGodBblEuztZjVetqEGo
 heroku config:set APP_CLIENT_SECRET='D6BDACE02D28D91D649958806AE16E06F8E71F8F8A93FE0AFA3904B604945554'
 heroku config:set SECURITY_USER='Sly Resident'
 
-heroku config:set DEMOSCENARIO='Wall'
+#heroku config:set DEMOSCENARIO='Wall'

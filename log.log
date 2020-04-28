@@ -1,0 +1,705 @@
+{'2020-04-10 16:10:37.263','INFO',95340,postgres.py:27-<module>:-->2020-04-10 16:10:37.263514 - Initialization done Postgresql }
+{'2020-04-10 16:10:37.695','DEBUG',95340,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:10:37.695','DEBUG',95340,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:10:37.695','DEBUG',95340,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:10:37.695','DEBUG',95340,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:10:38.562','DEBUG',95340,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:10:38.563','INFO',95340,rabbitmq.py:43-<module>:-->2020-04-10 16:10:38.563069  - Initialization done RabbitMq}
+{'2020-04-10 16:10:38.603','INFO',95340,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:10:39.459','INFO',95346,postgres.py:27-<module>:-->2020-04-10 16:10:39.459676 - Initialization done Postgresql }
+{'2020-04-10 16:10:39.771','DEBUG',95346,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:10:39.771','DEBUG',95346,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:10:39.771','DEBUG',95346,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:10:39.772','DEBUG',95346,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:10:40.282','DEBUG',95346,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:10:40.282','INFO',95346,rabbitmq.py:43-<module>:-->2020-04-10 16:10:40.282798  - Initialization done RabbitMq}
+{'2020-04-10 16:10:40.300','INFO',95346,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:10:47.177','INFO',95346,rediscache.py:22-__connect:-->2020-04-10 16:10:47.177419  - Initialization done Redis}
+{'2020-04-10 16:10:47.177','DEBUG',95346,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:10:48.364','DEBUG',95346,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:10:48.365','INFO',95346,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:10:48.365','DEBUG',95346,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:10:48.411','INFO',95346,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:11:14.863','INFO',95463,postgres.py:27-<module>:-->2020-04-10 16:11:14.863314 - Initialization done Postgresql }
+{'2020-04-10 16:11:15.352','DEBUG',95463,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:11:15.352','DEBUG',95463,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:11:15.352','DEBUG',95463,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:11:15.352','DEBUG',95463,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:11:15.926','DEBUG',95463,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:11:15.926','INFO',95463,rabbitmq.py:43-<module>:-->2020-04-10 16:11:15.926292  - Initialization done RabbitMq}
+{'2020-04-10 16:11:15.946','INFO',95463,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:11:16.201','INFO',95463,rediscache.py:22-__connect:-->2020-04-10 16:11:16.201875  - Initialization done Redis}
+{'2020-04-10 16:11:16.202','DEBUG',95463,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:11:17.335','DEBUG',95463,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:11:17.336','INFO',95463,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:11:17.336','DEBUG',95463,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:11:17.381','INFO',95463,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:11:17.517','INFO',95463,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:12:09.778','INFO',95582,postgres.py:27-<module>:-->2020-04-10 16:12:09.778344 - Initialization done Postgresql }
+{'2020-04-10 16:12:10.071','DEBUG',95582,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:12:10.071','DEBUG',95582,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:12:10.071','DEBUG',95582,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:12:10.071','DEBUG',95582,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:12:10.757','DEBUG',95582,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:12:10.758','INFO',95582,rabbitmq.py:43-<module>:-->2020-04-10 16:12:10.758033  - Initialization done RabbitMq}
+{'2020-04-10 16:12:10.774','INFO',95582,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:12:11.044','INFO',95582,rediscache.py:22-__connect:-->2020-04-10 16:12:11.044107  - Initialization done Redis}
+{'2020-04-10 16:12:11.044','DEBUG',95582,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:12:12.320','DEBUG',95582,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:12:12.320','INFO',95582,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:12:12.321','DEBUG',95582,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:12:12.372','INFO',95582,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:12:12.532','INFO',95582,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:12:33.066','INFO',96788,postgres.py:27-<module>:-->2020-04-10 16:12:33.066096 - Initialization done Postgresql }
+{'2020-04-10 16:12:33.441','DEBUG',96788,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:12:33.442','DEBUG',96788,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:12:33.442','DEBUG',96788,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:12:33.442','DEBUG',96788,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:12:34.459','DEBUG',96788,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:12:34.459','INFO',96788,rabbitmq.py:43-<module>:-->2020-04-10 16:12:34.459702  - Initialization done RabbitMq}
+{'2020-04-10 16:12:34.487','INFO',96788,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:12:35.302','INFO',96788,rediscache.py:22-__connect:-->2020-04-10 16:12:35.302400  - Initialization done Redis}
+{'2020-04-10 16:12:35.302','DEBUG',96788,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:12:36.575','DEBUG',96788,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:12:36.575','INFO',96788,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:12:36.575','DEBUG',96788,rediscache.py:65-__getCache:-->Reading in Redis}
+{'2020-04-10 16:12:36.623','INFO',96788,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:12:36.786','INFO',96788,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:19:32.901','INFO',98233,postgres.py:27-<module>:-->2020-04-10 16:19:32.901432 - Initialization done Postgresql }
+{'2020-04-10 16:19:33.248','DEBUG',98233,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:19:33.248','DEBUG',98233,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:19:33.248','DEBUG',98233,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:19:33.248','DEBUG',98233,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:19:34.017','DEBUG',98233,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:19:34.018','INFO',98233,rabbitmq.py:43-<module>:-->2020-04-10 16:19:34.018337  - Initialization done RabbitMq}
+{'2020-04-10 16:19:34.056','INFO',98233,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:19:34.488','INFO',98237,postgres.py:27-<module>:-->2020-04-10 16:19:34.488949 - Initialization done Postgresql }
+{'2020-04-10 16:19:34.808','DEBUG',98237,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:19:34.808','DEBUG',98237,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:19:34.808','DEBUG',98237,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:19:34.808','DEBUG',98237,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:19:35.362','DEBUG',98237,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:19:35.362','INFO',98237,rabbitmq.py:43-<module>:-->2020-04-10 16:19:35.362361  - Initialization done RabbitMq}
+{'2020-04-10 16:19:35.380','INFO',98237,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:20:22.684','INFO',98237,rediscache.py:26-__connect:-->2020-04-10 16:20:22.684698  - Initialization done Redis}
+{'2020-04-10 16:20:22.686','INFO',98237,postgres.py:404-__checkHerokuLogsTable:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:20:23.565','INFO',98237,postgres.py:411-__checkHerokuLogsTable:-->True}
+{'2020-04-10 16:20:23.793','INFO',98237,rediscache.py:26-__connect:-->2020-04-10 16:20:23.793419  - Initialization done Redis}
+{'2020-04-10 16:20:23.793','INFO',98237,rediscache.py:51-__setCache:-->{'checkHerokuLogTables': 'True'}}
+{'2020-04-10 16:20:23.795','DEBUG',98237,rediscache.py:54-__setCache:-->Storing in Redis}
+{'2020-04-10 16:20:24.166','DEBUG',98237,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:20:24.167','INFO',98237,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:20:24.167','INFO',98237,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:20:24.300','INFO',98237,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:20:37.458','INFO',98402,postgres.py:27-<module>:-->2020-04-10 16:20:37.458541 - Initialization done Postgresql }
+{'2020-04-10 16:20:37.894','DEBUG',98402,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:20:37.894','DEBUG',98402,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:20:37.895','DEBUG',98402,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:20:37.895','DEBUG',98402,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:20:38.687','DEBUG',98402,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:20:38.687','INFO',98402,rabbitmq.py:43-<module>:-->2020-04-10 16:20:38.687856  - Initialization done RabbitMq}
+{'2020-04-10 16:20:38.713','INFO',98402,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:20:49.317','INFO',98402,rediscache.py:27-__connect:-->2020-04-10 16:20:49.317878  - Initialization done Redis}
+{'2020-04-10 16:20:49.318','DEBUG',98402,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:20:49.371','INFO',98402,postgres.py:404-__checkHerokuLogsTable:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:20:50.329','INFO',98402,postgres.py:411-__checkHerokuLogsTable:-->True}
+{'2020-04-10 16:20:50.380','INFO',98402,rediscache.py:52-__setCache:-->{'checkHerokuLogTables': 'True'}}
+{'2020-04-10 16:20:50.380','DEBUG',98402,rediscache.py:55-__setCache:-->Storing in Redis}
+{'2020-04-10 16:20:50.803','DEBUG',98402,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:20:50.803','INFO',98402,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:20:50.803','DEBUG',98402,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:20:50.850','INFO',98402,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:20:50.998','INFO',98402,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:21:14.284','INFO',98453,postgres.py:27-<module>:-->2020-04-10 16:21:14.284081 - Initialization done Postgresql }
+{'2020-04-10 16:21:14.712','DEBUG',98453,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:21:14.712','DEBUG',98453,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:21:14.712','DEBUG',98453,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:21:14.712','DEBUG',98453,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:21:15.367','DEBUG',98453,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:21:15.368','INFO',98453,rabbitmq.py:43-<module>:-->2020-04-10 16:21:15.368263  - Initialization done RabbitMq}
+{'2020-04-10 16:21:15.398','INFO',98453,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:21:27.223','INFO',98475,postgres.py:27-<module>:-->2020-04-10 16:21:27.223291 - Initialization done Postgresql }
+{'2020-04-10 16:21:27.509','DEBUG',98475,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:21:27.509','DEBUG',98475,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:21:27.509','DEBUG',98475,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:21:27.509','DEBUG',98475,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:21:28.045','DEBUG',98475,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:21:28.046','INFO',98475,rabbitmq.py:43-<module>:-->2020-04-10 16:21:28.046205  - Initialization done RabbitMq}
+{'2020-04-10 16:21:28.068','INFO',98475,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:21:29.783','INFO',98484,postgres.py:27-<module>:-->2020-04-10 16:21:29.783061 - Initialization done Postgresql }
+{'2020-04-10 16:21:30.138','DEBUG',98484,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:21:30.139','DEBUG',98484,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:21:30.139','DEBUG',98484,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:21:30.139','DEBUG',98484,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:21:30.755','DEBUG',98484,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:21:30.755','INFO',98484,rabbitmq.py:43-<module>:-->2020-04-10 16:21:30.755543  - Initialization done RabbitMq}
+{'2020-04-10 16:21:30.775','INFO',98484,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:21:33.399','INFO',98501,postgres.py:27-<module>:-->2020-04-10 16:21:33.399717 - Initialization done Postgresql }
+{'2020-04-10 16:21:33.724','DEBUG',98501,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:21:33.724','DEBUG',98501,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:21:33.725','DEBUG',98501,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:21:33.725','DEBUG',98501,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:21:34.249','DEBUG',98501,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:21:34.249','INFO',98501,rabbitmq.py:43-<module>:-->2020-04-10 16:21:34.249313  - Initialization done RabbitMq}
+{'2020-04-10 16:21:34.267','INFO',98501,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:21:34.881','INFO',98501,rediscache.py:27-__connect:-->2020-04-10 16:21:34.881026  - Initialization done Redis}
+{'2020-04-10 16:21:34.881','DEBUG',98501,rediscache.py:71-__getCache:-->Reading in Redis}
+{'2020-04-10 16:21:35.994','DEBUG',98501,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:21:35.995','INFO',98501,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:21:35.995','DEBUG',98501,rediscache.py:71-__getCache:-->Reading in Redis}
+{'2020-04-10 16:21:36.042','INFO',98501,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:21:36.179','INFO',98501,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:22:10.735','INFO',98600,postgres.py:27-<module>:-->2020-04-10 16:22:10.735689 - Initialization done Postgresql }
+{'2020-04-10 16:22:11.034','DEBUG',98600,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:22:11.035','DEBUG',98600,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:22:11.035','DEBUG',98600,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:22:11.035','DEBUG',98600,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:22:11.770','DEBUG',98600,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:22:11.770','INFO',98600,rabbitmq.py:43-<module>:-->2020-04-10 16:22:11.770571  - Initialization done RabbitMq}
+{'2020-04-10 16:22:11.787','INFO',98600,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:22:13.180','INFO',98600,rediscache.py:27-__connect:-->2020-04-10 16:22:13.180267  - Initialization done Redis}
+{'2020-04-10 16:22:13.180','DEBUG',98600,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:22:14.502','DEBUG',98600,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:22:14.502','INFO',98600,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:22:14.502','DEBUG',98600,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:22:14.553','INFO',98600,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:22:14.741','INFO',98600,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:22:15.971','DEBUG',98600,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:22:16.330','DEBUG',98600,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:22:16.330','INFO',98600,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:22:16.331','DEBUG',98600,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:22:16.390','INFO',98600,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:22:16.542','INFO',98600,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:22:36.926','INFO',98630,postgres.py:27-<module>:-->2020-04-10 16:22:36.926607 - Initialization done Postgresql }
+{'2020-04-10 16:22:37.207','DEBUG',98630,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:22:37.207','DEBUG',98630,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:22:37.207','DEBUG',98630,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:22:37.207','DEBUG',98630,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:22:37.778','DEBUG',98630,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:22:37.779','INFO',98630,rabbitmq.py:43-<module>:-->2020-04-10 16:22:37.779226  - Initialization done RabbitMq}
+{'2020-04-10 16:22:37.803','INFO',98630,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:22:41.575','INFO',98647,postgres.py:27-<module>:-->2020-04-10 16:22:41.575930 - Initialization done Postgresql }
+{'2020-04-10 16:22:41.910','DEBUG',98647,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:22:41.910','DEBUG',98647,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:22:41.911','DEBUG',98647,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:22:41.911','DEBUG',98647,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:22:42.479','DEBUG',98647,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:22:42.479','INFO',98647,rabbitmq.py:43-<module>:-->2020-04-10 16:22:42.479761  - Initialization done RabbitMq}
+{'2020-04-10 16:22:42.502','INFO',98647,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:22:52.269','INFO',98668,postgres.py:27-<module>:-->2020-04-10 16:22:52.269455 - Initialization done Postgresql }
+{'2020-04-10 16:22:52.550','DEBUG',98668,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:22:52.550','DEBUG',98668,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:22:52.551','DEBUG',98668,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:22:52.551','DEBUG',98668,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:22:53.116','DEBUG',98668,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:22:53.117','INFO',98668,rabbitmq.py:43-<module>:-->2020-04-10 16:22:53.117185  - Initialization done RabbitMq}
+{'2020-04-10 16:22:53.140','INFO',98668,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:22:56.855','INFO',98685,postgres.py:27-<module>:-->2020-04-10 16:22:56.855615 - Initialization done Postgresql }
+{'2020-04-10 16:22:57.137','DEBUG',98685,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:22:57.137','DEBUG',98685,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:22:57.137','DEBUG',98685,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:22:57.137','DEBUG',98685,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:22:57.626','DEBUG',98685,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:22:57.627','INFO',98685,rabbitmq.py:43-<module>:-->2020-04-10 16:22:57.627232  - Initialization done RabbitMq}
+{'2020-04-10 16:22:57.647','INFO',98685,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:24:12.348','INFO',98685,rediscache.py:27-__connect:-->2020-04-10 16:24:12.348595  - Initialization done Redis}
+{'2020-04-10 16:24:12.349','DEBUG',98685,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:24:13.497','DEBUG',98685,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:24:13.498','INFO',98685,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:24:13.498','DEBUG',98685,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:24:13.542','INFO',98685,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:24:13.680','INFO',98685,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:25:10.472','INFO',98813,postgres.py:27-<module>:-->2020-04-10 16:25:10.472339 - Initialization done Postgresql }
+{'2020-04-10 16:25:10.880','DEBUG',98813,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:25:10.881','DEBUG',98813,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:25:10.881','DEBUG',98813,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:25:10.881','DEBUG',98813,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:25:11.560','DEBUG',98813,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:25:11.561','INFO',98813,rabbitmq.py:43-<module>:-->2020-04-10 16:25:11.561174  - Initialization done RabbitMq}
+{'2020-04-10 16:25:11.585','INFO',98813,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:25:14.422','INFO',98813,rediscache.py:27-__connect:-->2020-04-10 16:25:14.422764  - Initialization done Redis}
+{'2020-04-10 16:25:14.423','DEBUG',98813,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:25:15.636','DEBUG',98813,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:25:15.636','INFO',98813,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:25:15.636','DEBUG',98813,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 16:25:15.686','INFO',98813,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:25:15.854','INFO',98813,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:25:15.855','INFO',98813,rediscache.py:53-__setCache:-->{'sqlRequest': '__getImageAnalysis', 'objectName': 'A-0056'}}
+{'2020-04-10 16:25:15.855','DEBUG',98813,rediscache.py:55-__setCache:-->Storing in Redis}
+{'2020-04-10 16:25:15.858','INFO',98813,photo.py:67-photo_display:-->Treating request as a web request, output to Web page}
+{'2020-04-10 16:25:15.868','INFO',98813,photo.py:90-photo_display:-->returning data}
+{'2020-04-10 16:25:52.037','INFO',98893,postgres.py:27-<module>:-->2020-04-10 16:25:52.037616 - Initialization done Postgresql }
+{'2020-04-10 16:25:52.323','DEBUG',98893,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:25:52.323','DEBUG',98893,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:25:52.323','DEBUG',98893,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:25:52.323','DEBUG',98893,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:25:52.944','DEBUG',98893,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:25:52.945','INFO',98893,rabbitmq.py:43-<module>:-->2020-04-10 16:25:52.945494  - Initialization done RabbitMq}
+{'2020-04-10 16:25:52.974','INFO',98893,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:25:54.780','INFO',98893,rediscache.py:27-__connect:-->2020-04-10 16:25:54.780127  - Initialization done Redis}
+{'2020-04-10 16:25:54.780','DEBUG',98893,rediscache.py:71-__getCache:-->Reading in Redis}
+{'2020-04-10 16:25:55.882','DEBUG',98893,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:25:55.883','INFO',98893,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:25:55.883','DEBUG',98893,rediscache.py:71-__getCache:-->Reading in Redis}
+{'2020-04-10 16:25:55.928','INFO',98893,postgres.py:239-__getImageAnalysis:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:25:56.063','INFO',98893,postgres.py:242-__getImageAnalysis:-->{'data': [{'hair__c': 'brown', 'imageheight__c': 3088.0, 'haircolor__c': 'brown', 'gender__c': 'male', 'mediaid__c': '2b0b27c5-80eb-4233-8d5d-634cc3d2b534', 'age__c': 34.0, 'contempt__c': False, 'disgust__c': False, 'lipmakeup__c': False, 'description__c': '{"faceId":"908ff7c0-1364-4af9-843d-f81db38e6653","faceRectangle":{"top":930,"left":322,"width":1516,"height":1516},"faceAttributes":{"smile":0.997,"headPose":{"pitch":-2.7,"roll":-9.0,"yaw":-3.9},"gender":"male","age":34.0,"facialHair":{"moustache":0.4,"beard":0.1,"sideburns":0.1},"glasses":"NoGlasses","emotion":{"anger":0.0,"contempt":0.002,"disgust":0.0,"fear":0.0,"happiness":0.997,"neutral":0.001,"sadness":0.0,"surprise":0.0},"blur":{"blurLevel":"medium","value":0.52},"exposure":{"exposureLevel":"goodExposure","value":0.73},"noise":{"noiseLevel":"low","value":0.07},"makeup":{"eyeMakeup":false,"lipMakeup":false},"accessories":[],"occlusion":{"foreheadOccluded":false,"eyeOccluded":false,"mouthOccluded":false},"hair":{"bald":0.35,"invisible":false,"hairColor":[{"color":"brown","confidence":0.98},{"color":"black","confidence":0.7},{"color":"blond","confidence":0.57},{"color":"red","confidence":0.22},{"color":"gray","confidence":0.17},{"color":"other","confidence":0.12}]}}}', 'image__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'emotion__c': 'happiness', 'useragent__c': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1', 'smile_value__c': 0.997, 'eyemakeup__c': False, 'name': 'A-0056', 'facetop__c': 30.0, 'bald__c': False, 'isdeleted': False, 'moustache__c': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 54, 2), 'fear__c': False, 'personid__c': '136fa711-0363-4af1-997c-e7519b748628', 'beard__c': False, 'url__c': 'http://yourdemo.herokuapp.com/', 'facialhair__c': 'None', 'emotion_value__c': 0.997, 'sadness__c': False, 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'imagewidth__c': 2316.0, 'glasses__c': False, 'surprise__c': False, 'facewidth__c': 65.0, 'smile__c': True, 'neutral__c': False, 'happiness__c': True, 'anger__c': False, 'faceleft__c': 13.0, 'faceheight__c': 49.0, 'sfid': 'a051t0000099jfDAAQ', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['hair__c', 'imageheight__c', 'haircolor__c', 'gender__c', 'mediaid__c', 'age__c', 'contempt__c', 'disgust__c', 'lipmakeup__c', 'description__c', 'image__c', 'emotion__c', 'useragent__c', 'smile_value__c', 'eyemakeup__c', 'name', 'facetop__c', 'bald__c', 'isdeleted', 'moustache__c', 'systemmodstamp', 'fear__c', 'personid__c', 'beard__c', 'url__c', 'facialhair__c', 'emotion_value__c', 'sadness__c', 'createddate', 'imagewidth__c', 'glasses__c', 'surprise__c', 'facewidth__c', 'smile__c', 'neutral__c', 'happiness__c', 'anger__c', 'faceleft__c', 'faceheight__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:25:56.064','INFO',98893,rediscache.py:53-__setCache:-->{'sqlRequest': '__getImageAnalysis', 'objectName': 'A-0056'}}
+{'2020-04-10 16:25:56.064','DEBUG',98893,rediscache.py:55-__setCache:-->Storing in Redis}
+{'2020-04-10 16:25:56.155','INFO',98893,photo.py:67-photo_display:-->Treating request as a web request, output to Web page}
+{'2020-04-10 16:25:56.163','INFO',98893,photo.py:90-photo_display:-->returning data}
+{'2020-04-10 16:26:08.014','INFO',98938,postgres.py:27-<module>:-->2020-04-10 16:26:08.014550 - Initialization done Postgresql }
+{'2020-04-10 16:26:08.342','DEBUG',98938,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:26:08.342','DEBUG',98938,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:26:08.342','DEBUG',98938,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:26:08.342','DEBUG',98938,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:26:09.001','DEBUG',98938,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:26:09.002','INFO',98938,rabbitmq.py:43-<module>:-->2020-04-10 16:26:09.002025  - Initialization done RabbitMq}
+{'2020-04-10 16:26:09.026','INFO',98938,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:26:51.153','INFO',99030,postgres.py:27-<module>:-->2020-04-10 16:26:51.153704 - Initialization done Postgresql }
+{'2020-04-10 16:26:51.431','DEBUG',99030,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:26:51.431','DEBUG',99030,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:26:51.431','DEBUG',99030,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:26:51.431','DEBUG',99030,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:26:52.104','DEBUG',99030,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:26:52.104','INFO',99030,rabbitmq.py:43-<module>:-->2020-04-10 16:26:52.104768  - Initialization done RabbitMq}
+{'2020-04-10 16:26:52.131','INFO',99030,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:26:52.535','INFO',99033,postgres.py:27-<module>:-->2020-04-10 16:26:52.535221 - Initialization done Postgresql }
+{'2020-04-10 16:26:52.802','DEBUG',99033,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 16:26:52.803','DEBUG',99033,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 16:26:52.803','DEBUG',99033,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 16:26:52.803','DEBUG',99033,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 16:26:53.321','DEBUG',99033,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 16:26:53.328','INFO',99033,rabbitmq.py:43-<module>:-->2020-04-10 16:26:53.328900  - Initialization done RabbitMq}
+{'2020-04-10 16:26:53.350','INFO',99033,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 16:26:58.967','INFO',99033,rediscache.py:27-__connect:-->2020-04-10 16:26:58.967430  - Initialization done Redis}
+{'2020-04-10 16:26:58.967','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:26:59.624','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:00.223','DEBUG',99033,photo.py:53-photo_display:-->* url: http://localhost:5000/photo_display?name=A-0056
+* method:GET
+* Args:
+	* name = A-0056
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = cross-site
+	* Sec-Fetch-Mode = navigate
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:27:00.223','INFO',99033,photo.py:63-photo_display:-->Data not found in cache}
+{'2020-04-10 16:27:00.223','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:00.271','INFO',99033,postgres.py:245-__getImageAnalysis:-->Data found in redis, using it directly}
+{'2020-04-10 16:27:00.271','INFO',99033,photo.py:67-photo_display:-->Treating request as a web request, output to Web page}
+{'2020-04-10 16:27:00.281','INFO',99033,photo.py:90-photo_display:-->returning data}
+{'2020-04-10 16:27:00.305','DEBUG',99033,ugly.py:42-root:-->* url: http://localhost:5000/ugly
+* method:GET
+* Args:
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = none
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:27:00.305','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:00.359','INFO',99033,ugly.py:49-root:-->Data not found in cache}
+{'2020-04-10 16:27:00.366','INFO',99033,rediscache.py:53-__setCache:-->{'url': 'http://localhost:5000/ugly'}}
+{'2020-04-10 16:27:00.366','DEBUG',99033,rediscache.py:55-__setCache:-->Storing in Redis}
+{'2020-04-10 16:27:03.359','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:03.736','DEBUG',99033,tables.py:24-tables:-->* url: http://localhost:5000/tables
+* method:GET
+* Args:
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = same-origin
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Referer = http://localhost:5000/ugly
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:27:03.736','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:03.785','INFO',99033,postgres.py:282-__getTables:-->Data not found in cache : heroku log data not known}
+{'2020-04-10 16:27:03.952','INFO',99033,rediscache.py:53-__setCache:-->{'sqlRequest': '__getTables'}}
+{'2020-04-10 16:27:03.953','DEBUG',99033,rediscache.py:55-__setCache:-->Storing in Redis}
+{'2020-04-10 16:27:06.752','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:07.080','DEBUG',99033,tables.py:62-getObjects:-->* url: http://localhost:5000/getObjects?name=bet__c&output=html
+* method:GET
+* Args:
+	* name = bet__c
+	* output = html
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = same-origin
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Referer = http://localhost:5000/tables
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:27:07.080','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:07.126','INFO',99033,tables.py:76-getObjects:-->Data not found in cache}
+{'2020-04-10 16:27:07.126','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:07.184','INFO',99033,postgres.py:264-__getObjects:-->Data not found in cache : data not known}
+{'2020-04-10 16:27:07.325','INFO',99033,postgres.py:267-__getObjects:-->Data Returned}
+{'2020-04-10 16:27:07.325','INFO',99033,postgres.py:268-__getObjects:-->{'data': [], 'columns': ['webuser__c', 'winner__c', 'useragent__c', 'webuser__r__userid__c', 'name', 'isdeleted', 'systemmodstamp', 'createddate', 'userid__c', 'externalid__c', 'match__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 16:27:07.325','INFO',99033,rediscache.py:53-__setCache:-->{'sqlRequest': '__getObjects', 'tableName': 'bet__c'}}
+{'2020-04-10 16:27:07.326','DEBUG',99033,rediscache.py:55-__setCache:-->Storing in Redis}
+{'2020-04-10 16:27:07.416','INFO',99033,tables.py:82-getObjects:-->Treating request as a web request, output to Web page}
+{'2020-04-10 16:27:07.427','INFO',99033,tables.py:115-getObjects:-->returning data}
+{'2020-04-10 16:27:12.008','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:12.334','DEBUG',99033,tables.py:62-getObjects:-->* url: http://localhost:5000/getObjects?name=guest__c&output=html
+* method:GET
+* Args:
+	* name = guest__c
+	* output = html
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = same-origin
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Referer = http://localhost:5000/tables
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 16:27:12.334','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:12.380','INFO',99033,tables.py:76-getObjects:-->Data not found in cache}
+{'2020-04-10 16:27:12.380','DEBUG',99033,rediscache.py:72-__getCache:-->Reading in Redis}
+{'2020-04-10 16:27:12.425','INFO',99033,postgres.py:264-__getObjects:-->Data not found in cache : data not known}
+{'2020-04-10 16:27:12.568','INFO',99033,postgres.py:267-__getObjects:-->Data Returned}
+{'2020-04-10 16:27:12.568','INFO',99033,postgres.py:268-__getObjects:-->{'data': [{'lastname__c': 'Harpaz', 'contact__c': '0031t00000xS1f8AAC', 'webuser__c': 'a0E1t000003AOpwEAG', 'company__c': 'SFisrael', 'email__c': 'dharpaz@salesforce.com', 'firstname__c': 'Doron', 'external_picture_url__c': 'https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/72b4ceaa-6df4-4be8-8c91-d9418985801e.jpg', 'phone_number__c': '+972545895555', 'webuser__r__userid__c': 'a5ac105d-fa9a-4506-99a3-0438b5e308ab', 'name': 'G-0125', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 1, 20, 12, 9, 44), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 20, 11, 57, 19), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia2jpAAB', 'id': 1, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Rieunierfus', 'contact__c': '0031t00000xRspCAAS', 'webuser__c': 'a0E1t000003AObbEAG', 'company__c': 'Eieunkerkakka', 'email__c': 'arieunier+demo10@salesforce.com', 'firstname__c': 'Augustin', 'external_picture_url__c': 'https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/9e884fc3-e7e6-4bb5-a4ee-d94b3d233070.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '103bb9aa-85c7-405b-9562-c66d446c10f3', 'name': 'G-0124', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 2, 6, 10, 36, 54), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 8, 12, 7, 9), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IZp7BAAT', 'id': 3, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Nir', 'contact__c': '0031t00000xS3cBAAS', 'webuser__c': 'a0E1t000003AOtFEAW', 'company__c': 'SalesforceiSrael', 'email__c': 'nir.friedman@salesforce.com', 'firstname__c': 'Nir', 'external_picture_url__c': 'https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/ea4283f1-cada-4ed6-b827-7641ca9a06c3.jpg', 'phone_number__c': '+972544601301', 'webuser__r__userid__c': '95a870d5-34f8-4f58-9ab5-3e42f6241c2b', 'name': 'G-0128', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 2, 6, 10, 36, 59), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 22, 12, 57, 11), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia3RgAAJ', 'id': 6, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Nsnsnz', 'contact__c': '0031t000017IDSfAAO', 'webuser__c': 'a0E1t000003APRDEA4', 'company__c': 'Nous', 'email__c': 'arieunier+jaja@salesforce.com', 'firstname__c': 'Nsnsnz', 'external_picture_url__c': 'https://bucketeer-ef178e40-8d50-4308-9631-34283457b857.s3.eu-west-1.amazonaws.com/public/3b1b26fd-b1a3-4fdc-b99e-6f9a3ebe2fa6.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '94167f93-628b-4ec7-b66e-8048d2f0d927', 'name': 'G-0130', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 2, 6, 13, 1, 16), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 2, 6, 11, 3, 55), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IcetFAAR', 'id': 8, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Dede', 'contact__c': '0031t000017IDZWAA4', 'webuser__c': 'a0E1t000003APRwEAO', 'company__c': 'Dalzkzk', 'email__c': 'arieunier+hahah@salesforce.com', 'firstname__c': 'Jajayg', 'external_picture_url__c': 'https://bucketeer-1d698383-e6f1-4425-9b2b-febab717cce3.s3.eu-west-1.amazonaws.com/public/c56d0d3b-c23f-4333-977b-60534a1a9ae7.jpg', 'phone_number__c': '+33660791662', 'webuser__r__userid__c': '68372b65-b880-4d90-9c83-983cebbfc218', 'name': 'G-0131', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 3, 26, 15, 16, 15), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 2, 6, 14, 2, 22), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Icex2AAB', 'id': 9, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Deoakaka', 'contact__c': None, 'webuser__c': 'a0E1t000003AOrnEAG', 'company__c': 'WhiteW', 'email__c': 'arieunier+demo1@salesforce.com', 'firstname__c': 'Augustindemo', 'external_picture_url__c': 'https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/51c78329-901e-45e5-a666-858ea980957d.jpg', 'phone_number__c': '+972545324789', 'webuser__r__userid__c': '384a172b-241d-4fa6-b926-825e72c65d63', 'name': 'G-0127', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 3, 31, 14, 22, 33), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 21, 11, 4, 38), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia35pAAB', 'id': 4, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Test', 'contact__c': None, 'webuser__c': None, 'company__c': 'Test', 'email__c': 'tes@test.com', 'firstname__c': 'Test', 'external_picture_url__c': 'https://3.bp.blogspot.com/-KIngJEZr94Q/Wsxoh-8kwuI/AAAAAAAAQyM/YlDJM1eBvzoDAUV79-0v_Us-amsjlFpkgCLcBGAs/s1600/aaa.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': None, 'name': 'G-0123', 'check_out__c': None, 'ownerid': '0051t000002FB13AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 3, 31, 14, 22, 37), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2019, 12, 13, 14, 33), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IZZSuAAP', 'id': 5, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Max', 'contact__c': '0031t000017IDPbAAO', 'webuser__c': 'a0E1t000003APR8EAO', 'company__c': 'Australia', 'email__c': 'arieunier+madmax@salesforce.com', 'firstname__c': 'Mad', 'external_picture_url__c': 'https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/866fb90f-a31f-4ecc-81a5-cda4c68a0b40.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '2f297565-bb9c-4be1-94e6-b5a2ff3f4e80', 'name': 'G-0129', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 44, 33), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 2, 6, 9, 53, 27), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ices2AAB', 'id': 2, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Oliveira', 'contact__c': '0031t00000xS21EAAS', 'webuser__c': 'a0E1t000003AOrFEAW', 'company__c': 'Suiizizk', 'email__c': 'coliveira@salesforce.com', 'firstname__c': 'Cleston', 'external_picture_url__c': 'https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/09092b28-4fa6-4525-a8e6-f0f982f41bcf.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '92f67c6d-5cea-4929-a4e8-60473549726f', 'name': 'G-0126', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 41, 54), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 1, 20, 20, 8, 50), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia2tQAAR', 'id': 7, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'JB', 'contact__c': '0031t000017JyUOAA0', 'webuser__c': 'a0E1t000003AQzhEAG', 'company__c': 'JB', 'email__c': 'jb.ronssin@lifen.fr', 'firstname__c': 'JB', 'external_picture_url__c': None, 'phone_number__c': '+33620082020', 'webuser__r__userid__c': 'aa415ee8-ec25-4c43-8496-c1e27f050e45', 'name': 'G-0132', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 45, 45), 'status__c': 'AT RECEPTION', 'createddate': datetime.datetime(2020, 4, 10, 13, 45, 45), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': False, 'sfid': 'a041t00000IdNjuAAF', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Bqjsnz', 'contact__c': None, 'webuser__c': None, 'company__c': 'Qnanan', 'email__c': 'Arieunier+dmoakakak.com', 'firstname__c': 'Jqjsn', 'external_picture_url__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/19c3812b-805a-4742-810d-10b3f9d34a25.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': 'f942993c-eb00-4f9c-be56-4371e80f2aa2', 'name': None, 'check_out__c': None, 'ownerid': None, 'isdeleted': None, 'systemmodstamp': None, 'status__c': None, 'createddate': None, 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': None, 'sfid': None, 'id': 11, '_hc_lastop': 'FAILED', '_hc_err': '{"op": "INSERT", "src": "SFDC", "msg": "Email: invalid email address: Arieunier+dmoakakak.com"}'}, {'lastname__c': 'Nqnqnqnqnqnqn', 'contact__c': '0031t000017JyUdAAK', 'webuser__c': 'a0E1t000003AQzrEAG', 'company__c': 'Qnananqnanan', 'email__c': 'arieunier+jajajajaja@salesforce.com', 'firstname__c': 'Nqjqjqjqqj', 'external_picture_url__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': 'afe23375-c76c-4fd4-aa6e-2445a8ea093d', 'name': 'G-0133', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 57, 42), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IdNjzAAF', 'id': 12, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['lastname__c', 'contact__c', 'webuser__c', 'company__c', 'email__c', 'firstname__c', 'external_picture_url__c', 'phone_number__c', 'webuser__r__userid__c', 'name', 'check_out__c', 'ownerid', 'isdeleted', 'systemmodstamp', 'status__c', 'createddate', 'host__c', 'externalid__c', 'acceptedbyhost__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 17:23:10.302','INFO',14839,postgres.py:27-<module>:-->2020-04-10 17:23:10.302305 - Initialization done Postgresql }
+{'2020-04-10 17:23:10.677','DEBUG',14839,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 17:23:10.677','DEBUG',14839,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 17:23:10.677','DEBUG',14839,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 17:23:10.677','DEBUG',14839,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 17:23:11.436','DEBUG',14839,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 17:23:11.437','INFO',14839,rabbitmq.py:43-<module>:-->2020-04-10 17:23:11.437523  - Initialization done RabbitMq}
+{'2020-04-10 17:23:11.488','INFO',14839,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 17:23:11.914','INFO',14843,postgres.py:27-<module>:-->2020-04-10 17:23:11.914046 - Initialization done Postgresql }
+{'2020-04-10 17:23:12.185','DEBUG',14843,kafka_utils.py:42-<module>:-->KAFKA_PREFIX=gila-20117.}
+{'2020-04-10 17:23:12.185','DEBUG',14843,kafka_utils.py:43-<module>:-->KAKFA_TOPIC_READ=topicRead}
+{'2020-04-10 17:23:12.185','DEBUG',14843,kafka_utils.py:44-<module>:-->KAKFA_TOPIC_WRITE=topicWrite}
+{'2020-04-10 17:23:12.185','DEBUG',14843,kafka_utils.py:45-<module>:-->KAFKA_GROUP_ID=gila-20117.my-consumer-group}
+{'2020-04-10 17:23:12.548','DEBUG',14843,rabbitmq.py:34-init:-->Initialized : isOpen=True}
+{'2020-04-10 17:23:12.549','INFO',14843,rabbitmq.py:43-<module>:-->2020-04-10 17:23:12.549156  - Initialization done RabbitMq}
+{'2020-04-10 17:23:12.565','INFO',14843,photo.py:21-<module>:-->Upload In Redis = False}
+{'2020-04-10 17:23:13.781','INFO',14843,rediscache.py:25-__connect:-->2020-04-10 17:23:13.781903  - Initialization done Redis}
+{'2020-04-10 17:23:13.782','DEBUG',14843,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 17:23:14.473','DEBUG',14843,tables.py:62-getObjects:-->* url: http://localhost:5000/getObjects?name=guest__c&output=html
+* method:GET
+* Args:
+	* name = guest__c
+	* output = html
+* Headers:
+	* Host = localhost:5000
+	* Connection = keep-alive
+	* Cache-Control = max-age=0
+	* Upgrade-Insecure-Requests = 1
+	* User-Agent = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+	* Sec-Fetch-Dest = document
+	* Accept = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+	* Sec-Fetch-Site = same-origin
+	* Sec-Fetch-Mode = navigate
+	* Sec-Fetch-User = ?1
+	* Referer = http://localhost:5000/tables
+	* Accept-Encoding = gzip, deflate, br
+	* Accept-Language = en-GB,en;q=0.9,en-US;q=0.8,fr;q=0.7,pt;q=0.6
+	* Cookie = _csrf=aviI3zHNrhinhZ1DYAkpNGHv; _ga=GA1.1.1223532232.1582023336; test-demo-ar=837fd420-034b-46c6-bca6-60e292136da8; csrftoken=3Bx2Usy1PA3WzJmGxnsBs0cJFA5RDzGQts45SBMEnXxtQoKbEHzLPIjz0W9lpEPU; sessionid=oq4afwa3p0h562hjtgz1nn5ald2skcii; splunkweb_csrf_token_8000=17669870657308917379; token_key=17669870657308917379; experience_id=e6891cb9-0cb9-2338-a6bb-8c274b3f8e0b
+* Form:
+* Files:
+}
+{'2020-04-10 17:23:14.473','DEBUG',14843,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 17:23:14.498','INFO',14843,tables.py:76-getObjects:-->Data not found in cache}
+{'2020-04-10 17:23:14.498','DEBUG',14843,rediscache.py:70-__getCache:-->Reading in Redis}
+{'2020-04-10 17:23:14.522','INFO',14843,postgres.py:272-__getObjects:-->Data not found in cache : data not known}
+{'2020-04-10 17:23:14.610','INFO',14843,postgres.py:275-__getObjects:-->Data Returned}
+{'2020-04-10 17:23:14.611','INFO',14843,postgres.py:276-__getObjects:-->{'data': [{'lastname__c': 'Harpaz', 'contact__c': '0031t00000xS1f8AAC', 'webuser__c': 'a0E1t000003AOpwEAG', 'company__c': 'SFisrael', 'email__c': 'dharpaz@salesforce.com', 'firstname__c': 'Doron', 'external_picture_url__c': 'https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/72b4ceaa-6df4-4be8-8c91-d9418985801e.jpg', 'phone_number__c': '+972545895555', 'webuser__r__userid__c': 'a5ac105d-fa9a-4506-99a3-0438b5e308ab', 'name': 'G-0125', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 1, 20, 12, 9, 44), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 20, 11, 57, 19), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia2jpAAB', 'id': 1, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Rieunierfus', 'contact__c': '0031t00000xRspCAAS', 'webuser__c': 'a0E1t000003AObbEAG', 'company__c': 'Eieunkerkakka', 'email__c': 'arieunier+demo10@salesforce.com', 'firstname__c': 'Augustin', 'external_picture_url__c': 'https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/9e884fc3-e7e6-4bb5-a4ee-d94b3d233070.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '103bb9aa-85c7-405b-9562-c66d446c10f3', 'name': 'G-0124', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 2, 6, 10, 36, 54), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 8, 12, 7, 9), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IZp7BAAT', 'id': 3, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Nir', 'contact__c': '0031t00000xS3cBAAS', 'webuser__c': 'a0E1t000003AOtFEAW', 'company__c': 'SalesforceiSrael', 'email__c': 'nir.friedman@salesforce.com', 'firstname__c': 'Nir', 'external_picture_url__c': 'https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/ea4283f1-cada-4ed6-b827-7641ca9a06c3.jpg', 'phone_number__c': '+972544601301', 'webuser__r__userid__c': '95a870d5-34f8-4f58-9ab5-3e42f6241c2b', 'name': 'G-0128', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 2, 6, 10, 36, 59), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 22, 12, 57, 11), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia3RgAAJ', 'id': 6, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Nsnsnz', 'contact__c': '0031t000017IDSfAAO', 'webuser__c': 'a0E1t000003APRDEA4', 'company__c': 'Nous', 'email__c': 'arieunier+jaja@salesforce.com', 'firstname__c': 'Nsnsnz', 'external_picture_url__c': 'https://bucketeer-ef178e40-8d50-4308-9631-34283457b857.s3.eu-west-1.amazonaws.com/public/3b1b26fd-b1a3-4fdc-b99e-6f9a3ebe2fa6.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '94167f93-628b-4ec7-b66e-8048d2f0d927', 'name': 'G-0130', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 2, 6, 13, 1, 16), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 2, 6, 11, 3, 55), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IcetFAAR', 'id': 8, '_hc_lastop': None, '_hc_err': None}, {'lastname__c': 'Dede', 'contact__c': '0031t000017IDZWAA4', 'webuser__c': 'a0E1t000003APRwEAO', 'company__c': 'Dalzkzk', 'email__c': 'arieunier+hahah@salesforce.com', 'firstname__c': 'Jajayg', 'external_picture_url__c': 'https://bucketeer-1d698383-e6f1-4425-9b2b-febab717cce3.s3.eu-west-1.amazonaws.com/public/c56d0d3b-c23f-4333-977b-60534a1a9ae7.jpg', 'phone_number__c': '+33660791662', 'webuser__r__userid__c': '68372b65-b880-4d90-9c83-983cebbfc218', 'name': 'G-0131', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 3, 26, 15, 16, 15), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 2, 6, 14, 2, 22), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Icex2AAB', 'id': 9, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Deoakaka', 'contact__c': None, 'webuser__c': 'a0E1t000003AOrnEAG', 'company__c': 'WhiteW', 'email__c': 'arieunier+demo1@salesforce.com', 'firstname__c': 'Augustindemo', 'external_picture_url__c': 'https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/51c78329-901e-45e5-a666-858ea980957d.jpg', 'phone_number__c': '+972545324789', 'webuser__r__userid__c': '384a172b-241d-4fa6-b926-825e72c65d63', 'name': 'G-0127', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 3, 31, 14, 22, 33), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2020, 1, 21, 11, 4, 38), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia35pAAB', 'id': 4, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Test', 'contact__c': None, 'webuser__c': None, 'company__c': 'Test', 'email__c': 'tes@test.com', 'firstname__c': 'Test', 'external_picture_url__c': 'https://3.bp.blogspot.com/-KIngJEZr94Q/Wsxoh-8kwuI/AAAAAAAAQyM/YlDJM1eBvzoDAUV79-0v_Us-amsjlFpkgCLcBGAs/s1600/aaa.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': None, 'name': 'G-0123', 'check_out__c': None, 'ownerid': '0051t000002FB13AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 3, 31, 14, 22, 37), 'status__c': 'BADGE RETURNED', 'createddate': datetime.datetime(2019, 12, 13, 14, 33), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IZZSuAAP', 'id': 5, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Max', 'contact__c': '0031t000017IDPbAAO', 'webuser__c': 'a0E1t000003APR8EAO', 'company__c': 'Australia', 'email__c': 'arieunier+madmax@salesforce.com', 'firstname__c': 'Mad', 'external_picture_url__c': 'https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/866fb90f-a31f-4ecc-81a5-cda4c68a0b40.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '2f297565-bb9c-4be1-94e6-b5a2ff3f4e80', 'name': 'G-0129', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 44, 33), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 2, 6, 9, 53, 27), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ices2AAB', 'id': 2, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Oliveira', 'contact__c': '0031t00000xS21EAAS', 'webuser__c': 'a0E1t000003AOrFEAW', 'company__c': 'Suiizizk', 'email__c': 'coliveira@salesforce.com', 'firstname__c': 'Cleston', 'external_picture_url__c': 'https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/09092b28-4fa6-4525-a8e6-f0f982f41bcf.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': '92f67c6d-5cea-4929-a4e8-60473549726f', 'name': 'G-0126', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 41, 54), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 1, 20, 20, 8, 50), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000Ia2tQAAR', 'id': 7, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'JB', 'contact__c': '0031t000017JyUOAA0', 'webuser__c': 'a0E1t000003AQzhEAG', 'company__c': 'JB', 'email__c': 'jb.ronssin@lifen.fr', 'firstname__c': 'JB', 'external_picture_url__c': None, 'phone_number__c': '+33620082020', 'webuser__r__userid__c': 'aa415ee8-ec25-4c43-8496-c1e27f050e45', 'name': 'G-0132', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 45, 45), 'status__c': 'AT RECEPTION', 'createddate': datetime.datetime(2020, 4, 10, 13, 45, 45), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': False, 'sfid': 'a041t00000IdNjuAAF', 'id': 10, '_hc_lastop': 'SYNCED', '_hc_err': None}, {'lastname__c': 'Bqjsnz', 'contact__c': None, 'webuser__c': None, 'company__c': 'Qnanan', 'email__c': 'Arieunier+dmoakakak.com', 'firstname__c': 'Jqjsn', 'external_picture_url__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/19c3812b-805a-4742-810d-10b3f9d34a25.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': 'f942993c-eb00-4f9c-be56-4371e80f2aa2', 'name': None, 'check_out__c': None, 'ownerid': None, 'isdeleted': None, 'systemmodstamp': None, 'status__c': None, 'createddate': None, 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': None, 'sfid': None, 'id': 11, '_hc_lastop': 'FAILED', '_hc_err': '{"op": "INSERT", "src": "SFDC", "msg": "Email: invalid email address: Arieunier+dmoakakak.com"}'}, {'lastname__c': 'Nqnqnqnqnqnqn', 'contact__c': '0031t000017JyUdAAK', 'webuser__c': 'a0E1t000003AQzrEAG', 'company__c': 'Qnananqnanan', 'email__c': 'arieunier+jajajajaja@salesforce.com', 'firstname__c': 'Nqjqjqjqqj', 'external_picture_url__c': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg', 'phone_number__c': '+33643395652', 'webuser__r__userid__c': 'afe23375-c76c-4fd4-aa6e-2445a8ea093d', 'name': 'G-0133', 'check_out__c': None, 'ownerid': '0051t000002FCo6AAG', 'isdeleted': False, 'systemmodstamp': datetime.datetime(2020, 4, 10, 13, 57, 42), 'status__c': 'BADGE ISSUED', 'createddate': datetime.datetime(2020, 4, 10, 13, 54, 2), 'host__c': '0051t000002FB13AAG', 'externalid__c': None, 'acceptedbyhost__c': True, 'sfid': 'a041t00000IdNjzAAF', 'id': 12, '_hc_lastop': 'SYNCED', '_hc_err': None}], 'columns': ['lastname__c', 'contact__c', 'webuser__c', 'company__c', 'email__c', 'firstname__c', 'external_picture_url__c', 'phone_number__c', 'webuser__r__userid__c', 'name', 'check_out__c', 'ownerid', 'isdeleted', 'systemmodstamp', 'status__c', 'createddate', 'host__c', 'externalid__c', 'acceptedbyhost__c', 'sfid', 'id', '_hc_lastop', '_hc_err']}}
+{'2020-04-10 17:23:14.612','INFO',14843,rediscache.py:51-__setCache:-->Key->{'sqlRequest': '__getObjects', 'tableName': 'guest__c'}}
+{'2020-04-10 17:23:14.612','INFO',14843,rediscache.py:52-__setCache:-->Data->{"data": [{"lastname__c": "Harpaz", "contact__c": "0031t00000xS1f8AAC", "webuser__c": "a0E1t000003AOpwEAG", "company__c": "SFisrael", "email__c": "dharpaz@salesforce.com", "firstname__c": "Doron", "external_picture_url__c": "https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/72b4ceaa-6df4-4be8-8c91-d9418985801e.jpg", "phone_number__c": "+972545895555", "webuser__r__userid__c": "a5ac105d-fa9a-4506-99a3-0438b5e308ab", "name": "G-0125", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-01-20 12:09:44", "status__c": "BADGE RETURNED", "createddate": "2020-01-20 11:57:19", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000Ia2jpAAB", "id": 1, "_hc_lastop": null, "_hc_err": null}, {"lastname__c": "Rieunierfus", "contact__c": "0031t00000xRspCAAS", "webuser__c": "a0E1t000003AObbEAG", "company__c": "Eieunkerkakka", "email__c": "arieunier+demo10@salesforce.com", "firstname__c": "Augustin", "external_picture_url__c": "https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/9e884fc3-e7e6-4bb5-a4ee-d94b3d233070.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": "103bb9aa-85c7-405b-9562-c66d446c10f3", "name": "G-0124", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-02-06 10:36:54", "status__c": "BADGE RETURNED", "createddate": "2020-01-08 12:07:09", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000IZp7BAAT", "id": 3, "_hc_lastop": null, "_hc_err": null}, {"lastname__c": "Nir", "contact__c": "0031t00000xS3cBAAS", "webuser__c": "a0E1t000003AOtFEAW", "company__c": "SalesforceiSrael", "email__c": "nir.friedman@salesforce.com", "firstname__c": "Nir", "external_picture_url__c": "https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/ea4283f1-cada-4ed6-b827-7641ca9a06c3.jpg", "phone_number__c": "+972544601301", "webuser__r__userid__c": "95a870d5-34f8-4f58-9ab5-3e42f6241c2b", "name": "G-0128", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-02-06 10:36:59", "status__c": "BADGE RETURNED", "createddate": "2020-01-22 12:57:11", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000Ia3RgAAJ", "id": 6, "_hc_lastop": null, "_hc_err": null}, {"lastname__c": "Nsnsnz", "contact__c": "0031t000017IDSfAAO", "webuser__c": "a0E1t000003APRDEA4", "company__c": "Nous", "email__c": "arieunier+jaja@salesforce.com", "firstname__c": "Nsnsnz", "external_picture_url__c": "https://bucketeer-ef178e40-8d50-4308-9631-34283457b857.s3.eu-west-1.amazonaws.com/public/3b1b26fd-b1a3-4fdc-b99e-6f9a3ebe2fa6.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": "94167f93-628b-4ec7-b66e-8048d2f0d927", "name": "G-0130", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-02-06 13:01:16", "status__c": "BADGE ISSUED", "createddate": "2020-02-06 11:03:55", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000IcetFAAR", "id": 8, "_hc_lastop": null, "_hc_err": null}, {"lastname__c": "Dede", "contact__c": "0031t000017IDZWAA4", "webuser__c": "a0E1t000003APRwEAO", "company__c": "Dalzkzk", "email__c": "arieunier+hahah@salesforce.com", "firstname__c": "Jajayg", "external_picture_url__c": "https://bucketeer-1d698383-e6f1-4425-9b2b-febab717cce3.s3.eu-west-1.amazonaws.com/public/c56d0d3b-c23f-4333-977b-60534a1a9ae7.jpg", "phone_number__c": "+33660791662", "webuser__r__userid__c": "68372b65-b880-4d90-9c83-983cebbfc218", "name": "G-0131", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-03-26 15:16:15", "status__c": "BADGE RETURNED", "createddate": "2020-02-06 14:02:22", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000Icex2AAB", "id": 9, "_hc_lastop": "SYNCED", "_hc_err": null}, {"lastname__c": "Deoakaka", "contact__c": null, "webuser__c": "a0E1t000003AOrnEAG", "company__c": "WhiteW", "email__c": "arieunier+demo1@salesforce.com", "firstname__c": "Augustindemo", "external_picture_url__c": "https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/51c78329-901e-45e5-a666-858ea980957d.jpg", "phone_number__c": "+972545324789", "webuser__r__userid__c": "384a172b-241d-4fa6-b926-825e72c65d63", "name": "G-0127", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-03-31 14:22:33", "status__c": "BADGE RETURNED", "createddate": "2020-01-21 11:04:38", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000Ia35pAAB", "id": 4, "_hc_lastop": "SYNCED", "_hc_err": null}, {"lastname__c": "Test", "contact__c": null, "webuser__c": null, "company__c": "Test", "email__c": "tes@test.com", "firstname__c": "Test", "external_picture_url__c": "https://3.bp.blogspot.com/-KIngJEZr94Q/Wsxoh-8kwuI/AAAAAAAAQyM/YlDJM1eBvzoDAUV79-0v_Us-amsjlFpkgCLcBGAs/s1600/aaa.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": null, "name": "G-0123", "check_out__c": null, "ownerid": "0051t000002FB13AAG", "isdeleted": false, "systemmodstamp": "2020-03-31 14:22:37", "status__c": "BADGE RETURNED", "createddate": "2019-12-13 14:33:00", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000IZZSuAAP", "id": 5, "_hc_lastop": "SYNCED", "_hc_err": null}, {"lastname__c": "Max", "contact__c": "0031t000017IDPbAAO", "webuser__c": "a0E1t000003APR8EAO", "company__c": "Australia", "email__c": "arieunier+madmax@salesforce.com", "firstname__c": "Mad", "external_picture_url__c": "https://bucketeer-180d4e72-98a8-4b4a-9191-09b4cc936f65.s3.us-east-1.amazonaws.com/public/866fb90f-a31f-4ecc-81a5-cda4c68a0b40.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": "2f297565-bb9c-4be1-94e6-b5a2ff3f4e80", "name": "G-0129", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-04-10 13:44:33", "status__c": "BADGE ISSUED", "createddate": "2020-02-06 09:53:27", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000Ices2AAB", "id": 2, "_hc_lastop": "SYNCED", "_hc_err": null}, {"lastname__c": "Oliveira", "contact__c": "0031t00000xS21EAAS", "webuser__c": "a0E1t000003AOrFEAW", "company__c": "Suiizizk", "email__c": "coliveira@salesforce.com", "firstname__c": "Cleston", "external_picture_url__c": "https://bucketeer-ed0670a9-132b-43c7-b88d-212c3f6691ee.s3.eu-west-1.amazonaws.com/public/09092b28-4fa6-4525-a8e6-f0f982f41bcf.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": "92f67c6d-5cea-4929-a4e8-60473549726f", "name": "G-0126", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-04-10 13:41:54", "status__c": "BADGE ISSUED", "createddate": "2020-01-20 20:08:50", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000Ia2tQAAR", "id": 7, "_hc_lastop": "SYNCED", "_hc_err": null}, {"lastname__c": "JB", "contact__c": "0031t000017JyUOAA0", "webuser__c": "a0E1t000003AQzhEAG", "company__c": "JB", "email__c": "jb.ronssin@lifen.fr", "firstname__c": "JB", "external_picture_url__c": null, "phone_number__c": "+33620082020", "webuser__r__userid__c": "aa415ee8-ec25-4c43-8496-c1e27f050e45", "name": "G-0132", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-04-10 13:45:45", "status__c": "AT RECEPTION", "createddate": "2020-04-10 13:45:45", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": false, "sfid": "a041t00000IdNjuAAF", "id": 10, "_hc_lastop": "SYNCED", "_hc_err": null}, {"lastname__c": "Bqjsnz", "contact__c": null, "webuser__c": null, "company__c": "Qnanan", "email__c": "Arieunier+dmoakakak.com", "firstname__c": "Jqjsn", "external_picture_url__c": "https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/19c3812b-805a-4742-810d-10b3f9d34a25.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": "f942993c-eb00-4f9c-be56-4371e80f2aa2", "name": null, "check_out__c": null, "ownerid": null, "isdeleted": null, "systemmodstamp": null, "status__c": null, "createddate": null, "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": null, "sfid": null, "id": 11, "_hc_lastop": "FAILED", "_hc_err": "{\"op\": \"INSERT\", \"src\": \"SFDC\", \"msg\": \"Email: invalid email address: Arieunier+dmoakakak.com\"}"}, {"lastname__c": "Nqnqnqnqnqnqn", "contact__c": "0031t000017JyUdAAK", "webuser__c": "a0E1t000003AQzrEAG", "company__c": "Qnananqnanan", "email__c": "arieunier+jajajajaja@salesforce.com", "firstname__c": "Nqjqjqjqqj", "external_picture_url__c": "https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg", "phone_number__c": "+33643395652", "webuser__r__userid__c": "afe23375-c76c-4fd4-aa6e-2445a8ea093d", "name": "G-0133", "check_out__c": null, "ownerid": "0051t000002FCo6AAG", "isdeleted": false, "systemmodstamp": "2020-04-10 13:57:42", "status__c": "BADGE ISSUED", "createddate": "2020-04-10 13:54:02", "host__c": "0051t000002FB13AAG", "externalid__c": null, "acceptedbyhost__c": true, "sfid": "a041t00000IdNjzAAF", "id": 12, "_hc_lastop": "SYNCED", "_hc_err": null}], "columns": ["lastname__c", "contact__c", "webuser__c", "company__c", "email__c", "firstname__c", "external_picture_url__c", "phone_number__c", "webuser__r__userid__c", "name", "check_out__c", "ownerid", "isdeleted", "systemmodstamp", "status__c", "createddate", "host__c", "externalid__c", "acceptedbyhost__c", "sfid", "id", "_hc_lastop", "_hc_err"]}}
+{'2020-04-10 17:23:14.613','DEBUG',14843,rediscache.py:54-__setCache:-->Storing in Redis}
+{'2020-04-10 17:23:14.674','INFO',14843,tables.py:82-getObjects:-->Treating request as a web request, output to Web page}
+{'2020-04-10 17:23:14.686','INFO',14843,tables.py:115-getObjects:-->returning data}
+{'2020-04-10 17:23:20.846','INFO',14843,badges.py:47-badgeById:-->{'data': [{'id': '94ce7632-321e-4a30-b053-f0c738f36b23', 'guest_id': 'a041t00000IdNjzAAF', 'guest_firstname': 'Nqjqjqjqqj', 'guest_lastname': 'Nqnqnqnqnqnqn', 'guest_company': 'Qnananqnanan', 'host_firstname': 'Augustin', 'host_lastname': 'Rieunier', 'badge_status': 'ACTIVE', 'badge_url': 'https://yourdemo.herokuapp.com/badge/94ce7632-321e-4a30-b053-f0c738f36b23', 'creation_date': datetime.datetime(2020, 4, 10, 13, 57, 42, 290625), 'picture_url': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg'}], 'columns': ['id', 'guest_id', 'guest_firstname', 'guest_lastname', 'guest_company', 'host_firstname', 'host_lastname', 'badge_status', 'badge_url', 'creation_date', 'picture_url']}}
+{'2020-04-10 17:23:20.847','INFO',14843,badges.py:52-badgeById:-->https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='https://yourdemo.herokuapp.com/badge/94ce7632-321e-4a30-b053-f0c738f36b23?output=json'}
+{'2020-04-10 17:23:46.238','INFO',14843,badges.py:47-badgeById:-->{'data': [{'id': '94ce7632-321e-4a30-b053-f0c738f36b23', 'guest_id': 'a041t00000IdNjzAAF', 'guest_firstname': 'Nqjqjqjqqj', 'guest_lastname': 'Nqnqnqnqnqnqn', 'guest_company': 'Qnananqnanan', 'host_firstname': 'Augustin', 'host_lastname': 'Rieunier', 'badge_status': 'ACTIVE', 'badge_url': 'https://yourdemo.herokuapp.com/badge/94ce7632-321e-4a30-b053-f0c738f36b23', 'creation_date': datetime.datetime(2020, 4, 10, 13, 57, 42, 290625), 'picture_url': 'https://bucketeer-dd26e946-3375-4cba-ac59-9bfdef5658c5.s3.eu-west-1.amazonaws.com/public/2b0b27c5-80eb-4233-8d5d-634cc3d2b534.jpg'}], 'columns': ['id', 'guest_id', 'guest_firstname', 'guest_lastname', 'guest_company', 'host_firstname', 'host_lastname', 'badge_status', 'badge_url', 'creation_date', 'picture_url']}}
