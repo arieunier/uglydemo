@@ -1,7 +1,8 @@
 from datetime import datetime
 import uuid
 from flask import request
-import os 
+import os , json
+
 
 FOLLOWANALYTICS_API_KEY = os.getenv("FOLLOWANALYTICS_APPLICATION_KEY", None)
 FOLLOWANALYTICS_API_TOKEN = os.getenv("FOLLOWANALYTICS_API_TOKEN", None)
