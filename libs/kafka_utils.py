@@ -151,27 +151,42 @@ def receiveFromKafka(mode, topic_override=None):
             dictValue = ujson.loads(message.value)
             logger.debug(dictValue)
             
-            if ('channel' in  dictValue): # means it's coming from a Platform EVENT
-                if ('host_accept_guest__e'  in dictValue['channel'].lower()): 
-                    logger.info("about to send a SMS using BLOWER")
-                    message = "Dear {} {} , {} {} is aware of your arrival and will be here shortly".format(
-                        dictValue['data']['payload']['Guest_Firstname__c'],
-                        dictValue['data']['payload']['Guest_Lastname__c'],
-                        dictValue['data']['payload']['Host_Firstname__c'],
-                        dictValue['data']['payload']['Host_Lastname__c'],
-                    )
-                    blower.sendMessage(message, dictValue['data']['payload']['Guest_Phone_Number__c'])
-                elif ('send_smss__e' in dictValue['channel'].lower()):
-                    logger.info("about to send a SMS using BLOWER")
-                    message = dictValue['data']['payload']['message__c']
-                    phone_Number = dictValue['data']['payload']['phone_Number__c'],
-                    blower.sendMessage(message, phone_Number)   
-                elif ('push_notification__e' in dictValue['channel'].lower()):
+            # check value in the field Action Type
+            if ("payload" in dictValue):
+                if (dictValue['payload']['Action_Type__c'] == 'PushNotification'):
                     logger.info("about to send a BROWSER NOTIFICATION using PUSHER")
-                    message = dictValue['data']['payload']['message__c']
-                    userid = dictValue['data']['payload']['userid__c'],
-                    notification.sendNotification(userid, message)
-
+                    message = dictValue['payload']['message__c']
+                    userid = dictValue['payload']['userid__c'],
+                    notification.sendNotification(userid, message)  
+            """
+            if ('channel' in  dictValue): # means it's coming from a Platform EVENT via kafka
+            if ('host_accept_guest__e'  in dictValue['channel'].lower()): 
+                logger.info("about to send a SMS using BLOWER")
+                message = "Dear {} {} , {} {} is aware of your arrival and will be here shortly".format(
+                    dictValue['data']['payload']['Guest_Firstname__c'],
+                    dictValue['data']['payload']['Guest_Lastname__c'],
+                    dictValue['data']['payload']['Host_Firstname__c'],
+                    dictValue['data']['payload']['Host_Lastname__c'],
+                )
+                blower.sendMessage(message, dictValue['data']['payload']['Guest_Phone_Number__c'])
+            elif ('send_smss__e' in dictValue['channel'].lower()):
+                logger.info("about to send a SMS using BLOWER")
+                message = dictValue['data']['payload']['message__c']
+                phone_Number = dictValue['data']['payload']['phone_Number__c'],
+                blower.sendMessage(message, phone_Number)   
+            #{'schema': 'h7kPS4B7NEsigjlW7748lg', 
+            #   'payload': {
+            #           'CreatedById': '0051t000002FB13AAG', 
+            #            'message__c': 'Hello ! ', 
+            #            'Action_Type__c': 'PushNotification', 
+            #            'CreatedDate': '2020-06-16T15:52:45.535Z', 
+            #            'userid__c': 'dac11bb3-148e-4b27-a6f2-caf0af09fb0a'}, 'event': {'replayId': 14570697}}}    
+            elif ('push_notification__e' in dictValue['channel'].lower()):
+                logger.info("about to send a BROWSER NOTIFICATION using PUSHER")
+                message = dictValue['data']['payload']['message__c']
+                userid = dictValue['data']['payload']['userid__c'],
+                notification.sendNotification(userid, message)  
+            """
             consumer.commit()
         except Exception as e :
             import traceback

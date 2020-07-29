@@ -58,6 +58,51 @@ def sf_ChatterPost(sfurl, sftoken, guestid, hostid, status):
 
     #/services/data/v45.0/chatter/feed-elements?feedElementType=FeedItem&subjectId=a041t000003oLm4AAE&text=New+post
 
+def startBulkV2Job(sfurl, sftoken, sfobject):
+
+    url = sfurl + "/services/data/v48.0/jobs/ingest/"
+    body = {
+         "object" : sfobject,
+        "contentType" : "CSV",
+        "operation" : "insert"
+        }
+
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json"}        
+    data=ujson.dumps(body)
+    logger.info("##### CREATE JOB #####")
+    logger.info(data)
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.post(url, data=data , headers=headers)
+    logger.info(result.json())
+    return result.json()
+
+def uploadBulkv2Data(sfurl, sftoken, jobid, data):
+    url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid + "/batches/"
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "text/csv","Accept": "application/json"}        
+    logger.info("##### UPLOAD DATA #####")
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.put(url, data=data , headers=headers)
+    logger.info(result.status_code)
+    logger.info(result.text)
+
+def closeBulkV2Job(sfurl, sftoken, jobid):
+    url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid
+    body = {
+      "state" : "UploadComplete"
+        }
+    data=ujson.dumps(body)
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json", "Accept": "application/json"}            
+    logger.info("##### CLOSE JOB #####")
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.patch(url, data=data , headers=headers)
+    logger.info(result.status_code)
+    logger.info(result.json())
+    return result.json()
+
+
 def sf_updateBadge(sfurl, sftoken, guest, status):
     url = sfurl + '/services/data/v45.0/sobjects/guest__c/{}?_HttpMethod=PATCH'.format(guest) 
     #attributes = {'q':query}
