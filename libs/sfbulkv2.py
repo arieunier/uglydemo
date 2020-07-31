@@ -5,6 +5,18 @@ from libs import sf
 from simple_salesforce import Salesforce, SalesforceLogin
 import time
 
+
+"""
+how to use
+#init
+sfbulkv2.initSFconnection(username, password, security_token)
+#insert data
+sfbulkv2.Bulkv2_INSERT(100000)
+#query all
+files = sfbulkv2.Bulkv2_QUERY()
+# now deletes everything
+sfbulkv2.Bulkv2_delete(files)
+"""
 session_id = ''
 instance = ''
 sfurl = ''
@@ -68,5 +80,6 @@ def Bulkv2_delete(CSVFiles):
         freader.close()
         sf.bulkv2Delete_InsertData(sfurl, session_id, bulkid, data)
         sf.bulkv2Delete_CloseJob(sfurl, session_id, bulkid)
+
 
 
