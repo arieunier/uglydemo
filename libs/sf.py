@@ -58,7 +58,7 @@ def sf_ChatterPost(sfurl, sftoken, guestid, hostid, status):
 
     #/services/data/v45.0/chatter/feed-elements?feedElementType=FeedItem&subjectId=a041t000003oLm4AAE&text=New+post
 
-def startBulkV2Job(sfurl, sftoken, sfobject):
+def bulkv2Ingest_CreateJob(sfurl, sftoken, sfobject):
 
     url = sfurl + "/services/data/v48.0/jobs/ingest/"
     body = {
@@ -77,7 +77,7 @@ def startBulkV2Job(sfurl, sftoken, sfobject):
     logger.info(result.json())
     return result.json()
 
-def uploadBulkv2Data(sfurl, sftoken, jobid, data):
+def bulkv2Ingest_InsertData(sfurl, sftoken, jobid, data):
     url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid + "/batches/"
     headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "text/csv","Accept": "application/json"}        
     logger.info("##### UPLOAD DATA #####")
@@ -87,7 +87,7 @@ def uploadBulkv2Data(sfurl, sftoken, jobid, data):
     logger.info(result.status_code)
     logger.info(result.text)
 
-def closeBulkV2Job(sfurl, sftoken, jobid):
+def bulkv2Ingest_CloseJob(sfurl, sftoken, jobid):
     url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid
     body = {
       "state" : "UploadComplete"
@@ -102,6 +102,65 @@ def closeBulkV2Job(sfurl, sftoken, jobid):
     logger.info(result.json())
     return result.json()
 
+def bulkv2Ingest_CheckJobCompletion(sfurl, sftoken, jobid, jobtype):
+    url = sfurl + "/services/data/v48.0/jobs/" + jobtype + "/" + jobid
+    body = {
+      "state" : "UploadComplete"
+        }
+    data=ujson.dumps(body)
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json", "Accept": "application/json"}            
+    logger.info("##### CHECK JOB #####")
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.get(url, data=data , headers=headers)
+    logger.info(result.status_code)
+    logger.info(result.json())
+    return result.json()
+
+def bulkv2Query_CreateJob(sfurl, sftoken, soqlrequest):
+    url = sfurl + "/services/data/v48.0/jobs/query"
+    body = {
+        "operation" : "query",
+        "query" : soqlrequest
+        }
+    data=ujson.dumps(body)
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json", "Accept": "application/json"}            
+    logger.info("##### CREATE QUERY JOB #####")
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.post(url, data=data , headers=headers)
+    resultJson =result.json() 
+    logger.info(resultJson)
+    return resultJson
+
+def bulkv2Query_GetResult(sfurl, sftoken, jobid, nbRecords):
+    url = sfurl + "/services/data/v48.0/jobs/query/" + jobid + "/results"
+    body = {
+      "state" : "UploadComplete"
+        }
+    data=ujson.dumps(body)
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json", "Accept": "application/json"}            
+    logger.info("##### GET QUERY RESULT  #####")
+    logger.info(url)        
+    logger.info(headers)
+    recordProcessed = 0
+    params = {}
+    files = []
+    i = 0
+    while recordProcessed < nbRecords:
+        result = requests.get(url, data=data , headers=headers, params=params)
+        logger.info(result.headers)
+        logger.info(result.status_code)
+        recordProcessed += int(result.headers['Sforce-NumberOfRecords'])
+        f = open('bulkv2_' + i.__str__() + '.csv','w')
+        files.append('bulkv2_' + i.__str__() + '.csv')
+        f.write(result.text)
+        f.close()
+        i+=1
+        params['locator'] = result.headers['Sforce-Locator']
+        logger.info("{} / {} - loop {} ".format(recordProcessed, nbRecords, i))
+
+    return files
 
 def sf_updateBadge(sfurl, sftoken, guest, status):
     url = sfurl + '/services/data/v45.0/sobjects/guest__c/{}?_HttpMethod=PATCH'.format(guest) 
@@ -114,3 +173,50 @@ def sf_updateBadge(sfurl, sftoken, guest, status):
     logger.info(data)
     result = requests.post(url, data=data , headers=headers)
     logger.info(result)
+
+
+
+def bulkv2Delete_CreateJob(sfurl, sftoken, sfobject):
+
+    url = sfurl + "/services/data/v48.0/jobs/ingest/"
+    body = {
+         "object" : sfobject,
+        "contentType" : "CSV",
+        "operation" : "delete"
+        }
+
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json"}        
+    data=ujson.dumps(body)
+    logger.info("##### CREATE JOB #####")
+    logger.info(data)
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.post(url, data=data , headers=headers)
+    logger.info(result.json())
+    return result.json()
+
+def bulkv2Delete_InsertData(sfurl, sftoken, jobid, data):
+    url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid + "/batches/"
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "text/csv","Accept": "application/json"}        
+    logger.info("##### UPLOAD DATA #####")
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.put(url, data=data , headers=headers)
+    logger.info(result.status_code)
+    logger.info(result.text)
+
+
+def bulkv2Delete_CloseJob(sfurl, sftoken, jobid):
+    url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid
+    body = {
+      "state" : "UploadComplete"
+        }
+    data=ujson.dumps(body)
+    headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json", "Accept": "application/json"}            
+    logger.info("##### CLOSE JOB #####")
+    logger.info(url)        
+    logger.info(headers)
+    result = requests.patch(url, data=data , headers=headers)
+    logger.info(result.status_code)
+    logger.info(result.json())
+    return result.json()
