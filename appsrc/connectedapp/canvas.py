@@ -25,6 +25,7 @@ def canvas_main():
     try:
         logger.debug(utils.get_debug_all(request))
         cookie, cookie_exists =  utils.getCookie()
+        logger.info("CookieExists={} - Cookie ={}".format(cookie_exists,cookie))
         key = {'cookie' : cookie, 'fromCanvas':True}
         tmp_dict = None
         
@@ -74,6 +75,7 @@ def singleguestbadgemanagement():
     try:
         logger.debug(utils.get_debug_all(request))
         cookie, cookie_exists =  utils.getCookie()
+        logger.info("CookieExists={} - Cookie ={}".format(cookie_exists,cookie))
         #data_dict = None
         key_fromCanvas = {'cookie' : cookie, 'fromCanvas':True}
         logger.info(key_fromCanvas)
