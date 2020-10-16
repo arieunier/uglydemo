@@ -32,9 +32,10 @@ def sf_ChatterPost(sfurl, sftoken, guestid, hostid, status):
     url = sfurl + '/services/data/v45.0/chatter/feed-elements'
     
     headers = {'Authorization': "Bearer " + sftoken, "X-Prettylogger.debug": "1", "Content-Type" : "application/json"}
-    attributes = {'feedElementType':'FeedItem',
-    "subjectId":hostid,
-    'text': 'Badge status has been updated to {}'.format(status)}
+    #attributes = {'feedElementType':'FeedItem',
+    #"subjectId":hostid,
+    #'text': 'Badge status has been updated to {}'.format(status)}
+    attributes={}
     body = { 
             "body" : {
                 "messageSegments" : [
@@ -174,8 +175,6 @@ def sf_updateBadge(sfurl, sftoken, guest, status):
     result = requests.post(url, data=data , headers=headers)
     logger.info(result)
 
-
-
 def bulkv2Delete_CreateJob(sfurl, sftoken, sfobject):
 
     url = sfurl + "/services/data/v48.0/jobs/ingest/"
@@ -204,7 +203,6 @@ def bulkv2Delete_InsertData(sfurl, sftoken, jobid, data):
     result = requests.put(url, data=data , headers=headers)
     logger.info(result.status_code)
     logger.info(result.text)
-
 
 def bulkv2Delete_CloseJob(sfurl, sftoken, jobid):
     url = sfurl + "/services/data/v48.0/jobs/ingest/" + jobid

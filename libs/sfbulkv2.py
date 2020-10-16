@@ -20,7 +20,7 @@ sfbulkv2.Bulkv2_delete(files)
 session_id = ''
 instance = ''
 sfurl = ''
-SF_RECORD_NAME="bulkv2__c"
+SF_RECORD_NAME="Account"
 CSV_HEADER="Name,textField__c\n"
 
 
@@ -106,7 +106,7 @@ def Bulkv2_INSERT(nbRecords):
 
 def Bulkv2_QUERY():
     # now gets everything
-    bulkv2_query_id = sf.bulkv2Query_CreateJob(sfurl, session_id, "select id from bulkv2__c")['id']
+    bulkv2_query_id = sf.bulkv2Query_CreateJob(sfurl, session_id, "select id from account")['id']
     nbRecordProcessed = Bulkv2_CheckJobCompletion(bulkv2_query_id, "query")
     return sf.bulkv2Query_GetResult(sfurl, session_id, bulkv2_query_id, nbRecordProcessed)
 

@@ -20,3 +20,4 @@ pusher
 pyopenssl
 wtforms
 pyjwt
+simple-salesforce
