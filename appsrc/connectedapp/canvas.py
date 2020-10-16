@@ -76,6 +76,7 @@ def singleguestbadgemanagement():
         cookie, cookie_exists =  utils.getCookie()
         #data_dict = None
         key_fromCanvas = {'cookie' : cookie, 'fromCanvas':True}
+        logger.info(key_fromCanvas)
         tmp_dict_fromCanvas = rediscache.__getCache(key_fromCanvas)
 
         if ((tmp_dict_fromCanvas == None) or (tmp_dict_fromCanvas == '')) :
