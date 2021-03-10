@@ -21,6 +21,8 @@ def __connect():
     global REDIS_URL
     if (REDIS_URL != ''):
         url = urlparse(REDIS_URL)
+        #REDIS_CONN = redis.Redis(host=url.hostname, port=url.port, username=url.username, password=url.password, ssl=True, ssl_cert_reqs=None)
+        #REDIS_CONN = redis.from_url(REDIS_URL)
         REDIS_CONN = redis.Redis(host=url.hostname, port=url.port, username=url.username, password=url.password, ssl=True, ssl_cert_reqs=None)
         #REDIS_CONN = redis.from_url(REDIS_URL)
         REDIS_CONN.set('key','value')
