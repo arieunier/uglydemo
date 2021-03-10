@@ -26,7 +26,7 @@ def getCookie():
     if (cookie_value == None):
         cookie_value = uuid.uuid4().__str__()
         cookie_exists = False
-
+    
     return cookie_value, cookie_exists
 
 def returnResponse(data, code, cookie_value, cookie_exists):

@@ -12,7 +12,7 @@ MANUAL_ENGINE_POSTGRES = None
 SALESFORCE_SCHEMA = os.getenv("POSTGRES_SCHEMA", "salesforce")
 HEROKU_LOGS_TABLE = os.getenv("HEROKU_LOGS_TABLE", "heroku_logs__c") 
 SECURITY_USER= os.getenv("SECURITY_USER")
-
+dbSession_postgres=None
 logger = logs.logger_init(loggername='app',
             filename="log.log",
             debugvalue=logs.LOG_LEVEL,
@@ -43,9 +43,24 @@ def __getSFUsers():
     logger.debug(data)
     return data   
 
-
-    
-
+def _test_transaction():
+    global dbSession_postgres
+    isolatedsession = dbSession_postgres()
+    try:
+        # performs something
+        update =  """ update salesforce.heroku_logs__c set useragent__c=useragent__c || ' ';  """
+        isolatedsession.execute(update)
+        getRows =  """ select count(*) as nbRows, _hc_lastop from salesforce.heroku_logs__c group by  _hc_lastop """
+        results = isolatedsession.execute(getRows)
+        for result in results:
+            print(result)
+        isolatedsession.commit()
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        isolatedsession.rollback()
+    finally:
+        isolatedsession.close()
 
 def __getGameActivityById(gameactivity__c):
     key = {"sqlRequest" : "__getGameActivityById", "activityId" : gameactivity__c}
@@ -155,7 +170,6 @@ def __getMatchById(match_id):
 
     return data
 
-
 def __insertBadge(id, guest_id, guest_firstname, guest_lastname, guest_company, host_firstname, host_lastname, badge_status, badge_url,
 picture_url):
     sqlRequest = """
@@ -226,7 +240,6 @@ def __execRequestWithNoResult(strReq, attributes=None):
 def getBadgeById(badgeId):
     return __execRequest('Select * from public.badge where id=%(id)s', {'id':badgeId})
 
-
 def __execRequest(strReq, Attributes):
     if (MANUAL_ENGINE_POSTGRES != None):
         result = MANUAL_ENGINE_POSTGRES.execute(strReq, Attributes)
@@ -247,7 +260,6 @@ def __getImageAnalysis(tableName, objectName):
 
     return data
 
-
 def __getObjectsDescribe(tableName):
     key = {"sqlRequest" : "__getObjectsDescribe", "tableName" : tableName}
     tmp_dict = rediscache.__getCache(key)
@@ -264,7 +276,6 @@ def __getObjectsDescribe(tableName):
 
     return data
         
-
 def __getObjects(tableName):
     key = {"sqlRequest" : "__getObjects", "tableName" : tableName}
     tmp_dict = rediscache.__getCache(key)
@@ -281,7 +292,6 @@ def __getObjects(tableName):
 
     return data
         
-
 def __getTables():
     
     key = {"sqlRequest" : "__getTables"}
@@ -298,10 +308,6 @@ def __getTables():
 
     return data
 
-
-
-
-
 def __saveImageAnalysisEntry(attributes):
     if (MANUAL_ENGINE_POSTGRES != None):
         sqlRequest = """
@@ -316,7 +322,6 @@ def __saveImageAnalysisEntry(attributes):
             %(ImageWidth__c)s, %(ImageHeight__c)s, %(FaceTop__c)s, %(FaceLeft__c)s, %(FaceWidth__c)s, %(FaceHeight__c)s  )
             """
         MANUAL_ENGINE_POSTGRES.execute(sqlRequest,attributes)
-
 
 def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, cookie, picture):
     if (MANUAL_ENGINE_POSTGRES != None):
@@ -334,8 +339,6 @@ def __saveGuestEntry(Firstname, Lastname, Email, Company, PhoneNumber, Host, coo
             'PhoneNumber' : PhoneNumber,
             'Host' : Host ,'cookie' : cookie ,
             'picture':picture})    
-
-
 
 def __savePackagingReviewEntry(Name, Email, Brand, Grip, Plug, Portability, FreeText, Picture):
     if (MANUAL_ENGINE_POSTGRES != None):
@@ -355,8 +358,6 @@ def __savePackagingReviewEntry(Name, Email, Brand, Grip, Plug, Portability, Free
             'Portability' : Portability ,
             'FreeText' : FreeText ,
             'Picture':Picture})    
-
-
 
 def __saveLeadEntry(name, email, formvalue):
     if (MANUAL_ENGINE_POSTGRES != None):
@@ -388,7 +389,7 @@ def __saveLogEntry(request, userid):
         MANUAL_ENGINE_POSTGRES.execute(sqlRequestUserId,
                     {'useragent':useragent,
                     'userid' : userid})    
-
+        
         sqlRequest = """insert into salesforce.heroku_logs__c (userid__c, name, url__c, creationdate__c, externalid__c, useragent__c, method__c, webuser__r__userid__c) values 
             ( %(userid)s, %(name)s, %(url)s, %(creationdate)s, %(externalid)s, %(useragent)s , %(method)s , %(userid)s ) """
         externalid = uuid.uuid4().__str__()
@@ -401,8 +402,6 @@ def __saveLogEntry(request, userid):
                     'useragent':useragent,
                     'method' : request.method,
                     'userid' : userid})    
-
-
 
 def __checkHerokuLogsTable():
     key = {'checkHerokuLogTables' : "True"}
@@ -424,3 +423,6 @@ def __checkHerokuLogsTable():
     else:
         return True 
     
+
+
+_test_transaction()
